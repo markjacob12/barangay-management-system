@@ -1,0 +1,130 @@
+.masterWizardFrame {
+  width: 100%;
+  max-width: 1100px;
+  margin: 2rem auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 20px rgba(0, 31, 63, 0.04);
+  overflow: hidden;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Stepper Tracker Architecture Strip */
+.stepperHeaderBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8fafc; /* Fine subtle off-gray strip separator */
+  padding: 1.5rem 2.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.stepWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+/* Advanced Stepper Indicator Spheres */
+.stepCircle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 2px solid #cbd5e1;
+  color: #64748b;
+  font-size: 0.9rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+/* Active Working State */
+.activeStep {
+  border-color: #001f3f !important;
+  background-color: #001f3f !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 10px rgba(0, 31, 63, 0.2) !important;
+}
+
+/* Passed/Completed Step Checkmark Look */
+.completedStep {
+  border-color: #d4af37 !important; /* Premium State Gold Rim */
+  background-color: rgba(212, 175, 55, 0.08) !important;
+  color: #d4af37 !important;
+  font-size: 1rem;
+}
+
+/* Stepper Text Label Organizers */
+.stepLabelBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.stepIndexLabel {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  color: #94a3b8;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.stepTitle {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #64748b;
+  transition: color 0.25s ease;
+}
+
+.textNavy {
+  color: #001f3f !important;
+}
+
+/* Vector Connector Tracks line */
+.progressLine {
+  flex: 1;
+  height: 2px;
+  background-color: #cbd5e1;
+  margin: 0 1.25rem;
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lineFilled {
+  background-color: #d4af37 !important; /* Gold tracking vector connector line */
+}
+
+/* Sandbox Processing Content Base */
+.contentDynamicBody {
+  padding: 2.5rem;
+  background-color: #ffffff;
+}
+
+/* Mobile Adaptive Fluidity Rules */
+@media (max-width: 900px) {
+  .stepperHeaderBlock {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 1.5rem;
+  }
+
+  .progressLine {
+    display: none; /* Tinatanggal ang linya sa mobile view para hindi magulo */
+  }
+
+  .stepWrapper {
+    width: 100%;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px dashed #e2e8f0;
+  }
+
+  .stepWrapper:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}

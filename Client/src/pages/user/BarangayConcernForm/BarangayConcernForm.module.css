@@ -1,0 +1,153 @@
+/* I-reset ang form para walang dagdag na border box sa labas */
+.formContainer {
+  font-family: "Segoe UI", Arial, sans-serif;
+  width: 100%;
+}
+
+.formHeader {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+/* Premium Minimalist Back Arrow Trigger */
+.backBtn {
+  align-self: flex-start;
+  background: transparent;
+  border: none;
+  color: #64748b;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0;
+  transition: color 0.2s ease;
+  margin-bottom: 1rem;
+}
+
+.backBtn:hover {
+  color: #001f3f; /* Umaangat ang kulay papuntang Signature Navy */
+}
+
+.formTitle {
+  margin: 0;
+  color: #001f3f;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.highlightText {
+  color: #d4af37; /* Gold accent color sa pangalan ng piniling certificate */
+} /* Header Text */
+.formHeader {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.formHeader h2 {
+  color: #001f3f; /* Pro Navy */
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin: 0 0 8px 0;
+}
+
+.formHeader p {
+  color: #666666;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Layout Row para sa Date at Time */
+.formRow {
+  display: flex;
+  gap: 20px;
+}
+
+/* Form Groups */
+.selectGroup,
+.textTareaGroup,
+.inputGroup {
+  margin-bottom: 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Labels - Eksaktong tulad ng nasa screenshot mo (Bold at Navy) */
+.selectGroup label,
+.textTareaGroup label,
+.inputGroup label {
+  font-weight: 700;
+  color: #001f3f; /* Pro Navy */
+  font-size: 13.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin-bottom: 8px;
+}
+
+/* Inputs, Selects, at Textareas */
+.selectGroup select,
+.inputGroup input,
+.textTareaGroup textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #333333;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Placeholder Styling */
+.textTareaGroup textarea::placeholder {
+  color: #9ca3af;
+}
+
+/* Focus State - Dito papasok ang Gold Accent mo */
+.selectGroup select:focus,
+.inputGroup input:focus,
+.textTareaGroup textarea:focus {
+  outline: none;
+  border-color: #d4af37; /* Gold Accent */
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+}
+
+/* Button Action Section */
+.buttonAction {
+  margin-top: 15px;
+  text-align: right;
+}
+
+/* Pro Button Styling */
+.buttonAction button {
+  background-color: #001f3f; /* Navy Main */
+  color: #ffffff;
+  border: 2px solid #001f3f;
+  padding: 12px 32px;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease;
+}
+
+/* Hover Effect para sa Button */
+.buttonAction button:hover {
+  background-color: #d4af37; /* Kakagat ang Gold kapag itinapat ang mouse */
+  border-color: #d4af37;
+  color: #001f3f; /* Navy text sa ibabaw ng Gold */
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+.buttonAction button:active {
+  transform: scale(0.98);
+}

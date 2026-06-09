@@ -1,0 +1,501 @@
+.mainContent {
+  margin-left: 260px;
+  padding-top: 30px;
+}
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  background: #001f3f;
+  color: white;
+  padding: 20px;
+  transition: all 0.3s ease;
+  position: fixed;
+  left: 0;
+  top: 0;
+  border-right: 3px solid #d4af37;
+}
+
+.logoContainer {
+  margin-bottom: 40px;
+}
+
+.brandName {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.brandName span {
+  color: #d4af37;
+}
+.nav-bar {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+/* User Profile Section */
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 15px 0;
+  margin-bottom: 10px;
+}
+
+.avatar-circle {
+  width: 45px;
+  height: 45px;
+  background: #d4af37;
+  color: #001f3f;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
+}
+
+.username-info h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.welcome-text {
+  font-size: 0.85rem;
+  color: #aab2bd;
+  display: block;
+}
+
+.divider {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 10px 0;
+  width: 100%;
+}
+
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+}
+
+.pageTitle {
+  margin: 0;
+  color: #001f3f; /* Deep Premium Navy */
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.pageSubtitle {
+  margin: 0.4rem 0 0 0;
+  color: #64748b;
+  font-size: 0.93rem;
+  font-weight: 500;
+}
+
+.goldDivider {
+  width: 50px;
+  height: 3px;
+  background-color: #d4af37; /* Signature Gold Trim Strip */
+  border-radius: 2px;
+  margin-top: 1rem;
+}
+/* Navigation Links */
+.link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 15px;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  margin-bottom: 5px;
+}
+
+.icon {
+  font-size: 1.1rem;
+  color: #d4af37; /* Gold accent line consistency */
+}
+
+.link:hover {
+  background: rgba(212, 175, 55, 0.1); /* Light gold transparent */
+  color: #d4af37;
+}
+
+/* Active State */
+.active {
+  background: #d4af37 !important;
+  color: #001f3f !important;
+}
+
+.active .icon {
+  color: #001f3f;
+}
+.navMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 30px;
+  width: 80%;
+}
+/* Container framework ng buong layout */
+.mainContent {
+  margin-left: 260px;
+  padding: 40px;
+  background-color: #f8fafc;
+  min-height: 100vh;
+  font-family: "Inter", "Montserrat", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    margin-left: 0;
+    padding: 20px;
+  }
+}
+
+/* Dashboard Header Styling */
+.dashboardHeader {
+  margin-bottom: 35px;
+}
+
+.govSubtag {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #d4af37;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.dashboardHeader h2 {
+  font-size: 1.6rem;
+  color: #001f3f;
+  margin: 0;
+  font-weight: 800;
+}
+
+/* CSS Grid Engine para sa Cards (Automatic ang pagbaba kapag masikip ang screen) */
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  width: 100%;
+}
+
+/* Ang Isang Pirasong Elite Card */
+.concernCard {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 15px rgba(0, 31, 63, 0.03);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Itataas ng konti ang card kapag hinover para sa premium physical feel */
+.concernCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 31, 63, 0.08);
+  border-color: #cbd5e1;
+}
+
+/* Image Presentation Header Box */
+.cardImageSection {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  background: #001f3f;
+  overflow: hidden;
+}
+
+.cardThumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.concernCard:hover .cardThumb {
+  transform: scale(
+    1.04
+  ); /* Bahagyang zoom ng larawan kapag naka-hover ang card */
+}
+
+/* Floating Priority Badges Layer */
+.priorityBadge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.emergency {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fca5a5;
+}
+.high {
+  background: #ffedd5;
+  color: #9a3412;
+  border: 1px solid #fdba74;
+}
+.medium {
+  background: #fef9c3;
+  color: #854d0e;
+  border: 1px solid #fde047;
+}
+.low {
+  background: #dbeafe;
+  color: #1e40af;
+  border: 1px solid #93c5fd;
+}
+
+/* Card Content Details Body Configs */
+.cardBody {
+  padding: 20px;
+  flex-grow: 1; /* Sinasakop nito ang natitirang puwang para pantay-pantay ang mga button sa ilalim */
+  display: flex;
+  flex-direction: column;
+}
+
+.specificConcernTitle {
+  font-size: 1.05rem;
+  color: #334155;
+  margin: 8px 0 15px 0;
+  font-weight: 700;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Puputulin ang text sa 2 lines para manatiling pantay ang cards */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cardDivider {
+  height: 1px;
+  background: #f1f5f9;
+  margin-top: auto; /* Itutulak pababa bago mag-footer text */
+  margin-bottom: 12px;
+}
+
+.cardFooterText {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.monoText {
+  font-family: monospace;
+  font-weight: 600;
+  color: #001f3f;
+}
+
+/* Interactive Card Footer Controls Area */
+.cardActionArea {
+  padding: 0 20px 20px 20px;
+}
+
+.btnViewCard {
+  width: 100%;
+  background: #001f3f;
+  color: #ffffff;
+  border: 1px solid #001f3f;
+  padding: 10px 16px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.btnViewCard:hover {
+  background: #0a2d54;
+  border-color: #0a2d54;
+  box-shadow: 0 4px 12px rgba(0, 31, 63, 0.15);
+}
+
+/* Empty State Spinner UI */
+/* Styling para sa Empty State kung walang ulat */
+.emptyStateBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #001f3f; /* Ang iyong Navy Blue */
+  border: 2px solid #d4af37; /* Ang iyong Gold */
+  border-radius: 12px;
+  max-width: 500px;
+  margin: 40px auto;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.emptyIcon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.emptyStateBlock h3 {
+  color: #d4af37; /* Gold Title */
+  font-family: "Montserrat", "Inter", sans-serif;
+  font-size: 20px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.emptyStateBlock p {
+  color: #ffffff; /* White Text */
+  font-family: "Montserrat", "Inter", sans-serif;
+  font-size: 14px;
+  opacity: 0.8;
+  max-width: 350px;
+}
+.tabContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #f1f5f9; /* Soft gray backing parang capsule container */
+  padding: 0.35rem;
+  border-radius: 8px;
+  width: max-content; /* Saktong sukat lang sa haba ng mga buttons */
+  margin-bottom: 1.5rem;
+  border: 1px solid #e2e8f0;
+}
+
+/* Base style para sa lahat ng tab buttons kapag hindi pa napipili */
+.tabBtn {
+  background: transparent;
+  border: none;
+  color: #64748b; /* Muted slate gray para hindi umahon sa paningin */
+  padding: 0.6rem 1.2rem;
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Espasyo sa pagitan ng emoji icon at text */
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+/* Hover feedback kapag itinutok ang mouse sa hindi aktibong tab */
+.tabBtn:hover {
+  color: #001f3f; /* Umahon sa signature Navy kulay */
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* ==========================================================================
+   ACTIVE STATES (Kapag napili o clicked ang tab)
+   ========================================================================== */
+.tabBtn.activeTab {
+  background-color: #ffffff; /* Pumuputi ang background para magmukhang litaw na card */
+  color: #001f3f; /* Solid Navy Blue text */
+  box-shadow:
+    0 4px 10px rgba(0, 31, 63, 0.06),
+    0 1px 3px rgba(0, 0, 0, 0.05);
+  border-bottom: 2px solid #d4af37; /* May manipis na gold underline accent para sa focus indicator */
+}
+
+/* Responsive adjustment kung sakaling lumiit ang screen ng laptop */
+@media (max-width: 600px) {
+  .tabContainer {
+    width: 100%; /* Sinasakop ang buong lapad ng screen */
+    display: grid;
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /* Hinahati sa tatlong pantay na columns */
+    text-align: center;
+  }
+
+  .tabBtn {
+    justify-content: center;
+    padding: 0.6rem 0.4rem;
+    font-size: 0.8rem; /* Pinapaliit ang text para magkasya sa mobile devices */
+  }
+}
+/* Nililinis ang sukat at alignment ng mga bagong vector icons */
+.tabIcon {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+}
+
+/* Nagbibigay ng micro-interaction kapag hinover ang mouse sa button */
+.tabBtn:hover .tabIcon {
+  transform: scale(1.1);
+}
+/* Empty State Styling Elements */
+/* Container framework para sa Empty State at No Records Box */
+.noDataBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+  border: 1px dashed #cbd5e1; /* Putol-putol na border para sa clean blueprint empty look */
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 1rem 0;
+}
+
+/* Kulay at pwesto ng bago mong SVG Icon */
+.noDataIconSVG {
+  color: #94a3b8; /* Muted Slate gray */
+  margin-bottom: 1.25rem;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+/* Konting micro-interaction kapag tinapatan ng mouse ang walang data box */
+.noDataBox:hover .noDataIconSVG {
+  color: #d4af37; /* Nagiging Gold ang kupas na folder */
+  transform: translateY(-4px); /* Umaangat ng konti nang banayad */
+}
+
+.noDataBox h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #001f3f; /* Signature Deep Navy */
+}
+
+.noDataBox p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #64748b; /* Malinis na detalye ng text */
+  max-width: 340px; /* Saktong lapad para bumaba ang ibang salita */
+  line-height: 1.5;
+}

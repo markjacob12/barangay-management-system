@@ -1,0 +1,417 @@
+.mainContent {
+  margin-left: 260px;
+  padding-top: 30px;
+}
+/* Layout Framework Alignment */
+.mainContent {
+  margin-left: 260px; /* Sukat para sumakto sa tabi ng iyong Sidebar */
+  padding: 40px;
+  background-color: #f8fafc;
+  min-height: 100vh;
+  font-family: "Inter", "Montserrat", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    margin-left: 0;
+    padding: 20px;
+  }
+}
+
+/* Dashboard Decorative Header Block */
+.dashboardHeader {
+  margin-bottom: 30px;
+}
+
+.govSubtag {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #d4af37;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.dashboardHeader h2 {
+  font-size: 1.6rem;
+  color: #001f3f;
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.goldDivider {
+  width: 60px;
+  height: 3px;
+  background: #d4af37;
+  margin-top: 12px;
+  border-radius: 2px;
+}
+
+/* Container Wrapper ng Table para sa Security at Responsiveness */
+.tableResponsive {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 31, 63, 0.04);
+  border: 1px solid #e2e8f0;
+  overflow-x: auto;
+}
+
+/* Base Administration Table Configurations */
+.concernTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+/* Table Headers Styling (Premium Government Look) */
+.concernTable th {
+  background-color: #001f3f;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 16px 20px;
+  border-bottom: 3px solid #d4af37; /* Gold boundary line below header */
+  white-space: nowrap;
+}
+
+/* Table Rows & Columns Data Formatting */
+.concernTable td {
+  padding: 16px 20px;
+  border-bottom: 1px solid #edf2f7;
+  vertical-align: middle;
+  color: #334155;
+}
+
+/* Hover Row Effect para sa mabilisang scanning */
+.concernTable tbody tr:hover {
+  background-color: #f1f5f9;
+  transition: background-color 0.15s ease;
+}
+
+.textPrimary {
+  font-weight: 700;
+  color: #001f3f;
+}
+
+.textSecondary {
+  font-weight: 500;
+  color: #64748b;
+}
+
+/* Thumbnail Evidence Graphics Engine */
+.tableImageWrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tableThumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* System Priority Badges Framework */
+.priorityBadge {
+  display: inline-block;
+  padding: 5px 12px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.emergency {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fca5a5;
+}
+.high {
+  background: #ffedd5;
+  color: #9a3412;
+  border: 1px solid #fdba74;
+}
+.medium {
+  background: #fef9c3;
+  color: #854d0e;
+  border: 1px solid #fde047;
+}
+.low {
+  background: #dbeafe;
+  color: #1e40af;
+  border: 1px solid #93c5fd;
+}
+
+/* Control Action View Button Link */
+.btnView {
+  background: #ffffff;
+  color: #001f3f;
+  border: 1px solid #cbd5e1;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.btnView:hover {
+  background: #001f3f;
+  color: #ffffff;
+  border-color: #001f3f;
+  box-shadow: 0 4px 10px rgba(0, 31, 63, 0.15);
+}
+
+.btnView svg {
+  transition: stroke 0.2s ease;
+}
+
+/* Empty State / Loading Design UI */
+.noRecordsRow {
+  background-color: #ffffff !important;
+}
+
+.loadingState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+  gap: 12px;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(0, 31, 63, 0.1);
+  border-radius: 50%;
+  border-top-color: #d4af37;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* TABLE THUMBNAIL COMPONENT - PINALAKI ANG SUKAT */
+.tableImageWrapper {
+  width: 120px; /* Mula sa dating 70px */
+  height: 80px; /* Mula sa dating 50px */
+  border-radius: 8px; /* Mas swabe ang kurbada ng gilid */
+  overflow: hidden;
+  border: 1.5px solid #cbd5e1; /* Mas klarong border line */
+  background-color: #f1f5f9;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* Konting anino para lumitaw ang larawan */
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Hover Effect para sa mas premium na pakiramdam kapag tinapatan ng mouse */
+.tableImageWrapper:hover {
+  transform: scale(1.05); /* Bahagyang aangat ang picture */
+  border-color: #d4af37; /* Magiging Gold ang border kapag na-hover */
+}
+
+.tableThumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Siguradong hindi madi-distort o mayayari ang ratio ng image */
+}
+.tabBtn:hover {
+  color: #001f3f; /* Umahon sa signature Navy kulay */
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* ==========================================================================
+   ACTIVE STATES (Kapag napili o clicked ang tab)
+   ========================================================================== */
+.tabContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #f1f5f9; /* Soft gray backing parang capsule container */
+  padding: 0.35rem;
+  border-radius: 8px;
+  width: max-content; /* Saktong sukat lang sa haba ng mga buttons */
+  margin-bottom: 1.5rem;
+  border: 1px solid #e2e8f0;
+  margin-left: 0px;
+}
+
+/* Base style para sa lahat ng tab buttons kapag hindi pa napipili */
+.tabBtn {
+  background: transparent;
+  border: none;
+  color: #64748b; /* Muted slate gray para hindi umahon sa paningin */
+  padding: 0.6rem 1.2rem;
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Espasyo sa pagitan ng emoji icon at text */
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+.tabBtn.activeTab {
+  background-color: #ffffff; /* Pumuputi ang background para magmukhang litaw na card */
+  color: #001f3f; /* Solid Navy Blue text */
+  box-shadow:
+    0 4px 10px rgba(0, 31, 63, 0.06),
+    0 1px 3px rgba(0, 0, 0, 0.05);
+  border-bottom: 2px solid #d4af37; /* May manipis na gold underline accent para sa focus indicator */
+}
+
+/* Responsive adjustment kung sakaling lumiit ang screen ng laptop */
+@media (max-width: 600px) {
+  .tabContainer {
+    width: 100%; /* Sinasakop ang buong lapad ng screen */
+    display: grid;
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /* Hinahati sa tatlong pantay na columns */
+    text-align: center;
+  }
+
+  .tabBtn {
+    justify-content: center;
+    padding: 0.6rem 0.4rem;
+    font-size: 0.8rem; /* Pinapaliit ang text para magkasya sa mobile devices */
+  }
+}
+/* Nililinis ang sukat at alignment ng mga bagong vector icons */
+.tabIcon {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+}
+
+/* Nagbibigay ng micro-interaction kapag hinover ang mouse sa button */
+.tabBtn:hover .tabIcon {
+  transform: scale(1.1);
+}
+/* Empty State Styling Elements */
+/* Container framework para sa Empty State at No Records Box */
+.noDataBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+  border: 1px dashed #cbd5e1; /* Putol-putol na border para sa clean blueprint empty look */
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 1rem 0;
+}
+
+/* Kulay at pwesto ng bago mong SVG Icon */
+.noDataIconSVG {
+  color: #94a3b8; /* Muted Slate gray */
+  margin-bottom: 1.25rem;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+/* Konting micro-interaction kapag tinapatan ng mouse ang walang data box */
+.noDataBox:hover .noDataIconSVG {
+  color: #d4af37; /* Nagiging Gold ang kupas na folder */
+  transform: translateY(-4px); /* Umaangat ng konti nang banayad */
+}
+
+.noDataBox h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #001f3f; /* Signature Deep Navy */
+}
+
+.noDataBox p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #64748b; /* Malinis na detalye ng text */
+  max-width: 340px; /* Saktong lapad para bumaba ang ibang salita */
+  line-height: 1.5;
+}
+/* Container ng Empty State */
+.emptyContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px dashed #cbd5e1;
+  border-radius: 12px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Wrapper para sa Icon para may background effect */
+.emptyIconWrapper {
+  background-color: #f1f5f9;
+  padding: 20px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+/* SVG Icon styling */
+.emptyIconSVG {
+  color: #94a3b8;
+  stroke-width: 1.5;
+}
+
+/* Hover Effect: Magiging "Gold" ang folder kapag tinapatan */
+.emptyContainer:hover .emptyIconWrapper {
+  transform: translateY(-5px);
+  background-color: #fef9c3;
+}
+
+.emptyContainer:hover .emptyIconSVG {
+  color: #d4af37;
+}
+
+/* Typography para sa Empty State */
+.emptyContainer h3 {
+  color: #001f3f;
+  margin: 0 0 10px 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.emptyContainer p {
+  color: #64748b;
+  max-width: 350px;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.95rem;
+}

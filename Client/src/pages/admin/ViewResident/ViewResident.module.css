@@ -1,0 +1,182 @@
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #333333;
+}
+
+/* Header Banner - Pro Government Look */
+.headerBanner {
+  background-color: #001f3f; /* Navy Blue */
+  border-left: 6px solid #d4af37; /* Gold Accent */
+  padding: 2rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.avatarCircle {
+  width: 70px;
+  height: 70px;
+  background-color: #d4af37; /* Gold */
+  color: #001f3f;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.headerText {
+  flex-grow: 1;
+}
+
+.fullName {
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.subTitle {
+  color: #bdc3c7;
+  margin: 0.3rem 0 0 0;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.statusBadge {
+  background-color: rgba(212, 175, 55, 0.15);
+  color: #d4af37;
+  border: 1px solid #d4af37;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Grid Layout for Cards */
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.fullWidthCard {
+  grid-column: span 2;
+  border-top: 3px solid #001f3f;
+}
+
+.cardTitle {
+  color: #001f3f;
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 0.5rem;
+  position: relative;
+}
+
+.cardTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: #d4af37;
+}
+
+/* Info Alignments */
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+
+.infoGridFourCols {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+
+.infoGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoGroup label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #718096;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.5px;
+}
+
+.infoGroup p {
+  font-size: 1rem;
+  color: #1a202c;
+  margin: 0;
+  font-weight: 500;
+}
+
+.subLabel {
+  font-size: 0.75rem;
+  color: #718096;
+  margin-top: 0.2rem;
+}
+
+/* Highlights for Special Sectors */
+.highlightYes {
+  color: #e65100 !important; /* Soft alert color para sa mabilisang pansin */
+  font-weight: 700 !important;
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: #001f3f;
+  font-weight: 600;
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .fullWidthCard {
+    grid-column: span 1;
+  }
+
+  .infoGridFourCols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .headerBanner {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .statusBadge {
+    margin-top: 0.5rem;
+  }
+}

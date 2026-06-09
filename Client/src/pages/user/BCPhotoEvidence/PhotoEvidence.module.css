@@ -1,0 +1,189 @@
+/* Main Layout Container */
+.container {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 31, 63, 0.08);
+  font-family: "Inter", "Montserrat", sans-serif;
+  border-top: 5px solid #001f3f;
+}
+
+/* Typography Headers */
+.title {
+  font-size: 1.6rem;
+  color: #001f3f;
+  margin: 0 0 8px 0;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.subtitle {
+  color: #556b82;
+  font-size: 0.95rem;
+  margin: 0 0 30px 0;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Upload Dropzone Area */
+.uploadBox {
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+.dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #f8fafc;
+  border: 2px dashed #cbd5e1;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.dropzone:hover {
+  background: #f1f5f9;
+  border-color: #001f3f;
+}
+
+.iconContainer {
+  background: rgba(212, 175, 55, 0.1);
+  padding: 14px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.uploadButton {
+  background: #001f3f;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 10px rgba(0, 31, 63, 0.1);
+  transition: background 0.2s ease;
+}
+
+.dropzone:hover .uploadButton {
+  background: #0a2d54;
+}
+
+.fileTypes {
+  font-size: 0.75rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.hiddenInput {
+  display: none;
+}
+
+/* Image Preview Framework */
+.previewContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  background: #f8fafc;
+  padding: 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.previewImage {
+  width: 100%;
+  max-height: 320px;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+}
+
+.removeButton {
+  background: transparent;
+  color: #ef4444;
+  border: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.removeButton:hover {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* System Action Controller Area - PERPEKTONG PINAGITNA */
+.actionContainer {
+  display: flex;
+  justify-content: center; /* Pinapagitna ang mga buttons sa loob ng container */
+  align-items: center;
+  gap: 16px; /* Saktong space sa pagitan ng dalawang button */
+  border-top: 1px solid #e2e8f0;
+  padding-top: 25px;
+  width: 100%;
+}
+
+.backButton {
+  background: #ffffff;
+  color: #64748b;
+  border: 1px solid #cbd5e1;
+  padding: 12px 30px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 160px; /* Eksaktong lapad para maging pantay sa Next button */
+  text-align: center;
+}
+
+.backButton:hover {
+  background: #f8fafc;
+  color: #334155;
+  border-color: #94a3b8;
+}
+
+.nextButton {
+  background: #001f3f;
+  color: #ffffff;
+  border: 1px solid #001f3f;
+  padding: 12px 30px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 31, 63, 0.15);
+  transition: all 0.2s ease;
+  width: 160px; /* Parehas na sukat para balanse at elite tingnan */
+  text-align: center;
+}
+
+.nextButton:hover {
+  background: #0a2d54;
+  border-color: #0a2d54;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 31, 63, 0.2);
+}
+
+.nextButton:active {
+  transform: translateY(1px);
+}

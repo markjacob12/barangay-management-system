@@ -1,0 +1,271 @@
+/* Container Box Frame and Animation */
+.reviewContainer {
+  width: 100%;
+  animation: slideInUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reviewCard {
+  width: 100%;
+}
+
+/* Header Alignment Elements Toolbar */
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.backBtn {
+  background: transparent;
+  border: none;
+  color: #64748b;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0;
+  transition: color 0.2s ease;
+}
+
+.backBtn:hover:not(:disabled) {
+  color: #001f3f;
+}
+
+/* Translucent Soft Alert Tag */
+.statusBadge {
+  background-color: rgba(0, 31, 63, 0.06);
+  color: #001f3f;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+}
+
+.header h2 {
+  margin: 0;
+  color: #001f3f;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.highlightText {
+  color: #d4af37; /* Signature Gold theme parameter text */
+}
+
+.header p {
+  margin: 0.35rem 0 0 0;
+  color: #64748b;
+  font-size: 0.93rem;
+  font-weight: 500;
+}
+
+.goldDivider {
+  width: 60px;
+  height: 3px;
+  background-color: #d4af37;
+  border-radius: 2px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* 2-Column Summary Information Card Deck Grid */
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  background-color: #f8fafc; /* Elegant off-gray content platform block */
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.infoBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.fullWidth {
+  grid-column: span 2;
+  border-top: 1px dashed #cbd5e1;
+  padding-top: 1rem;
+  margin-top: 0.25rem;
+}
+
+/* Core Typography inside cells */
+.metaLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.25px;
+}
+
+.metaValue {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* Purpose large box scroll text area adjustments */
+.purposeBox {
+  line-height: 1.5;
+  color: #334155;
+  white-space: pre-wrap; /* Pinapanatili ang multiline spacing layout */
+}
+
+/* Safety Verification Callout Banner */
+.warningNotice {
+  margin-top: 1.25rem;
+  background-color: rgba(212, 175, 55, 0.06);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 6px;
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.noticeIcon {
+  font-size: 1.1rem;
+}
+
+.warningNotice p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #856404; /* Dark gold/amber safe warning tone */
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Bottom Controls Section Frame */
+.buttonContainer {
+  margin-top: 2.25rem;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+/* Slate Grey Alternate Edit Button Module */
+.editBtn {
+  background-color: #ffffff;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.editBtn:hover:not(:disabled) {
+  background-color: #f1f5f9;
+  color: #0f172a;
+  border-color: #94a3b8;
+}
+
+/* Master Primary Blue Submit Button */
+.nextBtn {
+  background-color: #001f3f;
+  color: #ffffff;
+  border: none;
+  border-bottom: 3px solid #d4af37;
+  padding: 0.75rem 2rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.15s ease;
+  box-shadow: 0 4px 12px rgba(0, 31, 63, 0.12);
+}
+
+.nextBtn:hover:not(:disabled) {
+  background-color: #002d5c;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 31, 63, 0.18);
+}
+
+.nextBtn:active:not(:disabled) {
+  transform: translateY(1px);
+  box-shadow: 0 2px 6px rgba(0, 31, 63, 0.1);
+}
+
+/* Disabled State Logic Framework overlay blocker */
+.editBtn:disabled,
+.nextBtn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* ==========================================================================
+   INTERACTIVE SUBMIT LOADING SPINNER COMPONENT
+   ========================================================================== */
+.spinnerLayout {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.loadingCircle {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #ffffff;
+  animation: spinCircle 0.6s linear infinite;
+}
+
+@keyframes spinCircle {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsive screen adaptations */
+@media (max-width: 640px) {
+  .infoGrid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .fullWidth {
+    grid-column: span 1;
+  }
+
+  .buttonContainer {
+    flex-direction: column-reverse; /* I-salansan pababa, ngunit nasa itaas ang main action submit button */
+    gap: 0.75rem;
+  }
+
+  .editBtn,
+  .nextBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}

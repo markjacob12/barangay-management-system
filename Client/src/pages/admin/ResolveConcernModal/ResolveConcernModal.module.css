@@ -1,0 +1,325 @@
+/* BACKGROUND OVERLAY SCREEN */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(
+    0,
+    15,
+    30,
+    0.5
+  ); /* May manipis na navy tint ang dilim para mas premium */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 12000;
+  padding: 24px;
+}
+
+/* NILAKHANG MODAL CONTAINER WINDOW (Mula 480px binuksan natin sa 750px) */
+.modalBox {
+  background-color: #ffffff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 750px; /* Mas malawak na layout para komportable sa paningin */
+  box-shadow: 0 20px 40px rgba(0, 20, 40, 0.15);
+  border: 1.5px solid rgba(0, 31, 63, 0.1); /* Soft navy outline border */
+  padding: 36px; /* Nilakhan din ang padding sa loob para huminga ang mga fields */
+  position: relative;
+  box-sizing: border-box;
+  animation: resolveModalSlideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* MODAL TYPOGRAPHY HEADLINE */
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modalTitle {
+  font-family: "Inter", "Montserrat", sans-serif;
+  font-size: 1.6rem; /* Mas malaking font title */
+  font-weight: 700;
+  color: #001f3f; /* Navy Blue */
+  margin: 0;
+}
+
+.btnClose {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #64748b;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px;
+  transition: all 0.2s ease;
+}
+
+.btnClose:hover {
+  color: #ef4444;
+  transform: scale(1.1);
+}
+
+/* DIVIDER LINE */
+.divider {
+  height: 2px;
+  background-color: #f1f5f9;
+  border-bottom: 1px solid #e2e8f0;
+  margin: 18px 0 24px 0;
+}
+
+/* FORM LAYOUT CONTROLS */
+.modalForm {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* Mas malaking agwat sa bawat input row */
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fieldLabel {
+  font-family: "Inter", sans-serif;
+  font-size: 0.8rem; /* Mas litaw na label headers */
+  font-weight: 700;
+  color: #334155;
+  letter-spacing: 0.6px;
+}
+
+.subLabel {
+  font-weight: 500;
+  color: #64748b;
+}
+
+/* DRAG & DROP DASHED BOX (Mas pinalapad at mas mataas ng konti) */
+.uploadZone {
+  border: 2px dashed #cbd5e1; /* Mas makapal na gatla */
+  border-radius: 12px;
+  padding: 40px 20px; /* Mas mataas na clickable area */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #fafbfc;
+  transition: all 0.2s ease;
+}
+
+.uploadZone:hover {
+  background-color: #f1f5f9;
+  border-color: #d4af37; /* Gold accent on hover */
+}
+
+.hiddenFileInput {
+  display: none;
+}
+
+.uploadContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.uploadIcon {
+  width: 48px; /* Mas malaking upload cloud icon */
+  height: 48px;
+  color: #001f3f;
+  margin-bottom: 12px;
+}
+
+.uploadTitle {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #001f3f;
+  margin-bottom: 4px;
+}
+
+.uploadMeta {
+  font-family: "Inter", sans-serif;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+/* IMAGE PREVIEW COMPONENT CONTAINER */
+.previewContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.imgPreview {
+  max-width: 100%;
+  max-height: 200px; /* Nilakihan ang max height ng image preview para kitang-kita ang patunay */
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.changePhotoText {
+  font-size: 0.85rem;
+  color: #d4af37; /* Gold Accent */
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* INPUT DATE LAYOUT FIELD */
+.dateInput {
+  padding: 12px 16px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  color: #334155;
+  outline: none;
+  max-width: 250px; /* Ginawang sakto lang ang haba ng date selector para hindi sumobra sa screen */
+  transition: border-color 0.2s ease;
+}
+
+.dateInput:focus {
+  border-color: #001f3f;
+  box-shadow: 0 0 0 3px rgba(0, 31, 63, 0.1);
+}
+
+/* TEXTAREA COMPONENT FIELD LOOK (Mas malapad at mataas para sa mahabang remarks) */
+.remarksTextArea {
+  width: 100%;
+  height: 140px; /* Tinalasan ang taas mula sa 110px */
+  padding: 14px 16px;
+  font-family: "Inter", sans-serif;
+  font-size: 0.98rem;
+  color: #334155;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  resize: none;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.remarksTextArea:focus {
+  border-color: #001f3f;
+  box-shadow: 0 0 0 3px rgba(0, 31, 63, 0.1);
+}
+
+.remarksTextArea::placeholder {
+  color: #94a3b8;
+}
+
+/* ACTION FOOTER ALIGNMENTS */
+.actionFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 12px;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 20px;
+}
+
+.btnCancel {
+  background-color: #e2e8f0;
+  color: #334155;
+  border: none;
+  padding: 14px 32px; /* Nilakhan ang clickable size ng buttons */
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btnCancel:hover {
+  background-color: #cbd5e1;
+}
+
+.btnResolve {
+  background-color: #001f3f; /* Navy Blue Core */
+  color: #ffffff;
+  border: 1px solid #001f3f;
+  padding: 14px 32px; /* Nilakhan ang clickable size ng buttons */
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btnResolve:hover {
+  background-color: #08294e;
+  border-color: #d4af37; /* Subtle Gold trim indicator on hover */
+  box-shadow: 0 4px 12px rgba(0, 31, 63, 0.2);
+}
+
+/* ANIMATION SLIDE */
+@keyframes resolveModalSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE CONTROL FOR TABLETS/MOBILE */
+@media (max-width: 768px) {
+  .modalBox {
+    padding: 24px;
+    max-width: 95%;
+  }
+  .dateInput {
+    max-width: 100%;
+  }
+}
+.formGroup input[type="date"] {
+  width: 100%;
+  max-width: 240px;
+  padding: 12px 14px;
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  color: #001f3f; /* Navy Blue text */
+  background-color: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Kapag tinapatan ng mouse */
+.formGroup input[type="date"]:hover {
+  border-color: #94a3b8;
+  background-color: #fafbfc;
+}
+
+/* Kapag cliniclick na ng user */
+.formGroup input[type="date"]:focus {
+  border-color: #001f3f; /* Navy Blue Border */
+  box-shadow: 0 0 0 3px rgba(0, 31, 63, 0.1);
+}
+
+/* Para maging kulay Navy Blue rin yung maliit na calendar icon ng browser */
+.formGroup input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 4px;
+  filter: invert(10%) sepia(85%) saturate(3000%) hue-rotate(190deg)
+    brightness(95%) contrast(110%);
+}
+
+/* Kapag tinapatan ng mouse yung calendar icon */
+.formGroup input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  background-color: rgba(214, 175, 55, 0.15); /* Soft Gold background glow */
+}

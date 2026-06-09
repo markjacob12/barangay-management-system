@@ -1,0 +1,242 @@
+.admin-layout {
+  display: flex; /* Eto ang magdidikit sa Sidebar at Main-Wrapper */
+  width: 100%;
+  min-height: 100vh;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Sasakupin ang lahat ng natitirang space */
+  overflow-y: auto; /* Para kung mahaba ang content, scrollable lang siya */
+}
+.content-area {
+  margin-left: 260px; /* Dapat kaparehas ito ng width ng sidebar mo */
+  padding: 40px;
+  width: calc(100% - 260px);
+  min-height: 100vh;
+  background-color: white;
+}
+/* ==========================================================================
+   DASHBOARD STATS GRID ENGINE
+   ========================================================================== */
+
+/* Ang main wrapper na nagbabalot sa tatlong cards */
+.box-continer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Hinahati sa 3 pantay na hanay */
+  gap: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 2rem;
+}
+
+/* Disenyo para sa bawat indibidwal na stats card */
+:local(.card) {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-top: 4px solid #001f3f; /* Signature Deep Navy header strip accent */
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 31, 63, 0.03);
+  transition: all 0.2s ease;
+}
+
+/* Hover feedback kapag itinutok ang mouse sa card */
+:local(.card):hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 31, 63, 0.06);
+  border-top-color: #d4af37; /* Nagiging Gold ang strip kapag naka-hover */
+}
+
+/* Styling para sa pamagat ng card (Pending Request, Total Resident) */
+:local(.card) h2 {
+  margin: 0;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #64748b; /* Slate gray para pormal tingnan */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Styling para sa malaking numero (Ang counters mo na '0') */
+:local(.card) p {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #001f3f; /* Solid Navy Blue display numbers */
+  line-height: 1.2;
+}
+
+/* ==========================================================================
+   MOBILE & TABLET RESPONSIVE SAFETY BOUNDARIES
+   ========================================================================== */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-top: 4px solid #001f3f; /* Deep Navy top border */
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 31, 63, 0.03);
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 31, 63, 0.06);
+  border-top-color: #d4af37; /* Nagiging Gold kapag hinover */
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card p {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #001f3f;
+  line-height: 1.2;
+}
+@media (max-width: 900px) {
+  .box-continer {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Nagiging dalawang kolum muna kapag katamtamang screen */
+  }
+}
+
+@media (max-width: 600px) {
+  .box-continer {
+    grid-template-columns: 1fr; /* Isang kolum na lang pababa kapag screen ng selpon */
+    gap: 1rem;
+  }
+}
+.bottom-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* 2 parts chart, 1 part activity */
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.chart-container,
+.activity-feed {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.activity-feed h3,
+.chart-container h3 {
+  font-size: 1.1rem;
+  color: #001f3f;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #d4af37;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+/* List style para sa Activity Feed */
+.activity-list {
+  list-style: none;
+  padding: 0;
+}
+
+.activity-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.9rem;
+  color: #475569;
+}
+.bottom-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* 2 parts chart, 1 part activity */
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.chart-container,
+.activity-feed {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.activity-feed h3,
+.chart-container h3 {
+  font-size: 1.1rem;
+  color: #001f3f;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #d4af37;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+/* List style para sa Activity Feed */
+.activity-list {
+  list-style: none;
+  padding: 0;
+}
+
+.activity-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.9rem;
+  color: #475569;
+}
+.btn-gold {
+  background-color: #d4af37;
+  color: #001f3f;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-gold:hover {
+  background-color: #b8962d;
+}
+@media (max-width: 900px) {
+  .bottom-wrapper {
+    grid-template-columns: 1fr; /* Magiging stackable sila sa tablet/phone */
+  }
+}
+/* Disenyo para sa action button sa loob ng card */
+.view-btn {
+  margin-top: 15px;
+  background-color: #f8f9fa;
+  border: 1px solid #e2e8f0;
+  color: #001f3f; /* Navy blue text */
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.view-btn:hover {
+  background-color: #001f3f; /* Magiging navy blue pag na-hover */
+  color: #d4af37; /* Magiging gold yung text */
+  border-color: #001f3f;
+}

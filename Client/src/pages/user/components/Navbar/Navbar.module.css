@@ -1,0 +1,138 @@
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #001f3f;
+  border-bottom: 4px solid #d4af37;
+  padding: 0 50px;
+  width: calc(100% - 260px); /* Width minus sidebar width */
+  margin-left: 260px;
+}
+.logo img {
+  width: 35%;
+}
+.icon {
+  color: whitesmoke;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+  top: 70px; /* Adjust base sa height ng Navbar mo */
+  right: 20px;
+  z-index: 2000;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdownMenu {
+  background: #ffffff;
+  min-width: 240px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Close Button Area */
+.closeHeader {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 10px 0 0;
+}
+
+.closeIcon {
+  font-size: 24px;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.closeIcon:hover {
+  color: #ff4d4d;
+}
+
+/* Profile Section */
+.profileSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 20px 20px 20px;
+}
+
+.logoWrapper {
+  width: 70px;
+  height: 70px;
+  background: #f8f9fa;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 5px;
+  border: 2px solid #d4af37; /* Gold accent from Screenshot 2026-05-04 154743.png */
+}
+
+.logoWrapper img {
+  width: 90%;
+  object-fit: contain;
+}
+
+.profileName {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #001f3f; /* Navy blue */
+  font-weight: 700;
+}
+
+.roleBadge {
+  font-size: 0.75rem;
+  color: #d4af37;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.divider {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 0;
+}
+
+/* Logout Button */
+.menuItem {
+  padding: 15px;
+  background: #fdfdfd;
+}
+
+.logoutBtn {
+  width: 100%;
+  padding: 10px;
+  background: #001f3f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logoutBtn:hover {
+  background: #d4af37; /* Nagiging gold pag hover */
+  color: #001f3f;
+  transform: translateY(-2px);
+}

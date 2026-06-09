@@ -1,0 +1,234 @@
+/* Container Box Frame */
+.formContainer {
+  width: 100%;
+  animation: slideInDown 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Header Alignment Elements */
+.formHeader {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+/* Premium Minimalist Back Arrow Trigger */
+.backBtn {
+  align-self: flex-start;
+  background: transparent;
+  border: none;
+  color: #64748b;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0;
+  transition: color 0.2s ease;
+  margin-bottom: 1rem;
+}
+
+.backBtn:hover {
+  color: #001f3f; /* Umaangat ang kulay papuntang Signature Navy */
+}
+
+.formTitle {
+  margin: 0;
+  color: #001f3f;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.highlightText {
+  color: #d4af37; /* Gold accent color sa pangalan ng piniling certificate */
+}
+
+.formSubtitle {
+  margin: 0.35rem 0 0 0;
+  color: #64748b;
+  font-size: 0.93rem;
+  font-weight: 500;
+}
+
+.goldDivider {
+  width: 60px;
+  height: 3px;
+  background-color: #d4af37;
+  border-radius: 2px;
+  margin-top: 1rem;
+}
+
+/* Main Layout Framework */
+.mainForm {
+  width: 100%;
+}
+
+/* Professional 2-Column Framework Grid */
+.inputGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem 1.5rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.fullWidth {
+  grid-column: span 2; /* Kakainin ang buong linya kapag Purpose o Certificate Type */
+}
+
+/* Form Typography Components */
+.fieldLabel {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #334155;
+  text-transform: uppercase;
+  letter-spacing: 0.25px;
+}
+
+.requiredAsterisk {
+  color: #dc2626;
+  margin-left: 2px;
+}
+
+.optionalText {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  text-transform: initial;
+}
+
+.lockIcon {
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+
+/* Standard Active Input Fields Styling */
+.inputField {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #0f172a;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.inputField:focus {
+  outline: none;
+  border-color: #001f3f;
+  box-shadow: 0 0 0 3px rgba(0, 31, 63, 0.08); /* Light navy halo accent ring */
+}
+
+/* Custom Large Resizable Text Area box */
+.textArea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #0f172a;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-family: inherit;
+  resize: vertical;
+  transition: all 0.2s ease;
+}
+
+.textArea:focus {
+  outline: none;
+  border-color: #001f3f;
+  box-shadow: 0 0 0 3px rgba(0, 31, 63, 0.08);
+}
+
+/* ==========================================================================
+   LOCKED READ-ONLY INPUT STATES (Eto ang magic design para sa kinuha sa DB)
+   ========================================================================== */
+.readOnlyInput {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #475569;
+  background-color: #f1f5f9; /* Matte off-gray background to indicate locked state */
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  box-sizing: border-box;
+  cursor: not-allowed; /* Nagiging icon na bawal i-type kapag tinutok ang mouse */
+  user-select: none;
+}
+
+/* Bottom Actions Control Strip Wrapper */
+.actionWrapper {
+  margin-top: 2.25rem;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Submission Button Module */
+.submitBtn {
+  background-color: #001f3f; /* Dark Premium Navy */
+  color: #ffffff;
+  border: none;
+  border-bottom: 3px solid #d4af37; /* Bottom key gold strip integration */
+  padding: 0.75rem 2rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.15s ease;
+  box-shadow: 0 4px 12px rgba(0, 31, 63, 0.12);
+}
+
+.submitBtn:hover {
+  background-color: #002d5c;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 31, 63, 0.18);
+}
+
+.submitBtn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 6px rgba(0, 31, 63, 0.1);
+}
+
+/* Entry Animation Layout Trigger */
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Small Scale Adaptations */
+@media (max-width: 640px) {
+  .inputGrid {
+    grid-template-columns: 1fr; /* Nagiging 1 column kapag screen ng cp */
+    gap: 1rem;
+  }
+
+  .fullWidth {
+    grid-column: span 1;
+  }
+
+  .submitBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}

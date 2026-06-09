@@ -1,0 +1,170 @@
+/* Core Structural Sandbox */
+.selectionContainer {
+  width: 100%;
+  animation: fadeInFrame 0.3s ease-out;
+}
+
+/* Section Header Typography Organizers */
+.headerSection {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  color: #001f3f; /* Deep Corporate Navy */
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0 0 0.4rem 0;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  color: #64748b; /* Soft gray description tone */
+  font-size: 0.93rem;
+  margin: 0 auto;
+  max-width: 600px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* Elegant Center Thin Ribbon bar */
+.goldDivider {
+  width: 50px;
+  height: 3px;
+  background-color: #d4af37; /* Signature Gold Trim Accent */
+  border-radius: 2px;
+  margin-top: 1rem;
+}
+
+/* 2x2 Clean Responsive Card Grid Framework */
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+/* Premium Interactive Document Button Selection Cards */
+.certCard {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 5px rgba(0, 31, 63, 0.01);
+  position: relative;
+  outline: none;
+}
+
+/* Horizontal Axis holding the Icon and Arrow Anchor */
+.cardHeaderAxis {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Icon Housing Frame with Translucent background effect */
+.iconHousing {
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  background-color: #f1f5f9;
+  color: #001f3f; /* Dark Navy icon stroke */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+/* Soft Hidden Action Arrow */
+.arrowWrapper {
+  color: #94a3b8;
+  transform: translateX(-4px);
+  opacity: 0;
+  transition: all 0.25s ease;
+}
+
+/* Text Container Stack */
+.cardTextMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.certName {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #001f3f;
+  transition: color 0.2s ease;
+}
+
+.certDescription {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   INTERACTIVE STATES (Micro-animations kapag tinutok o pinindot ang card)
+   ========================================================================== */
+.certCard:hover {
+  border-color: #001f3f; /* Dark navy border frame on focus */
+  background-color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 31, 63, 0.06);
+}
+
+.certCard:hover .iconHousing {
+  background-color: #001f3f;
+  color: #ffffff; /* Baligtarin ang kulay ng icon para sumabog ang highlight */
+}
+
+.certCard:hover .arrowWrapper {
+  opacity: 1;
+  transform: translateX(0);
+  color: #d4af37; /* Lilitaw ang gintong palaso bilang hint */
+}
+
+.certCard:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(0, 31, 63, 0.04);
+}
+
+/* CSS Entry Animations */
+@keyframes fadeInFrame {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsive collapse grid execution */
+@media (max-width: 680px) {
+  .cardGrid {
+    grid-template-columns: 1fr; /* Isang hanay na lang kapag cellphone ang gamit */
+    gap: 1rem;
+  }
+
+  .certCard {
+    padding: 1.25rem;
+  }
+
+  .arrowWrapper {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

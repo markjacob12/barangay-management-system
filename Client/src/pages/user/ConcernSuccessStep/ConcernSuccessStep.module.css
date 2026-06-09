@@ -1,0 +1,176 @@
+/* Main Structural Container */
+.successContainer {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 50px 40px;
+  border-radius: 12px;
+
+  font-family: "Inter", "Montserrat", sans-serif;
+
+  text-align: center;
+}
+
+/* Premium Success Badge Icon Alignment */
+.iconWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.successCircle {
+  background: rgba(212, 175, 55, 0.1); /* Soft Gold Blend */
+  border: 2px solid #d4af37;
+  padding: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: scaleIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Typography Header Matrix */
+.successHeader {
+  margin-bottom: 30px;
+}
+
+.govSubtag {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #d4af37;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.successHeader h2 {
+  font-size: 1.75rem;
+  color: #001f3f;
+  margin: 0 0 12px 0;
+  font-weight: 800;
+}
+
+.successHeader p {
+  color: #556b82;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0 15px;
+}
+
+/* Official Government Reference Tracking Card */
+.referenceCard {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #001f3f;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.cardRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px dashed #e2e8f0;
+}
+
+.cardRow:last-of-type {
+  border-bottom: none;
+}
+
+.cardLabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.cardValue {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #001f3f;
+  font-family:
+    "Courier New", Courier, monospace; /* Pang-resibo/Klerikal na look */
+  letter-spacing: 0.5px;
+}
+
+.cardValueText {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.cardNote {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin: 12px 0 0 0;
+  font-style: italic;
+}
+
+/* System Informative Alert Banner */
+.infoBanner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(0, 31, 63, 0.03);
+  border: 1px solid rgba(0, 31, 63, 0.08);
+  padding: 14px 18px;
+  border-radius: 6px;
+  text-align: left;
+  margin-bottom: 35px;
+}
+
+.infoBanner span {
+  font-size: 0.8rem;
+  color: #334155;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+/* Action Control Button - SENTRALISADO */
+.actionContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.btnFinish {
+  background: #001f3f;
+  color: #ffffff;
+  border: 1px solid #001f3f;
+  padding: 14px 40px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 31, 63, 0.15);
+  transition: all 0.2s ease;
+  min-width: 220px;
+  text-align: center;
+}
+
+.btnFinish:hover {
+  background: #0a2d54;
+  border-color: #0a2d54;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 31, 63, 0.23);
+}
+
+.btnFinish:active {
+  transform: translateY(1px);
+}

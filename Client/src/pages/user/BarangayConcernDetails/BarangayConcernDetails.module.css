@@ -1,0 +1,316 @@
+/* --- MODAL FRAME --- */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 31, 63, 0.45); /* Tinted Navy overlay */
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modalBox {
+  background-color: #ffffff;
+  width: 92%;
+  max-width: 950px; /* Standard modal width */
+  max-height: 85vh;
+  border-radius: 12px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  position: relative;
+  border-top: 5px solid #001f3f; /* Kapansin-pansin na Navy header border */
+  transition: max-width 0.3s ease;
+}
+
+/* Palalawakin natin ang modal kapag resolved para sa comparison images */
+.resolvedLayout {
+  grid-template-columns: 1.3fr 1fr !important; /* Mas malawak ang kaliwa */
+}
+:global(.resolvedLayout).modalBox,
+.modalBox:has(.comparisonGrid) {
+  max-width: 1150px; /* Mas malapad para sa audit display */
+}
+
+.detailsContainer {
+  padding: 30px;
+  max-height: 82vh;
+  overflow-y: auto;
+}
+
+.btnCloseModal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: color 0.15s;
+  z-index: 10;
+}
+
+.btnCloseModal:hover {
+  color: #ef4444;
+}
+
+/* --- GRID SYSTEM --- */
+.detailCard {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 35px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .detailCard,
+  .resolvedLayout {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* --- BEFORE / AFTER COMPARISON IMAGE AREA --- */
+.imageSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.comparisonGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+@media (max-width: 550px) {
+  .comparisonGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.photoBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.photoLabel {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: 4px;
+  color: #1e293b;
+}
+
+.beforeLabel {
+  background-color: #fef2f2;
+  color: #991b1b;
+  border-left: 3px solid #ef4444;
+}
+
+.afterLabel {
+  background-color: #f0fdf4;
+  color: #166534;
+  border-left: 3px solid #22c55e;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 250px;
+  background-color: #f8fafc;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
+.mainImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- GOVERNMENT DETAILS & METADATA --- */
+.metaDataBlock {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  background-color: #f8fafc;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.metaLabel {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #64748b;
+  margin-bottom: 4px;
+  letter-spacing: 0.03em;
+}
+
+.idValue {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: #001f3f;
+  font-size: 0.85rem;
+}
+
+/* --- STATUSES --- */
+.statusBadge {
+  display: inline-block;
+  padding: 3px 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.statusPending {
+  background-color: #fef3c7;
+  color: #d97706;
+  border: 1px solid #fde68a;
+}
+.statusProcessing {
+  background-color: #e0f2fe;
+  color: #0284c7;
+  border: 1px solid #bae6fd;
+}
+.statusResolved {
+  background-color: #dcfce7;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+.statusDefault {
+  background-color: #f1f5f9;
+  color: #475569;
+}
+
+/* --- RIGHT PANEL TEXT CONTENTS --- */
+.infoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.govSubtag {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #d4af37; /* Gold */
+  letter-spacing: 0.08em;
+}
+
+.mainTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #001f3f;
+  margin-top: 4px;
+}
+
+.infoGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.gridItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #f8fafc;
+  padding: 10px 14px;
+  border-radius: 6px;
+}
+
+.iconWrapper {
+  color: #001f3f;
+  background-color: rgba(0, 31, 63, 0.05);
+  padding: 6px;
+  border-radius: 4px;
+  display: flex;
+}
+
+.itemText label {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #64748b;
+}
+
+.itemText p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.divider {
+  height: 1px;
+  background-color: #e2e8f0;
+}
+
+.sectionLabel {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #001f3f;
+  margin-bottom: 6px;
+}
+
+.goldText {
+  color: #b48c1e !important;
+}
+
+.descriptionBox {
+  background-color: #f8fafc;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #334155;
+}
+
+/* --- OFFICIAL RESOLUTION BOX --- */
+.resolutionBox {
+  background-color: rgba(212, 175, 55, 0.04);
+  border-left: 4px solid #d4af37; /* Gold dynamic bar */
+  padding: 15px;
+  border-radius: 0 8px 8px 0;
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+  border-right: 1px solid rgba(212, 175, 55, 0.15);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.remarksText {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #1e293b;
+  font-weight: 500;
+}
+
+.resolutionMetaDate {
+  margin-top: 10px;
+  font-size: 0.75rem;
+  color: #64748b;
+  text-align: right;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

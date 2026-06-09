@@ -1,0 +1,362 @@
+/* ==========================================================================
+   1. MASTER LAYOUT ENGINE (Sinisiguro nitong magkatabi ang Sidebar at Main)
+   ========================================================================== */
+.admin-layout {
+  display: flex;
+  background-color: #f8fafc; /* Professional off-white government background */
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.main-wrapper {
+  flex: 1; /* Kakainin nito ang lahat ng natitirang espasyo sa kanan ng sidebar */
+  display: flex;
+  flex-direction: column;
+  min-width: 0; /* Salbabida laban sa grid break at biglaang pag-stretch */
+}
+
+.content-area {
+  padding: 2.5rem; /* Maluwag na espasyo para sa premium dashboard look */
+  margin-left: 270px; /* Gitna ang buong table container kung sobrang lapad ng screen */
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   2. DASHBOARD HEADER SYSTEM (Title, Subtitle, at Counter Badge)
+   ========================================================================== */
+.pageHeaderContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.titleBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.pageTitle {
+  color: #001f3f; /* Deep Agency Navy */
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.pageSubtitle {
+  color: #64748b;
+  font-size: 0.88rem;
+  margin: 0.4rem 0 0 0;
+}
+
+.liveCounterBadge {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #334155;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  font-weight: 500;
+}
+
+.liveCounterBadge strong {
+  color: #001f3f;
+  margin-left: 0.3rem;
+}
+
+/* ==========================================================================
+   3. SYSTEM TABLE HOUSING (Dito nakatago ang glass-shadow effect)
+   ========================================================================== */
+.tableContainerShadow {
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 20px rgba(0, 31, 63, 0.05);
+  overflow-x: auto; /* Salbabida para sa scrollbar kapag maliit ang monitor */
+}
+
+.adminTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Elegant Heavy Header Styling */
+.adminTable th {
+  background-color: #001f3f; /* Primary Navy */
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  padding: 1.25rem 1.5rem;
+  border: none;
+}
+
+.adminTable td {
+  padding: 1.1rem 1.5rem;
+  border-bottom: 1px solid #f1f5f9;
+  color: #1e293b;
+  vertical-align: middle;
+}
+
+/* Table Actions & Micro interactions */
+.tableInteractiveRow {
+  transition: background-color 0.15s ease;
+}
+
+.tableInteractiveRow:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.tableInteractiveRow:hover {
+  background-color: rgba(
+    212,
+    175,
+    55,
+    0.04
+  ); /* Light gold accent window filter */
+}
+
+/* Specific Cell Fine-tuning */
+.primaryNameCell {
+  font-weight: 700;
+  color: #001f3f;
+}
+
+.secondaryText {
+  color: #475569;
+  max-width: 280px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dateText {
+  color: #64748b;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.quantityText {
+  font-weight: 700;
+  color: #334155;
+}
+
+.textCenter {
+  text-align: center !important;
+}
+
+/* Dynamic Professional Certificate Label Badges */
+.certBadge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Kulay para sa mga dynamic badges batay sa types ng document */
+.clearance,
+:global(.barangay_clearance) {
+  background-color: #e6f4ea;
+  color: #137333;
+  border: 1px solid #ceead6;
+}
+
+.indigency,
+:global(.barangay_indigency) {
+  background-color: #ffe7d9;
+  color: #b06000;
+  border: 1px solid #fad2bc;
+}
+
+.residency,
+:global(.barangay_permit),
+:global(.permit) {
+  background-color: #e8f0fe;
+  color: #1a73e8;
+  border: 1px solid #d2e3fc;
+}
+
+.defaultBadge {
+  background-color: #f1f5f9;
+  color: #334155;
+  border: 1px solid #e2e8f0;
+}
+
+/* Premium Action Process Button Layout */
+.actionCenterCell {
+  display: flex;
+  justify-content: center;
+}
+
+.viewBtn {
+  background-color: #ffffff;
+  color: #001f3f;
+  border: 1.5px solid #001f3f;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.viewBtn:hover {
+  background-color: #001f3f;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 31, 63, 0.15);
+}
+
+/* Ultra Clean Empty Database State */
+.emptyTableWrapper {
+  padding: 0 !important;
+}
+
+.emptyStateBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+/* Container para sa mga tabs */
+.tabContainer {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 8px;
+}
+
+/* Base style ng bawat tab button */
+.tabBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #555555; /* Neutral dark gray para sa madaling basahing inactive text */
+  background-color: #f8f9fa;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+/* Hover effect para sa hindi pa napipiling tabs */
+.tabBtn:hover {
+  background-color: #f0f4f8;
+  color: #001f3f; /* Lumilitaw ang navy blue kapag hinover */
+  border-color: #001f3f;
+}
+
+/* Style kapag ACTIVE ang tab (Dito papasok ang theme mo) */
+.tabBtn.activeTab {
+  background-color: #001f3f; /* Deep Navy Blue */
+  color: #d4af37; /* Metallic Gold Text */
+  border-color: #001f3f;
+  box-shadow: 0 4px 12px rgba(0, 31, 63, 0.2); /* Soft shadow gamit ang navy base */
+}
+
+/* Kulay ng SVG icons */
+.tabIcon {
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+/* Swabe na micro-animation kapag hinover o active ang icon */
+.tabBtn:hover .tabIcon {
+  transform: scale(1.05);
+}
+
+.tabBtn.activeTab .tabIcon {
+  /* Sinisiguro nito na sasabay ang kulay ng icon sa ginto (#d4af37) */
+  stroke: #d4af37;
+}
+/* ==========================================================================
+   DOCKET MANAGEMENT SEARCH INPUT PANEL STYLING
+   ========================================================================== */
+
+.headerControlsBlock {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.searchWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 260px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.6rem 1rem 0.6rem 2.3rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #1e293b;
+  background-color: #f8fafc;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.15s ease;
+}
+
+.searchInput:focus {
+  background-color: #ffffff;
+  border-color: #001f3f; /* Signature Navy Blue Focus Point */
+  box-shadow: 0 0 0 3px rgba(0, 31, 63, 0.08);
+}
+
+.searchIcon {
+  position: absolute;
+  left: 0.8rem;
+  color: #94a3b8;
+  pointer-events: none;
+  transition: color 0.15s ease;
+}
+
+.searchInput:focus + .searchIcon {
+  color: #001f3f;
+}
+
+/* Responsive Action Layout adjustments */
+@media (max-width: 900px) {
+  .pageHeaderContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .headerControlsBlock {
+    width: 100%;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .searchWrapper {
+    width: 100%;
+  }
+  .liveCounterBadge {
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,106 @@
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Mas standard ito para sa layout mo */
+  padding: 0 40px; /* Padding sa gilid para hindi dikit sa screen */
+  background-color: #001f3f;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  border-bottom: 4px solid #d4af37;
+  font-family: "Poppins", sans-serif;
+  width: calc(100% - 260px); /* Width minus sidebar width */
+  margin-left: 260px;
+}
+
+.logo img {
+  height: 100px; /* 120px ay medyo malaki para sa navbar, 70-80px is sweet spot */
+  width: auto;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05); /* Kaunting effect pag hinover */
+}
+.govCenterTag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  pointer-events: none;
+}
+
+.republicText {
+  font-size: 10px;
+  font-weight: 700;
+  color: #d4af37; /* Gold primary sub-header */
+  letter-spacing: 2px;
+}
+
+.localText {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+/* Right Profile Controller Section */
+.info {
+  display: flex;
+  align-items: center;
+}
+
+.profileBadge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 14px;
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(212, 175, 55, 0.25); /* Subtle gold boundary outline */
+  border-radius: 4px; /* Clean sharp corners */
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.profileBadge:hover {
+  background-color: rgba(212, 175, 55, 0.08);
+  border-color: #d4af37;
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.1);
+}
+
+.avatarCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: #d4af37;
+  color: #001f3f;
+  border-radius: 50%; /* Perfect circle for identity token */
+}
+
+.profileDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.accountName {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.accountRole {
+  font-size: 10px;
+  font-weight: 500;
+  color: #94a3b8; /* Muted gray tracking description */
+  margin-top: 1px;
+}
+
+/* Fluid Responsiveness Configuration */
+@media (max-width: 992px) {
+  .govCenterTag {
+    display: none; /* Tinatago ang gitnang teksto kung maliit ang view screen area */
+  }
+}

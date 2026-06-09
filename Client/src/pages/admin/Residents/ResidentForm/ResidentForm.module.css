@@ -1,0 +1,339 @@
+/* Container Box Design */
+.formContainer {
+  max-width: 1200px;
+  margin: 2rem auto;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 12px 35px rgba(0, 31, 63, 0.08);
+  border: 1px solid #e2e8f0;
+  padding: 2.5rem;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+}
+
+/* Master Government Style Header */
+.formHeader {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin-bottom: 2.5rem;
+  overflow: hidden;
+}
+
+.headerRibbon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background-color: #001f3f; /* Primary Navy */
+  border-right: 4px solid #d4af37; /* Accent Gold */
+}
+
+.headerTextContainer {
+  flex-grow: 1;
+  padding-left: 1rem;
+}
+
+.sectionTitle {
+  color: #001f3f;
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: 0.75px;
+}
+
+.sectionSubtitle {
+  color: #64748b;
+  font-size: 0.85rem;
+  margin: 0.4rem 0 0 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.formStatusBadge {
+  background-color: #ffffff;
+  border: 1px solid #d4af37;
+  color: #d4af37;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+/* Split Main Content Window */
+.formContent {
+  display: flex;
+  gap: 3rem;
+}
+
+/* Photo Side Wrapper */
+.photoSection {
+  flex: 0 0 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px dashed #cbd5e1;
+  padding-right: 3rem;
+}
+
+.photoLabel {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #001f3f;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.photoPlaceholderContainer {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 8px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  margin-bottom: 1.25rem;
+}
+
+.photoPlaceholder {
+  width: 170px;
+  height: 170px;
+  background-color: #f1f5f9;
+  border: 2px dashed #94a3b8;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.avatarIcon {
+  font-size: 4.5rem;
+  color: #cbd5e1;
+}
+
+.btnBrowse {
+  background-color: #ffffff;
+  color: #001f3f;
+  border: 1.5px solid #001f3f;
+  padding: 0.65rem 1rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btnBrowse:hover {
+  background-color: #001f3f;
+  color: #ffffff;
+}
+
+.photoInstructions {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  text-align: center;
+  margin-top: 0.75rem;
+  line-height: 1.4;
+}
+
+/* Right Core Inputs Engine */
+.formFieldsSection {
+  flex: 1;
+}
+
+/* Smart Section Dividers */
+.formSectionHeader {
+  color: #001f3f;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f1f5f9;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sectionNumber {
+  background-color: #001f3f;
+  color: #d4af37; /* Gold on Navy Numbering */
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+/* 3-Column Standard System Grid */
+.inputGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.fieldGroup {
+  position: relative;
+}
+
+/* Pure Premium Controls inputs */
+.fieldGroup input[type="text"],
+.fieldGroup input[type="number"],
+.fieldGroup input[type="date"],
+.fieldGroup select {
+  width: 100%;
+  padding: 0.85rem 0.85rem;
+  font-size: 0.95rem;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #0f172a;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fieldGroup input:focus,
+.fieldGroup select:focus {
+  border-color: #001f3f;
+  box-shadow: 0 0 0 3px rgba(0, 31, 63, 0.12);
+}
+
+.fieldGroup input:disabled {
+  background-color: #f8fafc !important;
+  color: #94a3b8;
+  border-color: #e2e8f0;
+  cursor: not-allowed;
+}
+
+/* Micro-Engine Floating Labels Animation */
+.floatingLabel {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ffffff;
+  padding: 0 6px;
+  color: #64748b;
+  font-size: 0.9rem;
+  pointer-events: none;
+  transition:
+    transform 0.2s ease,
+    top 0.2s ease,
+    font-size 0.2s ease,
+    color 0.2s ease;
+}
+
+.fieldGroup input:focus ~ .floatingLabel,
+.fieldGroup input:not(:placeholder-shown) ~ .floatingLabel {
+  top: 0;
+  font-size: 0.75rem;
+  color: #001f3f;
+  font-weight: 700;
+}
+
+/* Static top labels for native browser dropdowns/calendars */
+.selectLabel {
+  position: absolute;
+  left: 12px;
+  top: 0;
+  transform: translateY(-50%);
+  background: #ffffff;
+  padding: 0 6px;
+  color: #001f3f;
+  font-size: 0.75rem;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.requiredAsterisk {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+/* Form Action Buttons Container */
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1.75rem;
+}
+
+.btnSave {
+  background-color: #001f3f;
+  color: #ffffff;
+  border: none;
+  border-bottom: 4px solid #d4af37; /* Distinct Gold Accent Trim */
+  padding: 1rem 3.5rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-shadow: 0 4px 12px rgba(0, 31, 63, 0.15);
+}
+
+.btnSave:hover {
+  background-color: #002d5c;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 31, 63, 0.2);
+}
+
+.btnSave:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 31, 63, 0.15);
+}
+
+/* Responsive Structural Engineering */
+@media (max-width: 1024px) {
+  .formContent {
+    flex-direction: column;
+  }
+  .photoSection {
+    border-right: none;
+    border-bottom: 1px dashed #cbd5e1;
+    padding-right: 0;
+    padding-bottom: 2.5rem;
+    width: 100%;
+    flex: none;
+  }
+  .inputGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .inputGrid {
+    grid-template-columns: 1fr;
+  }
+  .formContainer {
+    padding: 1.5rem;
+  }
+  .formHeader {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  .headerRibbon {
+    width: 100%;
+    height: 6px;
+    bottom: auto;
+    border-right: none;
+    border-bottom: 4px solid #d4af37;
+  }
+  .headerTextContainer {
+    padding-left: 0;
+  }
+}
