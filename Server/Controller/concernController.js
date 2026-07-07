@@ -4,15 +4,12 @@ const { uploadToCloudinary } = require("../utils/cloudinary");
 
 exports.addConcern = async (req, res) => {
   try {
-    // 1. BAGUHIN: Gamitin ang 'let' para pwedeng ma-update ang variable
     let imageUrl = "";
 
-    // 2. CHECK: Kung may file na inupload, i-upload sa Cloudinary
     if (req.file) {
       imageUrl = await uploadToCloudinary(req.file.buffer);
     }
 
-    // ... rest of your code ...
     const {
       typeOfConcern,
       specificConcern,
@@ -21,7 +18,7 @@ exports.addConcern = async (req, res) => {
       date,
       time,
       priorityLevel,
-      status, // tinanggal ko ang 'image' dito kasi imageUrl na ang gagamitin natin
+      status,
     } = req.body;
 
     const newConcern = new Concern({
@@ -85,7 +82,7 @@ exports.resolveConern = async (req, res) => {
     const { id } = req.params;
     const { resolutionRemarks, resolutionDate } = req.body;
 
-    let reslutionImageUrl = ""; // Rename for clarity
+    let reslutionImageUrl = "";
 
     if (req.file) {
       reslutionImageUrl = await uploadToCloudinary(req.file.buffer);
@@ -97,7 +94,7 @@ exports.resolveConern = async (req, res) => {
         status: "Resolved",
         resolutionRemarks: resolutionRemarks,
         resolutionDate: resolutionDate,
-        reslutionImage: reslutionImageUrl, // Ensure this matches your schema exactly
+        reslutionImage: reslutionImageUrl,
       },
       { new: true },
     );

@@ -82,11 +82,11 @@ exports.addResident = async (req, res) => {
       data: saveResident,
     });
   } catch (err) {
-    console.error(err); // Mahalaga ito para makita mo ang error sa terminal
+    console.error(err);
     res.status(500).json({
       success: false,
       message: "Unsuccessful",
-      err: err.message, // Dapat 'err.message' hindi lang 'message'
+      err: err.message,
     });
   }
 };
@@ -121,7 +121,7 @@ exports.deleteResident = async (req, res) => {
 
 exports.getResident = async (req, res) => {
   try {
-    const { search } = req.query; // Kukunin natin yung sinearch mo
+    const { search } = req.query;
     let query = {};
 
     if (search) {

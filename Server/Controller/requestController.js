@@ -38,11 +38,8 @@ exports.createRequest = async (req, res) => {
 
 exports.getRequest = async (req, res) => {
   try {
-    // 1. Alamin kung Admin ang tumatawag.
     const isAdmin = req.user.role === "admin";
 
-    // 2. Kapag Admin, empty object {} para makuha LAHAT.
-    // Kapag User, i-filter lang sa requests nila.
     const query = isAdmin ? {} : { userId: req.user.id };
 
     const requests = await Request.find(query)
@@ -70,8 +67,8 @@ exports.deleteRequest = async (req, res) => {
 
 exports.updateRequestStatus = async (req, res) => {
   try {
-    const { id } = req.params; // Kukunin ang ID ng request mula sa URL
-    const { status } = req.body; // Kukunin kung "Approved" o "Disapproved" mula sa frontend body
+    const { id } = req.params;
+    const { status } = req.body;
 
     const updateRequest = await Request.findByIdAndUpdate(
       id,

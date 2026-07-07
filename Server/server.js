@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const connectDB = require("./Config/db");
 const { globalLimiter, authLimiter } = require("./middleware/rateLimiter");
-const authRoutes = require("./Routes/authRoutes"); // I-import ang routes file
+const authRoutes = require("./Routes/authRoutes");
 const residentRoutes = require("./Routes/residentRoutes");
 const requestRoutes = require("./Routes/requestRoutes");
 const concernRoutes = require("./Routes/concernRoutes");
@@ -14,7 +14,6 @@ const app = express();
 const cors = require("cors");
 app.use(cors());
 
-// Middleware para makabasa ng JSON ang server
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);

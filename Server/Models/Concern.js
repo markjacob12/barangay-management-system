@@ -26,7 +26,5 @@ const concernSchema = mongoose.Schema(
   { timestamps: true },
 );
 
-// DITO ANG PAGBABAGO:
-// Imbes na direktang mongoose.model, gagamit tayo ng conditional check
 module.exports =
   mongoose.models.Concern || mongoose.model("Concern", concernSchema);
