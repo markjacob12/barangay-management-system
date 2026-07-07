@@ -1,5 +1,5 @@
 const Concern = require("../Models/Concern");
-// IMPORTANTO: I-import ang utility function na ginawa natin
+
 const { uploadToCloudinary } = require("../utils/cloudinary");
 
 exports.addConcern = async (req, res) => {
@@ -30,7 +30,7 @@ exports.addConcern = async (req, res) => {
       date,
       time,
       priorityLevel,
-      image: imageUrl, // Dito natin ilalagay yung nakuha nating URL
+      image: imageUrl,
       status,
     });
 
