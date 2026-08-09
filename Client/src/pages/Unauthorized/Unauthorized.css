@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #001f3f; /* Dark Navy Base */
+  background-color: #001f3f;
   padding: 20px;
   font-family: "Inter", system-ui, sans-serif;
 }
