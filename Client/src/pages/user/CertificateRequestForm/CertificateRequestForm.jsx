@@ -9,13 +9,13 @@ const CertificateRequestForm = ({ type, onBack, onNext }) => {
     typeOfCertificate: type,
     contactNumber: "",
     purpose: "",
-    quantity: "1", // Ginawa nating "1" ang default para mas mabilis sa user
+    quantity: "1",
     suffix: "",
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Contact number validation: digits only, must start with 0, and be exactly 11 digits
+
     if (!/^0\d{10}$/.test(applicationForm.contactNumber)) {
       return alert(
         "Ang Contact Number ay dapat may 11 digits at nagsisimula sa 0 (e.g., 09123456789).",
@@ -56,10 +56,8 @@ const CertificateRequestForm = ({ type, onBack, onNext }) => {
         <div className={style.goldDivider}></div>
       </div>
 
-      {/* Main Core Form Block */}
       <form className={style.mainForm} onSubmit={handleSubmit}>
         <div className={style.inputGrid}>
-          {/* FIRST NAME (LOCKED) */}
           <div className={style.inputGroup}>
             <label className={style.fieldLabel}>
               First Name <span className={style.lockIcon}>🔒</span>
@@ -72,7 +70,6 @@ const CertificateRequestForm = ({ type, onBack, onNext }) => {
             />
           </div>
 
-          {/* MIDDLE NAME (LOCKED) */}
           <div className={style.inputGroup}>
             <label className={style.fieldLabel}>
               Middle Name <span className={style.lockIcon}>🔒</span>
@@ -85,7 +82,6 @@ const CertificateRequestForm = ({ type, onBack, onNext }) => {
             />
           </div>
 
-          {/* LAST NAME (LOCKED) */}
           <div className={style.inputGroup}>
             <label className={style.fieldLabel}>
               Last Name <span className={style.lockIcon}>🔒</span>
@@ -98,7 +94,6 @@ const CertificateRequestForm = ({ type, onBack, onNext }) => {
             />
           </div>
 
-          {/* SUFFIX */}
           <div className={style.inputGroup}>
             <label className={style.fieldLabel}>
               Suffix <span className={style.optionalText}>(Optional)</span>
@@ -117,7 +112,6 @@ const CertificateRequestForm = ({ type, onBack, onNext }) => {
             />
           </div>
 
-          {/* CERTIFICATE TYPE (LOCKED FULL WIDTH) */}
           <div className={`${style.inputGroup} ${style.fullWidth}`}>
             <label className={style.fieldLabel}>
               Selected Certificate Classification{" "}
@@ -131,7 +125,6 @@ const CertificateRequestForm = ({ type, onBack, onNext }) => {
             />
           </div>
 
-          {/* CONTACT NUMBER */}
           <div className={style.inputGroup}>
             <label className={style.fieldLabel}>
               Contact Number <span className={style.requiredAsterisk}>*</span>
@@ -152,7 +145,6 @@ const CertificateRequestForm = ({ type, onBack, onNext }) => {
             />
           </div>
 
-          {/* QUANTITY */}
           <div className={style.inputGroup}>
             <label className={style.fieldLabel}>
               Quantity (Bilang ng Kopya){" "}
@@ -174,7 +166,6 @@ const CertificateRequestForm = ({ type, onBack, onNext }) => {
             />
           </div>
 
-          {/* PURPOSE (FULL WIDTH TEXTAREA) */}
           <div className={`${style.inputGroup} ${style.fullWidth}`}>
             <label className={style.fieldLabel}>
               Purpose / Dahilan ng Pagkuha{" "}
@@ -196,7 +187,6 @@ const CertificateRequestForm = ({ type, onBack, onNext }) => {
           </div>
         </div>
 
-        {/* Action Button Segment */}
         <div className={style.actionWrapper}>
           <button type="submit" className={style.submitBtn}>
             <span>I-save at Magpatuloy</span>

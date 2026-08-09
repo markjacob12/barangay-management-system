@@ -38,13 +38,11 @@ const ConcernDetails = ({ data, onClose, statusUpdate }) => {
   return (
     <div className={style.modalOverlay} onClick={onClose}>
       <div className={style.modalBox} onClick={(e) => e.stopPropagation()}>
-        {/* Close Button na may background frame */}
         <button className={style.btnCloseModal} onClick={onClose} title="Isara">
           &times;
         </button>
 
         <div key={data._id} className={style.modalContainer}>
-          {/* BRAND HEADER: Mukhang Opisyal na Selyo o Dokumento */}
           <header className={style.govHeader}>
             <div className={style.headerLeft}>
               <span className={style.govSubtag}>
@@ -63,9 +61,7 @@ const ConcernDetails = ({ data, onClose, statusUpdate }) => {
 
           <div className={style.goldDivider}></div>
 
-          {/* TWO-COLUMN CONTENT GRID */}
           <div className={style.mainGrid}>
-            {/* LEFT SIDE: Big Professional Evidence Presentation */}
             <div className={style.leftPanel}>
               <label className={style.panelSectionLabel}>
                 KALAKIP NA EBIDENSYA / LARAWAN
@@ -84,7 +80,6 @@ const ConcernDetails = ({ data, onClose, statusUpdate }) => {
               </div>
             </div>
 
-            {/* RIGHT SIDE: Heavy-duty Technical Metadata Profile */}
             <div className={style.rightPanel}>
               <div className={style.metaProfileCard}>
                 <div className={style.profileField}>
@@ -119,7 +114,6 @@ const ConcernDetails = ({ data, onClose, statusUpdate }) => {
                 </div>
               </div>
 
-              {/* BIG DETAILED DESCRIPTION AREA */}
               <div className={style.descriptionSection}>
                 <label className={style.panelSectionLabel}>
                   BUONG SALAYSAY AT PAGLALARAWAN
@@ -132,7 +126,6 @@ const ConcernDetails = ({ data, onClose, statusUpdate }) => {
                 </div>
               </div>
 
-              {/* PREMIUM ACTION EXECUTIVE FOOTER */}
               <div className={style.actionPanel}>
                 {data.status === "Pending" && (
                   <div>

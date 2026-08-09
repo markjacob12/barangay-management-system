@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f0f2f5; /* Light gray background */
+  background-color: #f0f2f5;
   font-family: "Poppins", sans-serif;
 }
 
@@ -40,7 +40,7 @@
 .login-side-info h2 {
   font-size: 1.8rem;
   letter-spacing: 2px;
-  color: #d4af37; /* Gold */
+  color: #d4af37;
   margin: 0;
 }
 
@@ -125,7 +125,6 @@
   text-decoration: underline;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .login-card {
     flex-direction: column;

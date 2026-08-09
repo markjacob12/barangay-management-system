@@ -5,7 +5,6 @@ const CertificationRequest = ({ onOpenModal }) => {
   return (
     <div className={style.requestCardBox}>
       <div className={style.cardFlexContainer}>
-        {/* Decorative Government-Grade Badge Icon */}
         <div className={style.iconColumn}>
           <div className={style.badgeIconCircle}>
             <svg
@@ -26,7 +25,6 @@ const CertificationRequest = ({ onOpenModal }) => {
           </div>
         </div>
 
-        {/* Informational Text Block */}
         <div className={style.textContentBlock}>
           <h3 className={style.cardTitle}>Online Document Certification</h3>
           <p className={style.cardDescription}>
@@ -35,7 +33,6 @@ const CertificationRequest = ({ onOpenModal }) => {
           </p>
         </div>
 
-        {/* Action Button Trigger Wrapper */}
         <div className={style.buttonActionWrapper}>
           <button
             type="button"
@@ -43,7 +40,6 @@ const CertificationRequest = ({ onOpenModal }) => {
             onClick={onOpenModal}
           >
             <span>Gumawa ng Request</span>
-            {/* Elegant forward arrow icon */}
             <svg
               width="16"
               height="16"

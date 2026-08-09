@@ -27,13 +27,10 @@ export const useConcern = () => {
     try {
       const formData = new FormData();
 
-      // 1. I-handle ang file kung mayroon
       if (data.imageFile) {
         formData.append("image", data.imageFile);
       }
 
-      // 2. I-map ang lahat ng text fields nang sabay-sabay
-      // Ginawa nating object para isang loop lang ang katapat
       const textFields = {
         typeOfConcern: data.typeOfConcern || "",
         specificConcern: data.specificConcern || "",
@@ -45,19 +42,15 @@ export const useConcern = () => {
         status: "Pending",
       };
 
-      // Ito ang "magic" loop na maglalagay sa lahat ng fields sa formData
       Object.entries(textFields).forEach(([key, value]) => {
         formData.append(key, value);
       });
 
-      // 3. I-send ang request
       const res = await api.post("/concern/add", formData);
 
-      // 4. Update UI kung success
       setConcernData((prev) => [...prev, res.data.data]);
       return true;
     } catch (err) {
-      // Mas malinis na error logging
       const errorMessage =
         err.response?.data?.message || "May error sa server, subukan muli.";
       console.error("❌ Submission Failed:", errorMessage);
@@ -79,7 +72,6 @@ export const useConcern = () => {
 
   const resolveConcern = async (id, formData) => {
     try {
-      // Ensure the header is explicitly set if not handled by your axios interceptor
       const res = await api.put(`/concern/resolve/${id}`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });

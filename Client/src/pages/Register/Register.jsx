@@ -15,7 +15,6 @@ const Register = () => {
     middleName: "",
   });
 
-  // System Message Notification States
   const [systemMessage, setSystemMessage] = useState({ type: "", text: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -35,7 +34,6 @@ const Register = () => {
         text: "Mabuhay! Matagumpay na nairerehistro ang iyong account.",
       });
 
-      // Sandaling delay para makita ng user ang tagumpay na abiso bago mag-redirect
       setTimeout(() => {
         navigate("/HomeUser");
       }, 1500);
@@ -49,7 +47,6 @@ const Register = () => {
       setIsSubmitting(false);
     }
 
-    // Nire-reset lamang ang form field kung hindi nagtagumpay upang hindi masayang ang tinype ng user
     if (systemMessage.type !== "success") {
       setRegisterForm({
         username: "",
@@ -65,7 +62,6 @@ const Register = () => {
   return (
     <div className="register-container">
       <div className="register-card">
-        {/* Government Institutional Header */}
         <div className="register-header">
           <img src={Logo} alt="PAPA Barangay Logo" className="reg-logo" />
           <h2>Maging Kasapi ng PAPA BARANGAY</h2>
@@ -78,7 +74,6 @@ const Register = () => {
           </p>
         </div>
 
-        {/* Dynamic System Status Feedbacks */}
         {systemMessage.text && (
           <div className={`system-status-banner ${systemMessage.type}`}>
             <span className="status-icon">
@@ -90,7 +85,6 @@ const Register = () => {
 
         <form className="register-form" onSubmit={handleSubmit}>
           <div className="form-grid">
-            {/* Column 1: Akawnt Kredensyal */}
             <div className="form-column">
               <div className="column-title-segment">Impormasyon ng Account</div>
 
@@ -140,7 +134,6 @@ const Register = () => {
               </div>
             </div>
 
-            {/* Column 2: Personal na Detalye */}
             <div className="form-column">
               <div className="column-title-segment">Personal na Detalye</div>
 
@@ -193,7 +186,6 @@ const Register = () => {
             </div>
           </div>
 
-          {/* Action Footer Frame */}
           <div className="register-footer">
             <button
               type="submit"

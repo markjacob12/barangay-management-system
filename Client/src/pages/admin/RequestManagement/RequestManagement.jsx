@@ -23,7 +23,6 @@ const RequestManagement = () => {
     setIsViewModal(false);
   };
 
-  // Helper function para sa intelligent professional certificate types tag styling
   const getCertificateBadgeClass = (type) => {
     const lowerType = type?.toLowerCase() || "";
     if (lowerType.includes("clearance")) return style.clearance;
@@ -36,7 +35,6 @@ const RequestManagement = () => {
     requests?.filter((req) => {
       const requestStatus = req.status?.toLowerCase().trim() || "pending";
 
-      // 1. Tab Filter Logic
       let tabMatch = false;
       switch (currentTab) {
         case "pending":
@@ -61,7 +59,6 @@ const RequestManagement = () => {
         req.lastName?.toLowerCase().includes(searchLower) ||
         req.typeOfCertificate?.toLowerCase().includes(searchLower);
 
-      // Dapat ay parehong TRUE ang tabMatch at searchMatch
       return tabMatch && searchMatch;
     }) || [];
   return (
@@ -70,7 +67,6 @@ const RequestManagement = () => {
       <div className={style["main-wrapper"]}>
         <Navbar />
         <div className={style["content-area"]}>
-          {/* Professional Government-Grade Module Title Block */}
           <div className={style.pageHeaderContainer}>
             <div className={style.titleBlock}>
               <h2 className={style.pageTitle}>Document Requests Panel</h2>
@@ -80,7 +76,6 @@ const RequestManagement = () => {
               </p>
             </div>
 
-            {/* Dito sa kanang bahagi ng header ipinuwesto ang Premium Search Bar Group */}
             <div className={style.headerControlsBlock}>
               <div className={style.searchWrapper}>
                 <svg
@@ -118,7 +113,6 @@ const RequestManagement = () => {
               className={`${style.tabBtn} ${currentTab === "pending" ? style.activeTab : ""}`}
               onClick={() => setCurrentTab("pending")}
             >
-              {/* Modern Animated/Style Hourglass Icon */}
               <svg
                 width="16"
                 height="16"
@@ -143,7 +137,6 @@ const RequestManagement = () => {
               className={`${style.tabBtn} ${currentTab === "approved" ? style.activeTab : ""}`}
               onClick={() => setCurrentTab("approved")}
             >
-              {/* Double Check / Shield Success Icon */}
               <svg
                 width="16"
                 height="16"
@@ -186,7 +179,6 @@ const RequestManagement = () => {
             </button>
           </div>
 
-          {/* Responsive Table Grid Container */}
           <div className={style.tableContainerShadow}>
             <table className={style.adminTable}>
               <thead>
@@ -203,11 +195,10 @@ const RequestManagement = () => {
                 {filteredRequest && filteredRequest.length > 0 ? (
                   filteredRequest.map((req) => (
                     <tr key={req._id} className={style.tableInteractiveRow}>
-                      {/* Name with elegant Last Name prioritization or formal structure */}
                       <td className={style.primaryNameCell}>
                         {`${req.lastName}, ${req.firstName} ${req.middleName || ""}`}
                       </td>
-                      {/* Dynamic Certificate Type Badge */}
+
                       <td>
                         <span
                           className={`${style.certBadge} ${getCertificateBadgeClass(req.typeOfCertificate)}`}
@@ -234,7 +225,6 @@ const RequestManagement = () => {
                           onClick={() => handleView(req)}
                           title="Open Comprehensive Document Request File"
                         >
-                          {/* Pro Document Folder Eye/Open View Icon */}
                           <svg
                             width="14"
                             height="14"
@@ -273,7 +263,6 @@ const RequestManagement = () => {
         </div>
       </div>
 
-      {/* Premium Integrated Document View Modal System */}
       {isViewModal && (
         <div className={style.modalOverlay}>
           <div className={style.modalContent}>

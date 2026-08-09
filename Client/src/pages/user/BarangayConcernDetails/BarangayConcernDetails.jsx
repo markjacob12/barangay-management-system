@@ -38,15 +38,12 @@ const BarangayConcernDetails = ({ data, onClose }) => {
               &times;
             </button>
 
-            {/* Nag-iba ang class ng card kapag resolved para sa mas malawak na grid space */}
             <div
               key={data._id}
               className={`${style.detailCard} ${isResolved ? style.resolvedLayout : ""}`}
             >
-              {/* ================= LEFT COLUMN: EVIDENCE PHOTO(S) ================= */}
               <div className={style.imageSection}>
                 {!isResolved ? (
-                  // KONDISYON A: Kapag HINDI PA RESOLVED (Isang malaking Before Photo lang)
                   <div className={style.singlePhotoBlock}>
                     <label className={style.photoLabel}>
                       Ebidensya ng Hinaing (BEFORE)
@@ -65,7 +62,6 @@ const BarangayConcernDetails = ({ data, onClose }) => {
                     </div>
                   </div>
                 ) : (
-                  // KONDISYON B: KAPAG RESOLVED NA (Government Audit View - Side by Side)
                   <div className={style.comparisonGrid}>
                     <div className={style.photoBlock}>
                       <label
@@ -109,7 +105,6 @@ const BarangayConcernDetails = ({ data, onClose }) => {
                   </div>
                 )}
 
-                {/* METADATA PANEL */}
                 <div className={style.metaDataBlock}>
                   <div className={style.ticketIdBlock}>
                     <span className={style.metaLabel}>TICKET ID</span>
@@ -129,7 +124,6 @@ const BarangayConcernDetails = ({ data, onClose }) => {
                 </div>
               </div>
 
-              {/* ================= RIGHT COLUMN: CORE DETAILS ================= */}
               <div className={style.infoSection}>
                 <div className={style.headerBlock}>
                   <span className={style.govSubtag}>
@@ -206,7 +200,6 @@ const BarangayConcernDetails = ({ data, onClose }) => {
                   </div>
                 </div>
 
-                {/* RESOLUTION REMARKS BOX (Lalabas lang din kapag Resolved) */}
                 {isResolved && (
                   <div className={style.resolutionRemarksBlock}>
                     <label

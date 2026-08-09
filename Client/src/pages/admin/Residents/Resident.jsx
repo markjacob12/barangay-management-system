@@ -53,16 +53,13 @@ const Resident = () => {
                 <ResidentForm
                   onSave={(data) => {
                     addResident(data);
-                    setIsModalOpen(false); // Kusa itong magsasara pagkatapos i-save
+                    setIsModalOpen(false);
                   }}
                 />
               </div>
             </div>
           )}
-          {/* Palitan mo itong lumang bahagi na ito: */}
-          {/* {isViewResident && <ViewResident resident={selectResident} />} */}
 
-          {/* At gawin mong ganito ang istraktura gamit ang modal classes mo: */}
           {isViewResident && (
             <div className={style.residentModalOverlay}>
               <div className={style.residentModalContent}>
@@ -78,7 +75,6 @@ const Resident = () => {
                   &times;
                 </button>
 
-                {/* Dito ipapakita ang laman ng resident */}
                 <ViewResident resident={selectResident} />
               </div>
             </div>

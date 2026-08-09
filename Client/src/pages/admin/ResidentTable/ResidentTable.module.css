@@ -11,7 +11,6 @@
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* Header Toolbar Panel */
 .headerSection {
   display: flex;
   justify-content: space-between;
@@ -42,12 +41,11 @@
   letter-spacing: 0.5px;
 }
 
-/* Premium Gold Add Button */
 .btnAdd {
   background-color: #001f3f;
   color: #ffffff;
   border: none;
-  border-bottom: 3px solid #d4af37; /* Gold Rim Accent */
+  border-bottom: 3px solid #d4af37;
   padding: 0.75rem 1.5rem;
   font-weight: 700;
   font-size: 0.9rem;
@@ -68,17 +66,15 @@
 
 .plusIcon {
   font-size: 1.2rem;
-  color: #d4af37; /* Gold Plus Sign */
+  color: #d4af37;
   line-height: 1;
 }
 
-/* Responsive Table Shell Wrapper */
 .tableResponsive {
   width: 100%;
   overflow-x: auto;
 }
 
-/* Core Table Structural Layout */
 .customTable {
   width: 100%;
   border-collapse: collapse;
@@ -86,9 +82,8 @@
   font-size: 0.95rem;
 }
 
-/* High-end Official Navy Header Look */
 .customTable th {
-  background-color: #001f3f; /* Navy Header */
+  background-color: #001f3f;
   color: #ffffff;
   font-weight: 600;
   text-transform: uppercase;
@@ -105,25 +100,18 @@
   vertical-align: middle;
 }
 
-/* Row Hover and Alternating Track Styles */
 .tableRow {
   transition: background-color 0.15s ease;
 }
 
 .tableRow:nth-child(even) {
-  background-color: #f8fafc; /* Fine alternating background */
+  background-color: #f8fafc;
 }
 
 .tableRow:hover {
-  background-color: rgba(
-    212,
-    175,
-    55,
-    0.04
-  ); /* Subtle Gold hue accent on row hover */
+  background-color: rgba(212, 175, 55, 0.04);
 }
 
-/* Column Specific Alignments & Modifications */
 .nameCell {
   font-weight: 700;
   color: #001f3f !important;
@@ -141,7 +129,6 @@
   color: #64748b;
 }
 
-/* Premium Minimalist Status Badges */
 .genderBadge {
   font-size: 0.75rem;
   font-weight: 700;
@@ -173,7 +160,6 @@
   border-radius: 4px;
 }
 
-/* Action Control Panels */
 .actionCells {
   display: flex;
   justify-content: center;
@@ -181,7 +167,6 @@
   gap: 0.6rem;
 }
 
-/* Pro View Button Style */
 .btnView {
   background-color: #ffffff;
   color: #001f3f;
@@ -202,7 +187,6 @@
   color: #ffffff;
 }
 
-/* Pro Delete Button Style */
 .btnDelete {
   background-color: #fff1f2;
   color: #e11d48;
@@ -248,7 +232,6 @@
   font-weight: 500;
 }
 
-/* Responsive Structural Engineering */
 @media (max-width: 768px) {
   .headerSection {
     flex-direction: column;
@@ -261,9 +244,6 @@
     justify-content: center;
   }
 }
-/* ==========================================================================
-   ADDITIONAL STYLES FOR THE SEARCH BAR AND TOOLBAR ALIGNMENT
-   ========================================================================== */
 
 .toolbarActions {
   display: flex;

@@ -38,7 +38,6 @@
   margin-left: 270px;
 }
 
-/* Header Text Blocks */
 .sectionHeader {
   display: flex;
   flex-direction: column;
@@ -46,7 +45,7 @@
 
 .pageTitle {
   margin: 0;
-  color: #001f3f; /* Deep Premium Navy */
+  color: #001f3f;
   font-size: 1.6rem;
   font-weight: 800;
   letter-spacing: -0.5px;
@@ -62,26 +61,21 @@
 .goldDivider {
   width: 50px;
   height: 3px;
-  background-color: #d4af37; /* Signature Gold Trim Strip */
+  background-color: #d4af37;
   border-radius: 2px;
   margin-top: 1rem;
 }
 
-/* Grid Layout Canvas Panels */
 .containerRequest {
   width: 100%;
 }
 
 .requestsGridCanvas {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(340px, 1fr)
-  ); /* Auto adaptive columns card canvas */
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   gap: 1.5rem;
 }
 
-/* Premium Resident Ticket Cards Design */
 .requestCard {
   background-color: #ffffff;
   border: 1px solid #e2e8f0;
@@ -116,9 +110,6 @@
   line-height: 1.3;
 }
 
-/* ==========================================================================
-   DYNAMIC STATUS BADGES FRAMEWORK MATRIX
-   ========================================================================== */
 .statusBadge {
   font-size: 0.72rem;
   font-weight: 800;
@@ -130,24 +121,23 @@
 }
 
 .statusPending {
-  background-color: #fffbeb; /* Soft Amber Yellow */
+  background-color: #fffbeb;
   color: #b45309;
   border: 1px solid #fef3c7;
 }
 
 .statusApproved {
-  background-color: #f0fdf4; /* Emerald Green */
+  background-color: #f0fdf4;
   color: #166534;
   border: 1px solid #bbf7d0;
 }
 
 .statusRejected {
-  background-color: #fef2f2; /* Crimson Danger Red */
+  background-color: #fef2f2;
   color: #991b1b;
   border: 1px solid #ffeeee;
 }
 
-/* Content Details Value Stack */
 .cardBody {
   display: flex;
   flex-direction: column;
@@ -184,7 +174,6 @@
   text-overflow: ellipsis;
 }
 
-/* Actions Hub Controllers Footer strip */
 .cardActions {
   display: flex;
   gap: 0.75rem;
@@ -225,8 +214,6 @@
   border-color: #dc2626;
 }
 
-/* Empty State Styling Elements */
-/* Container framework para sa Empty State at No Records Box */
 .noDataBox {
   display: flex;
   flex-direction: column;
@@ -235,46 +222,41 @@
   text-align: center;
   padding: 4rem 2rem;
   background-color: #ffffff;
-  border: 1px dashed #cbd5e1; /* Putol-putol na border para sa clean blueprint empty look */
+  border: 1px dashed #cbd5e1;
   border-radius: 8px;
   width: 100%;
   box-sizing: border-box;
   margin: 1rem 0;
 }
 
-/* Kulay at pwesto ng bago mong SVG Icon */
 .noDataIconSVG {
-  color: #94a3b8; /* Muted Slate gray */
+  color: #94a3b8;
   margin-bottom: 1.25rem;
   transition:
     transform 0.3s ease,
     color 0.3s ease;
 }
 
-/* Konting micro-interaction kapag tinapatan ng mouse ang walang data box */
 .noDataBox:hover .noDataIconSVG {
-  color: #d4af37; /* Nagiging Gold ang kupas na folder */
-  transform: translateY(-4px); /* Umaangat ng konti nang banayad */
+  color: #d4af37;
+  transform: translateY(-4px);
 }
 
 .noDataBox h3 {
   margin: 0 0 0.5rem 0;
   font-size: 1.2rem;
   font-weight: 700;
-  color: #001f3f; /* Signature Deep Navy */
+  color: #001f3f;
 }
 
 .noDataBox p {
   margin: 0;
   font-size: 0.9rem;
-  color: #64748b; /* Malinis na detalye ng text */
-  max-width: 340px; /* Saktong lapad para bumaba ang ibang salita */
+  color: #64748b;
+  max-width: 340px;
   line-height: 1.5;
 }
 
-/* ==========================================================================
-   MODAL BACKDROP INTERFACE ENGINES
-   ========================================================================== */
 .modalOverlay {
   position: fixed;
   top: 0;
@@ -338,7 +320,6 @@
   overflow-y: auto;
 }
 
-/* Loading Spinner Components */
 .loadingSkeletonWrapper {
   display: flex;
   flex-direction: column;
@@ -383,7 +364,6 @@
   }
 }
 
-/* Mobile responsive media breakpoints */
 @media (max-width: 768px) {
   .coreBodyFrame {
     flex-direction: column;
@@ -398,28 +378,23 @@
     grid-template-columns: 1fr;
   }
 }
-/* ==========================================================================
-   TAB FILTERS INTERFACE SYSTEM
-   ========================================================================== */
 
-/* Main Container na nagbabalot sa tatlong buttons */
 .tabContainer {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: #f1f5f9; /* Soft gray backing parang capsule container */
+  background-color: #f1f5f9;
   padding: 0.35rem;
   border-radius: 8px;
-  width: max-content; /* Saktong sukat lang sa haba ng mga buttons */
+  width: max-content;
   margin-bottom: 1.5rem;
   border: 1px solid #e2e8f0;
 }
 
-/* Base style para sa lahat ng tab buttons kapag hindi pa napipili */
 .tabBtn {
   background: transparent;
   border: none;
-  color: #64748b; /* Muted slate gray para hindi umahon sa paningin */
+  color: #64748b;
   padding: 0.6rem 1.2rem;
   font-family: inherit;
   font-size: 0.88rem;
@@ -428,48 +403,40 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 0.5rem; /* Espasyo sa pagitan ng emoji icon at text */
+  gap: 0.5rem;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   user-select: none;
 }
 
-/* Hover feedback kapag itinutok ang mouse sa hindi aktibong tab */
 .tabBtn:hover {
-  color: #001f3f; /* Umahon sa signature Navy kulay */
+  color: #001f3f;
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-/* ==========================================================================
-   ACTIVE STATES (Kapag napili o clicked ang tab)
-   ========================================================================== */
 .tabBtn.activeTab {
-  background-color: #ffffff; /* Pumuputi ang background para magmukhang litaw na card */
-  color: #001f3f; /* Solid Navy Blue text */
+  background-color: #ffffff;
+  color: #001f3f;
   box-shadow:
     0 4px 10px rgba(0, 31, 63, 0.06),
     0 1px 3px rgba(0, 0, 0, 0.05);
-  border-bottom: 2px solid #d4af37; /* May manipis na gold underline accent para sa focus indicator */
+  border-bottom: 2px solid #d4af37;
 }
 
-/* Responsive adjustment kung sakaling lumiit ang screen ng laptop */
 @media (max-width: 600px) {
   .tabContainer {
-    width: 100%; /* Sinasakop ang buong lapad ng screen */
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(
-      3,
-      1fr
-    ); /* Hinahati sa tatlong pantay na columns */
+    grid-template-columns: repeat(3, 1fr);
     text-align: center;
   }
 
   .tabBtn {
     justify-content: center;
     padding: 0.6rem 0.4rem;
-    font-size: 0.8rem; /* Pinapaliit ang text para magkasya sa mobile devices */
+    font-size: 0.8rem;
   }
 }
-/* Nililinis ang sukat at alignment ng mga bagong vector icons */
+
 .tabIcon {
   flex-shrink: 0;
   width: 16px;
@@ -477,7 +444,6 @@
   transition: transform 0.2s ease;
 }
 
-/* Nagbibigay ng micro-interaction kapag hinover ang mouse sa button */
 .tabBtn:hover .tabIcon {
   transform: scale(1.1);
 }

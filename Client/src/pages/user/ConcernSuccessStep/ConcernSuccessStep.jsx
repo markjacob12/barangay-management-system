@@ -2,13 +2,11 @@ import React from "react";
 import style from "./ConcernSuccessStep.module.css";
 
 const ConcernSuccessStep = ({ data, onBack }) => {
-  // Mag-generate ng random tracking number para sa residente bilang patunay
   const trackingNumber =
     data?.trackingId || `BRGY-${Math.floor(100000 + Math.random() * 900000)}`;
 
   return (
     <div className={style.successContainer}>
-      {/* Success Animated/Static Badge Area */}
       <div className={style.iconWrapper}>
         <div className={style.successCircle}>
           <svg
@@ -26,7 +24,6 @@ const ConcernSuccessStep = ({ data, onBack }) => {
         </div>
       </div>
 
-      {/* Main Announcement Block */}
       <div className={style.successHeader}>
         <span className={style.govSubtag}>SISTEMA NG PAMUNUAN NG BARANGAY</span>
         <h2>Matagumpay na Naisumite ang Ulat!</h2>
@@ -36,7 +33,6 @@ const ConcernSuccessStep = ({ data, onBack }) => {
         </p>
       </div>
 
-      {/* Official Document Reference Card */}
       <div className={style.referenceCard}>
         <div className={style.cardRow}>
           <span className={style.cardLabel}>Tracking Reference Number:</span>
@@ -54,7 +50,6 @@ const ConcernSuccessStep = ({ data, onBack }) => {
         </p>
       </div>
 
-      {/* Information Disclaimer Banner */}
       <div className={style.infoBanner}>
         <svg
           width="18"
@@ -74,7 +69,6 @@ const ConcernSuccessStep = ({ data, onBack }) => {
         </span>
       </div>
 
-      {/* Action Controller Area - PINAGITNA */}
       <div className={style.actionContainer}>
         <button type="button" onClick={onBack} className={style.btnFinish}>
           Bumalik sa Dashboard

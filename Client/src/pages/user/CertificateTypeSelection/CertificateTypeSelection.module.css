@@ -1,10 +1,8 @@
-/* Core Structural Sandbox */
 .selectionContainer {
   width: 100%;
   animation: fadeInFrame 0.3s ease-out;
 }
 
-/* Section Header Typography Organizers */
 .headerSection {
   text-align: center;
   margin-bottom: 2.5rem;
@@ -14,7 +12,7 @@
 }
 
 .title {
-  color: #001f3f; /* Deep Corporate Navy */
+  color: #001f3f;
   font-size: 1.5rem;
   font-weight: 800;
   margin: 0 0 0.4rem 0;
@@ -22,7 +20,7 @@
 }
 
 .subtitle {
-  color: #64748b; /* Soft gray description tone */
+  color: #64748b;
   font-size: 0.93rem;
   margin: 0 auto;
   max-width: 600px;
@@ -30,23 +28,20 @@
   font-weight: 500;
 }
 
-/* Elegant Center Thin Ribbon bar */
 .goldDivider {
   width: 50px;
   height: 3px;
-  background-color: #d4af37; /* Signature Gold Trim Accent */
+  background-color: #d4af37;
   border-radius: 2px;
   margin-top: 1rem;
 }
 
-/* 2x2 Clean Responsive Card Grid Framework */
 .cardGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
 
-/* Premium Interactive Document Button Selection Cards */
 .certCard {
   background-color: #ffffff;
   border: 1px solid #e2e8f0;
@@ -63,7 +58,6 @@
   outline: none;
 }
 
-/* Horizontal Axis holding the Icon and Arrow Anchor */
 .cardHeaderAxis {
   display: flex;
   justify-content: space-between;
@@ -71,20 +65,18 @@
   width: 100%;
 }
 
-/* Icon Housing Frame with Translucent background effect */
 .iconHousing {
   width: 44px;
   height: 44px;
   border-radius: 6px;
   background-color: #f1f5f9;
-  color: #001f3f; /* Dark Navy icon stroke */
+  color: #001f3f;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease;
 }
 
-/* Soft Hidden Action Arrow */
 .arrowWrapper {
   color: #94a3b8;
   transform: translateX(-4px);
@@ -92,7 +84,6 @@
   transition: all 0.25s ease;
 }
 
-/* Text Container Stack */
 .cardTextMeta {
   display: flex;
   flex-direction: column;
@@ -114,11 +105,8 @@
   font-weight: 500;
 }
 
-/* ==========================================================================
-   INTERACTIVE STATES (Micro-animations kapag tinutok o pinindot ang card)
-   ========================================================================== */
 .certCard:hover {
-  border-color: #001f3f; /* Dark navy border frame on focus */
+  border-color: #001f3f;
   background-color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(0, 31, 63, 0.06);
@@ -126,13 +114,13 @@
 
 .certCard:hover .iconHousing {
   background-color: #001f3f;
-  color: #ffffff; /* Baligtarin ang kulay ng icon para sumabog ang highlight */
+  color: #ffffff;
 }
 
 .certCard:hover .arrowWrapper {
   opacity: 1;
   transform: translateX(0);
-  color: #d4af37; /* Lilitaw ang gintong palaso bilang hint */
+  color: #d4af37;
 }
 
 .certCard:active {
@@ -140,7 +128,6 @@
   box-shadow: 0 4px 12px rgba(0, 31, 63, 0.04);
 }
 
-/* CSS Entry Animations */
 @keyframes fadeInFrame {
   from {
     opacity: 0;
@@ -152,10 +139,9 @@
   }
 }
 
-/* Mobile responsive collapse grid execution */
 @media (max-width: 680px) {
   .cardGrid {
-    grid-template-columns: 1fr; /* Isang hanay na lang kapag cellphone ang gamit */
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
 

@@ -12,7 +12,6 @@ const LandingNavBar = () => {
               <Link to="/Login">Login</Link>
             </li>
             <li>
-              {/* Binigyan natin ng special class para standout ang Register */}
               <Link to="/register" className={style["register-btn"]}>
                 Register
               </Link>

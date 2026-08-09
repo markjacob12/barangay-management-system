@@ -82,7 +82,6 @@ const CertificateTypeSelection = ({ onSelect }) => {
 
   return (
     <div className={style.selectionContainer}>
-      {/* Informational Center Header Block */}
       <div className={style.headerSection}>
         <h2 className={style.title}>Pumili ng Uri ng Dokumento</h2>
         <p className={style.subtitle}>
@@ -92,7 +91,6 @@ const CertificateTypeSelection = ({ onSelect }) => {
         <div className={style.goldDivider}></div>
       </div>
 
-      {/* Grid Canvas System */}
       <div className={style.cardGrid}>
         {certificates.map((cert) => (
           <button

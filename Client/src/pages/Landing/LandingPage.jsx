@@ -18,10 +18,8 @@ const LandingPage = () => {
 
   return (
     <div className={style.landingContainer}>
-      {/* 1. Navigation Bar */}
       <LandingNavBar />
 
-      {/* 2. Hero Section (Dynamic Government Premium Banner) */}
       <section
         className={style.heroSection}
         style={{ backgroundImage: `url(${Background})` }}
@@ -52,11 +50,9 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* 3. Quick Services / Features Section */}
       <section className={style.servicesSection}>
         <h2 className={style.sectionTitle}>Mga Online na Serbisyo</h2>
         <div className={style.gridServices}>
-          {/* 1. Barangay Permit */}
           <div className={style.serviceCard}>
             <h3>Barangay Permit</h3>
             <p>
@@ -65,7 +61,6 @@ const LandingPage = () => {
             </p>
           </div>
 
-          {/* 2. Barangay Clearance */}
           <div className={style.serviceCard}>
             <h3>Barangay Clearance</h3>
             <p>
@@ -75,7 +70,6 @@ const LandingPage = () => {
             </p>
           </div>
 
-          {/* 3. Certificate of Indigency */}
           <div className={style.serviceCard}>
             <h3>Certificate of Indigency</h3>
             <p>
@@ -84,7 +78,6 @@ const LandingPage = () => {
             </p>
           </div>
 
-          {/* 4. Blotter / Reklamo */}
           <div className={style.serviceCard}>
             <h3>Blotter / Reklamo</h3>
             <p>
@@ -93,7 +86,6 @@ const LandingPage = () => {
             </p>
           </div>
 
-          {/* 5. Barangay Residency */}
           <div className={style.serviceCard}>
             <h3>Barangay Residency</h3>
             <p>
@@ -104,7 +96,6 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* 4. Footer Section */}
       <footer className={style.footer}>
         <p>
           &copy; {new Date().getFullYear()}{" "}

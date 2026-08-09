@@ -1,5 +1,5 @@
 .admin-layout {
-  display: flex; /* Eto ang magdidikit sa Sidebar at Main-Wrapper */
+  display: flex;
   width: 100%;
   min-height: 100vh;
 }
@@ -7,58 +7,51 @@
 .main-wrapper {
   display: flex;
   flex-direction: column;
-  flex-grow: 1; /* Sasakupin ang lahat ng natitirang space */
-  overflow-y: auto; /* Para kung mahaba ang content, scrollable lang siya */
+  flex-grow: 1;
+  overflow-y: auto;
 }
 .content-area {
-  margin-left: 260px; /* Dapat kaparehas ito ng width ng sidebar mo */
+  margin-left: 260px;
   padding: 40px;
   width: calc(100% - 260px);
   min-height: 100vh;
   background-color: white;
 }
-/* Dedicated Full-Screen Overlay para sa Entry Form */
+
 .formModalOverlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(
-    15,
-    23,
-    42,
-    0.75
-  ); /* Mas madilim na slate/navy tone para mag-pop ang form */
-  backdrop-filter: blur(5px); /* Swabeng blur effect sa likod */
+  background-color: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(5px);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999; /* Sinisiguradong laging nasa ibabaw */
+  z-index: 9999;
   animation: formFadeIn 0.25s ease-out;
 }
 
-/* Modal Content Box Wrapper */
 .formModalContent {
   background-color: #ffffff;
   width: 95%;
-  max-width: 1250px; /* Mas malawak para maging kumportable ang 3-column input layout natin */
-  max-height: 90vh; /* Hindi lalampas sa screen ng laptop o desktop */
-  overflow-y: auto; /* May scrollbar sa loob kapag mababa ang resolution ng screen */
+  max-width: 1250px;
+  max-height: 90vh;
+  overflow-y: auto;
   border-radius: 8px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
   position: relative;
-  padding: 0.5rem; /* Sapat na padding dahil may padding na ang ResidentForm sa loob */
-  border-left: 5px solid #d4af37; /* Gold Accent Ribbon sa kaliwang gilid ng modal */
-  animation: formPopUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); /* Snappy pro animation entry */
+  padding: 0.5rem;
+  border-left: 5px solid #d4af37;
+  animation: formPopUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* Corporate/Government Close Button Look */
 .formCloseBtn {
   position: absolute;
-  top: 35px; /* Eksaktong katapat ng pamagat sa loob ng ResidentForm */
+  top: 35px;
   right: 40px;
-  background: #f1f5f9; /* Soft light gray circle wrapper */
+  background: #f1f5f9;
   border: 1px solid #cbd5e1;
   width: 32px;
   height: 32px;
@@ -72,17 +65,16 @@
   z-index: 50;
   transition: all 0.2s ease;
   line-height: 1;
-  padding-bottom: 3px; /* Visual balancing sa krus ng times symbol */
+  padding-bottom: 3px;
 }
 
 .formCloseBtn:hover {
-  background-color: #dc2626; /* Nagiging Pula kapag itatapon ang mouse bilang babala na magka-cancel */
+  background-color: #dc2626;
   color: #ffffff;
   border-color: #dc2626;
-  transform: rotate(90deg); /* May cool pro rotation feature */
+  transform: rotate(90deg);
 }
 
-/* High-End Webkit Scrollbars para sa loob ng Form Content Panel */
 .formModalContent::-webkit-scrollbar {
   width: 8px;
 }
@@ -92,15 +84,14 @@
 }
 
 .formModalContent::-webkit-scrollbar-thumb {
-  background: #001f3f; /* Navy Scroll Runner */
+  background: #001f3f;
   border-radius: 20px;
 }
 
 .formModalContent::-webkit-scrollbar-thumb:hover {
-  background: #d4af37; /* Gold kapag hinawakan o hinitak ng encoder */
+  background: #d4af37;
 }
 
-/* Smooth Dynamic Micro-Animations */
 @keyframes formFadeIn {
   from {
     opacity: 0;
@@ -121,7 +112,6 @@
   }
 }
 
-/* Mobile responsive alignment rules */
 @media (max-width: 768px) {
   .formModalContent {
     width: 100%;
@@ -157,47 +147,38 @@
 
 .btnClose:hover {
   background: #001f3f;
-  color: #d4af37; /* Gold accent on hover */
+  color: #d4af37;
 }
-/* Unique Backdrop overlay para sa Resident View na naka-blur nang kaunti */
+
 .residentModalOverlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(
-    0,
-    31,
-    63,
-    0.6
-  ); /* Navy blue base overlay na may transparency */
-  backdrop-filter: blur(
-    4px
-  ); /* Ginagawa nitong blur yung background para malinis tingnan */
+  background-color: rgba(0, 31, 63, 0.6);
+  backdrop-filter: blur(4px);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999; /* Siguraduhing nasa pinaka-itaas siya ng kahit anong element */
+  z-index: 9999;
   animation: fadeIn 0.2s ease-out;
 }
 
-/* Container ng mismong Profile Form */
 .residentModalContent {
   background-color: #ffffff;
   width: 90%;
   max-width: 1100px;
-  max-height: 85vh; /* Hindi lalampas sa screen */
-  overflow-y: auto; /* Magkakaroon ng scrollbar kapag mahaba ang data ng residente */
+  max-height: 85vh;
+  overflow-y: auto;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   position: relative;
   padding: 1rem;
-  border-top: 5px solid #d4af37; /* Gold top-border para sa Gov/Pro accent */
+  border-top: 5px solid #d4af37;
   animation: slideUp 0.3s ease-out;
 }
 
-/* Elegant Close Button */
 .residentCloseBtn {
   position: absolute;
   top: 15px;
@@ -205,14 +186,13 @@
   background: none;
   border: none;
   font-size: 2rem;
-  color: #ffffff; /* Gagawing puti para bagay sa Navy header banner */
+  color: #ffffff;
   cursor: pointer;
   z-index: 10;
   color: #001f3f;
   line-height: 1;
 }
 
-/* Smooth entry animations para maging mukhang modern at swabe */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -233,7 +213,6 @@
   }
 }
 
-/* Custom Scrollbar para sa loob ng modal para mukhang premium */
 .residentModalContent::-webkit-scrollbar {
   width: 8px;
 }

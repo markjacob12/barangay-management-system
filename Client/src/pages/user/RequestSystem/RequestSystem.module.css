@@ -12,12 +12,11 @@
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* Stepper Tracker Architecture Strip */
 .stepperHeaderBlock {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f8fafc; /* Fine subtle off-gray strip separator */
+  background-color: #f8fafc;
   padding: 1.5rem 2.5rem;
   border-bottom: 1px solid #e2e8f0;
 }
@@ -28,7 +27,6 @@
   gap: 0.85rem;
 }
 
-/* Advanced Stepper Indicator Spheres */
 .stepCircle {
   width: 36px;
   height: 36px;
@@ -45,7 +43,6 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
 }
 
-/* Active Working State */
 .activeStep {
   border-color: #001f3f !important;
   background-color: #001f3f !important;
@@ -53,15 +50,13 @@
   box-shadow: 0 4px 10px rgba(0, 31, 63, 0.2) !important;
 }
 
-/* Passed/Completed Step Checkmark Look */
 .completedStep {
-  border-color: #d4af37 !important; /* Premium State Gold Rim */
+  border-color: #d4af37 !important;
   background-color: rgba(212, 175, 55, 0.08) !important;
   color: #d4af37 !important;
   font-size: 1rem;
 }
 
-/* Stepper Text Label Organizers */
 .stepLabelBlock {
   display: flex;
   flex-direction: column;
@@ -86,7 +81,6 @@
   color: #001f3f !important;
 }
 
-/* Vector Connector Tracks line */
 .progressLine {
   flex: 1;
   height: 2px;
@@ -96,16 +90,14 @@
 }
 
 .lineFilled {
-  background-color: #d4af37 !important; /* Gold tracking vector connector line */
+  background-color: #d4af37 !important;
 }
 
-/* Sandbox Processing Content Base */
 .contentDynamicBody {
   padding: 2.5rem;
   background-color: #ffffff;
 }
 
-/* Mobile Adaptive Fluidity Rules */
 @media (max-width: 900px) {
   .stepperHeaderBlock {
     flex-direction: column;
@@ -115,7 +107,7 @@
   }
 
   .progressLine {
-    display: none; /* Tinatanggal ang linya sa mobile view para hindi magulo */
+    display: none;
   }
 
   .stepWrapper {

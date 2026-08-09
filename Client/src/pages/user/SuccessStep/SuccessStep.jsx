@@ -5,7 +5,6 @@ const SuccessStep = ({ data, type, onCloseModal }) => {
   const requestor = `${data?.firstName || "Gabriel"} ${data?.lastName || "Garcia"}`;
   const certificate = type || "Barangay Indigency";
 
-  // Gumamit tayo ng useMemo para hindi pabago-bago ang Tracking ID kapag nag-render ang state
   const trackingId = useMemo(() => {
     return "BRGY-" + Math.random().toString(36).substr(2, 9).toUpperCase();
   }, []);
@@ -14,7 +13,6 @@ const SuccessStep = ({ data, type, onCloseModal }) => {
     <div className={style.successWrapper}>
       <div className={style.modernCard}>
         <div className={style.content}>
-          {/* Engineered Animated SVG Checkmark Burst */}
           <div className={style.iconCircle}>
             <svg className={style.checkmarkSvg} viewBox="0 0 52 52">
               <circle
@@ -42,7 +40,6 @@ const SuccessStep = ({ data, type, onCloseModal }) => {
             cellphone kapag handa na itong pirmahan at kunin.
           </p>
 
-          {/* Premium Digital Receipt Slip Overlay */}
           <div className={style.detailsBox}>
             <div className={style.detailsHeader}>Official Request Receipt</div>
 
@@ -73,7 +70,6 @@ const SuccessStep = ({ data, type, onCloseModal }) => {
             </div>
           </div>
 
-          {/* Core Return Navigation Button */}
           <div className={style.actionSection}>
             <button
               type="button"

@@ -15,7 +15,6 @@ const Sidebar = () => {
   return (
     <>
       <aside className={`${style.sidebar} ${collapsed ? style.collapsed : ""}`}>
-        {/* Elite Brand Header */}
         <div className={style.logoContainer}>
           <div className={style.sealEmblem}>🏛️</div>
           <h2 className={style.brandName}>
@@ -24,7 +23,6 @@ const Sidebar = () => {
           <span className={style.govSubtag}>ADMIN PORTAL</span>
         </div>
 
-        {/* Elegant Navigation Menu */}
         <nav className={style.navMenu}>
           <NavLink
             to="/AdminDashboard"
@@ -32,7 +30,6 @@ const Sidebar = () => {
               isActive ? style.activeLink : style.link
             }
           >
-            {/* Dashboard Icon */}
             <svg
               className={style.svgIcon}
               viewBox="0 0 24 24"
@@ -54,7 +51,6 @@ const Sidebar = () => {
               isActive ? style.activeLink : style.link
             }
           >
-            {/* Residents Icon */}
             <svg
               className={style.svgIcon}
               viewBox="0 0 24 24"
@@ -76,7 +72,6 @@ const Sidebar = () => {
               isActive ? style.activeLink : style.link
             }
           >
-            {/* Request Icon */}
             <svg
               className={style.svgIcon}
               viewBox="0 0 24 24"
@@ -99,7 +94,6 @@ const Sidebar = () => {
               isActive ? style.activeLink : style.link
             }
           >
-            {/* Concern/Blotter Icon */}
             <svg
               className={style.svgIcon}
               viewBox="0 0 24 24"
@@ -115,7 +109,6 @@ const Sidebar = () => {
           </NavLink>
         </nav>
 
-        {/* Sidebar Footer with Logout */}
         <div className={style.footer}>
           <div className={style.divider}></div>
           <button onClick={handleLogout} className={style.logoutBtn}>

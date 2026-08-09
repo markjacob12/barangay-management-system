@@ -11,7 +11,6 @@ const BarangayConcern = () => {
   const [selecetedConcern, setSelectedConern] = useState(null);
   const [currentTab, setCurrentTab] = useState("pending");
 
-  // Sa loob ng BarangayConcern component:
   const filteredRequest = useMemo(() => {
     return concernData.filter((req) => {
       const concernStatus = (req.status || "pending").toLowerCase();
@@ -33,7 +32,7 @@ const BarangayConcern = () => {
           return true;
       }
     });
-  }, [concernData, currentTab]); // Mag-recalculate lang kapag nagbago ang data o tab
+  }, [concernData, currentTab]);
 
   const getPriorityClass = (priority) => {
     switch (priority) {
@@ -72,7 +71,6 @@ const BarangayConcern = () => {
             className={`${style.tabBtn} ${currentTab === "pending" ? style.activeTab : ""}`}
             onClick={() => setCurrentTab("pending")}
           >
-            {/* Modern Animated/Style Hourglass Icon */}
             <svg
               width="16"
               height="16"
@@ -97,7 +95,6 @@ const BarangayConcern = () => {
             className={`${style.tabBtn} ${currentTab === "approved" ? style.activeTab : ""}`}
             onClick={() => setCurrentTab("approved")}
           >
-            {/* Double Check / Shield Success Icon */}
             <svg
               width="16"
               height="16"
@@ -120,7 +117,6 @@ const BarangayConcern = () => {
             className={`${style.tabBtn} ${currentTab === "resolved" ? style.activeTab : ""}`}
             onClick={() => setCurrentTab("resolved")}
           >
-            {/* Alert / Ban / X Circle Icon */}
             <svg
               width="16"
               height="16"
@@ -143,7 +139,6 @@ const BarangayConcern = () => {
             className={`${style.tabBtn} ${currentTab === "disapproved" ? style.activeTab : ""}`}
             onClick={() => setCurrentTab("disapproved")}
           >
-            {/* Alert / Ban / X Circle Icon */}
             <svg
               width="16"
               height="16"
@@ -166,7 +161,6 @@ const BarangayConcern = () => {
           <div className={style.cardGrid}>
             {filteredRequest.map((req) => (
               <div key={req._id} className={style.concernCard}>
-                {/* Card Image Header Section */}
                 <div className={style.cardImageSection}>
                   <img
                     src={req.image}
@@ -178,7 +172,7 @@ const BarangayConcern = () => {
                         "https://placehold.co/400x250/001f3f/d4af37?text=No+Attached+Photo";
                     }}
                   />
-                  {/* Dynamic Floating Priority Badge inside Image */}
+
                   <span
                     className={`${style.priorityBadge} ${getPriorityClass(req.priorityLevel)}`}
                   >
@@ -186,7 +180,6 @@ const BarangayConcern = () => {
                   </span>
                 </div>
 
-                {/* Card Content Details Body */}
                 <div className={style.cardBody}>
                   <span className={style.govSubtag}>{req.typeOfConcern}</span>
                   <h4 className={style.specificConcernTitle}>
@@ -204,7 +197,6 @@ const BarangayConcern = () => {
                   </p>
                 </div>
 
-                {/* Card Action Interactive Footer */}
                 <div className={style.cardActionArea}>
                   <button
                     className={style.btnViewCard}
@@ -229,7 +221,6 @@ const BarangayConcern = () => {
           </div>
         ) : (
           <div className={style.noDataBox}>
-            {/* Modern Vector Empty Folder/Inbox Icon */}
             <svg
               width="48"
               height="48"

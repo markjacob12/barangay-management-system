@@ -12,7 +12,6 @@ const Concern = () => {
   const [selectedConcern, setSelectedConcern] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Dynamic Badge Color para sa Priority Level
   const getPriorityClass = (priority) => {
     switch (priority) {
       case "Emergency":
@@ -26,7 +25,6 @@ const Concern = () => {
     }
   };
 
-  // Dynamic Badge Color para sa Estado/Status
   const getStatusClass = (status) => {
     switch (status?.toLowerCase()) {
       case "pending":
@@ -63,11 +61,11 @@ const Concern = () => {
           return true;
       }
     });
-  }, [concernData, currentTab]); // Mag-recalculate lang kapag nagbago ang data o tab
+  }, [concernData, currentTab]);
 
   const handleOpenModal = (req) => {
     console.log("Data na ipapasa:", req);
-    setSelectedConcern(req); // Ipinapasa bilang array dahil .map ang nasa modal mo
+    setSelectedConcern(req);
     setIsModalOpen(true);
   };
 
@@ -81,7 +79,6 @@ const Concern = () => {
       </section>
 
       <main className={style.mainContent}>
-        {/* Elite Admin Dashboard Header */}
         <div className={style.dashboardHeader}>
           <div>
             <span className={style.govSubtag}>SISTEMA NG ADMINISTRASYON</span>
@@ -95,7 +92,6 @@ const Concern = () => {
             className={`${style.tabBtn} ${currentTab === "pending" ? style.activeTab : ""}`}
             onClick={() => setCurrentTab("pending")}
           >
-            {/* Modern Animated/Style Hourglass Icon */}
             <svg
               width="16"
               height="16"
@@ -120,7 +116,6 @@ const Concern = () => {
             className={`${style.tabBtn} ${currentTab === "approved" ? style.activeTab : ""}`}
             onClick={() => setCurrentTab("approved")}
           >
-            {/* Double Check / Shield Success Icon */}
             <svg
               width="16"
               height="16"
@@ -143,7 +138,6 @@ const Concern = () => {
             className={`${style.tabBtn} ${currentTab === "resolved" ? style.activeTab : ""}`}
             onClick={() => setCurrentTab("resolved")}
           >
-            {/* Alert / Ban / X Circle Icon */}
             <svg
               width="16"
               height="16"
@@ -166,7 +160,6 @@ const Concern = () => {
             className={`${style.tabBtn} ${currentTab === "disapproved" ? style.activeTab : ""}`}
             onClick={() => setCurrentTab("disapproved")}
           >
-            {/* Alert / Ban / X Circle Icon */}
             <svg
               width="16"
               height="16"
@@ -185,7 +178,7 @@ const Concern = () => {
             Tinanggihan (Disapproved)
           </button>
         </div>
-        {/* Responsive Table Component Container */}
+
         <div className={style.tableResponsive}>
           {filteredRequest && filteredRequest.length > 0 ? (
             <table className={style.concernTable}>
@@ -204,7 +197,6 @@ const Concern = () => {
               <tbody>
                 {concernData.map((req) => (
                   <tr key={req._id}>
-                    {/* Column 1: Image Frame */}
                     <td>
                       <div className={style.tableImageWrapper}>
                         <img
@@ -220,14 +212,12 @@ const Concern = () => {
                       </div>
                     </td>
 
-                    {/* Column 2: Concern Type Details */}
                     <td className={style.textPrimary}>
                       <span className={style.concernMainText}>
                         {req.typeOfConcern}
                       </span>
                     </td>
 
-                    {/* Column 3: Priority Pill Badge */}
                     <td>
                       <span
                         className={`${style.priorityBadge} ${getPriorityClass(req.priorityLevel)}`}
@@ -236,7 +226,6 @@ const Concern = () => {
                       </span>
                     </td>
 
-                    {/* Column 4: Status Badge */}
                     <td>
                       <span
                         className={`${style.statusBadge} ${getStatusClass(req.status)}`}
@@ -245,7 +234,6 @@ const Concern = () => {
                       </span>
                     </td>
 
-                    {/* Column 5: Document Timestamp */}
                     <td className={style.textSecondary}>
                       <div className={style.dateTimeBlock}>
                         <span className={style.tableDate}>
@@ -257,7 +245,6 @@ const Concern = () => {
                       </div>
                     </td>
 
-                    {/* Column 6: Action Trigger Button */}
                     <td style={{ textAlign: "center" }}>
                       <button
                         className={style.btnView}
@@ -282,7 +269,6 @@ const Concern = () => {
               </tbody>
             </table>
           ) : (
-            /* Premium Empty state wrapper */
             <div className={style.emptyContainer}>
               <div className={style.emptyIconWrapper}>
                 <svg

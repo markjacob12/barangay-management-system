@@ -29,13 +29,12 @@
   max-width: 700px;
   max-height: 85vh;
   overflow-y: auto;
-  border-top: 5px solid #d4af37; /* Gold Accent Bar sa pinaka-ulo */
+  border-top: 5px solid #d4af37;
   animation: modalSlideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
 }
 
-/* Premium Government-Style Header */
 .docketHeader {
   display: flex;
   align-items: center;
@@ -47,8 +46,8 @@
 }
 
 .headerIconBlock {
-  background-color: #001f3f; /* Signature Navy Blue */
-  color: #d4af37; /* Gold Emblem Icon */
+  background-color: #001f3f;
+  color: #d4af37;
   width: 40px;
   height: 40px;
   border-radius: 6px;
@@ -78,7 +77,6 @@
   font-weight: 500;
 }
 
-/* Close Window 'X' Button on Top-Right */
 .closeXBtn {
   position: absolute;
   top: 1.5rem;
@@ -99,12 +97,11 @@
 }
 
 .closeXBtn:hover {
-  background-color: #dc2626; /* Nagiging Pula kapag balak i-dismiss ng encoder */
+  background-color: #dc2626;
   color: #ffffff;
   border-color: #dc2626;
 }
 
-/* Master Body Information Layout */
 .docketBody {
   padding: 2rem;
 }
@@ -124,7 +121,6 @@
   margin-top: 2rem;
 }
 
-/* 2-Column Professional Framework Grid */
 .infoGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -155,13 +151,12 @@
   color: #0f172a;
 }
 
-/* Premium Component Badges and Formatting */
 .docBadgeAccent {
   color: #001f3f;
-  background-color: #fff9db; /* Soft gold tint */
+  background-color: #fff9db;
   border: 1px solid #ffe066;
   padding: 0.5rem 1rem;
-  border-left: 4px solid #d4af37; /* Side trim gold strip */
+  border-left: 4px solid #d4af37;
   border-radius: 4px;
   display: inline-block;
   width: fit-content;
@@ -177,7 +172,6 @@
   line-height: 1.5;
 }
 
-/* Bottom Action Strip Buttons Layout */
 .docketActions {
   display: flex;
   justify-content: flex-end;
@@ -228,7 +222,6 @@
   box-shadow: 0 6px 14px rgba(0, 31, 63, 0.2);
 }
 
-/* Scrollbar styling sa loob ng popup */
 .modalContent::-webkit-scrollbar {
   width: 6px;
 }
@@ -242,7 +235,6 @@
   border-radius: 10px;
 }
 
-/* Animation Keyframes */
 @keyframes overlayFade {
   from {
     opacity: 0;
@@ -263,7 +255,6 @@
   }
 }
 
-/* Mobile Layout Responsive Adaptations */
 @media (max-width: 640px) {
   .infoGrid {
     grid-template-columns: 1fr;
@@ -280,31 +271,30 @@
     justify-content: center;
   }
 }
-/* Base style para sa status badge */
+
 .statusBadge {
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: bold;
   text-transform: uppercase;
-  margin-left: auto; /* Itutulak nito ang badge sa kanan, bago ang close button */
+  margin-left: auto;
   margin-right: 15px;
 }
 
-/* Mga kulay base sa status */
 .pending {
   background-color: #fef3c7;
-  color: #d97706; /* Dilaw/Orange */
+  color: #d97706;
 }
 
 .approve {
   background-color: #dcfce7;
-  color: #15803d; /* Berde */
+  color: #15803d;
 }
 
 .disapprove {
   background-color: #fee2e2;
-  color: #b91c1c; /* Pula */
+  color: #b91c1c;
 }
 
 .finalizedMessage {
@@ -313,11 +303,7 @@
   color: #6b7280;
   font-style: italic;
 }
-/* ==========================================================================
-   ADDITIONAL STYLES FOR THE PRINT BUTTON & FINALIZED ACTION WRAPPER 
-   ========================================================================== */
 
-/* Wrapper para mapagtabi ang notification status text at ang Print button */
 .finalizedActionWrapper {
   display: flex;
   align-items: center;
@@ -326,12 +312,11 @@
   gap: 1.5rem;
 }
 
-/* Premium Government-Themed Print Action Button */
 .printBtn {
-  background-color: #001f3f; /* Signature Navy Blue base */
+  background-color: #001f3f;
   color: #ffffff;
   border: 1px solid #001f3f;
-  border-bottom: 3px solid #d4af37; /* Gold Accent Bottom line trim */
+  border-bottom: 3px solid #d4af37;
   padding: 0.65rem 1.8rem;
   font-size: 0.85rem;
   font-weight: 700;
@@ -356,7 +341,6 @@
   border-bottom-width: 1px;
 }
 
-/* Mobile responsive alignment update */
 @media (max-width: 640px) {
   .finalizedActionWrapper {
     flex-direction: column;

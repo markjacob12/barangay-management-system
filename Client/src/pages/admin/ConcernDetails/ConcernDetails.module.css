@@ -1,14 +1,11 @@
-/* ==========================================================================
-   EXECUTIVE MODAL OVERLAY (SAKTO LANG ANG BLUR)
-   ========================================================================== */
 .modalOverlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 15, 30, 0.65); /* Pro Navy Tint */
-  backdrop-filter: blur(6px); /* Saktong blur lang */
+  background-color: rgba(0, 15, 30, 0.65);
+  backdrop-filter: blur(6px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,28 +13,22 @@
   padding: 24px;
 }
 
-/* ==========================================================================
-   STANDARD PRO MODAL BOX CONTAINER (950px MEDIUM PROFILE)
-   ========================================================================== */
 .modalBox {
   background-color: #ffffff;
-  border-radius: 12px; /* Standard smooth corners */
+  border-radius: 12px;
   width: 100%;
-  max-width: 950px; /* Hindi 1200px, hindi rin 600px—sakto lang! */
+  max-width: 950px;
   box-shadow: 0 20px 50px rgba(0, 20, 40, 0.25);
-  border: 2px solid #d4af37; /* Gold Accent Trim */
+  border: 2px solid #d4af37;
   overflow: hidden;
   position: relative;
   animation: govModalSlideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .modalContainer {
-  padding: 32px; /* Komportableng espasyo, hindi maluwag, hindi masikip */
+  padding: 32px;
 }
 
-/* ==========================================================================
-   OFFICIAL BARANGAY HEADBLOCK
-   ========================================================================== */
 .govHeader {
   display: flex;
   justify-content: space-between;
@@ -46,7 +37,7 @@
 }
 
 .govSubtag {
-  font-size: 0.75rem; /* Clean and crisp professional sizing */
+  font-size: 0.75rem;
   font-weight: 800;
   color: #d4af37;
   letter-spacing: 1.5px;
@@ -55,9 +46,9 @@
 }
 
 .modalMainTitle {
-  font-size: 1.75rem; /* Tamang-tama ang laki para sa dashboard subtitle */
+  font-size: 1.75rem;
   font-weight: 800;
-  color: #001f3f; /* Deep Navy */
+  color: #001f3f;
   margin: 0;
 }
 
@@ -66,7 +57,6 @@
   gap: 10px;
 }
 
-/* SLEEK BRAND SEPARATOR */
 .goldDivider {
   height: 3.5px;
   width: 100%;
@@ -80,17 +70,13 @@
   margin: 18px 0 24px 0;
 }
 
-/* ==========================================================================
-   TWO-COLUMN BALANCED GRID ENGINE
-   ========================================================================== */
 .mainGrid {
   display: grid;
-  grid-template-columns: 1fr 1.2fr; /* Tamang proporsyon ng image sa data */
+  grid-template-columns: 1fr 1.2fr;
   gap: 28px;
   align-items: start;
 }
 
-/* LEFT SIDE: SAKTONG VIEWPORT IMAGE PANEL */
 .leftPanel {
   display: flex;
   flex-direction: column;
@@ -107,7 +93,7 @@
 
 .imageContainer {
   width: 100%;
-  height: 350px; /* Binabaan natin para maging sakto ang haba sa screen */
+  height: 350px;
   border-radius: 8px;
   overflow: hidden;
   border: 1.5px solid #e2e8f0;
@@ -121,7 +107,6 @@
   object-fit: contain;
 }
 
-/* RIGHT SIDE: METADATA DOSSIER PROFILE */
 .rightPanel {
   display: flex;
   flex-direction: column;
@@ -164,7 +149,7 @@
 }
 
 .specificSubject {
-  font-size: 1.4rem; /* Katamtamang laki ng title, malinaw pero hindi sumisigaw */
+  font-size: 1.4rem;
   font-weight: 800;
   color: #001f3f;
   margin: 0;
@@ -192,9 +177,6 @@
   margin: 0 4px;
 }
 
-/* ==========================================================================
-   OFFICIAL STATEMENT BOX (DESKRIPSYON)
-   ========================================================================== */
 .descriptionSection {
   display: flex;
   flex-direction: column;
@@ -213,16 +195,13 @@
 }
 
 .officialStatementBox p {
-  font-size: 1rem; /* Tamang-tamang basahin, professional standard font size */
+  font-size: 1rem;
   color: #475569;
   line-height: 1.6;
   margin: 0;
   font-weight: 500;
 }
 
-/* ==========================================================================
-   PILL STATE BADGES (CLEAN METRICS)
-   ========================================================================== */
 .badge {
   font-size: 0.78rem;
   font-weight: 800;
@@ -250,9 +229,6 @@
   border: 1px solid #bbf7d0;
 }
 
-/* ==========================================================================
-   STANDARD ACTION BUTTONS PANEL
-   ========================================================================== */
 .actionPanel {
   display: flex;
   flex-wrap: wrap;
@@ -265,7 +241,7 @@
 .actionPanel button:not([class]) {
   flex: 1;
   min-width: 150px;
-  padding: 12px 20px; /* Compact professional padding */
+  padding: 12px 20px;
   font-size: 0.95rem;
   font-weight: 700;
   border: none;
@@ -316,9 +292,6 @@
   box-shadow: 0 4px 12px rgba(22, 163, 74, 0.2);
 }
 
-/* ==========================================================================
-   COMPACT CLOSE BUTTON CHIP
-   ========================================================================== */
 .btnCloseModal {
   position: absolute;
   top: 16px;
@@ -345,9 +318,6 @@
   border-color: #ef4444;
 }
 
-/* ==========================================================================
-   ANIMATIONS & RESPONSIVE CONSTRAINTS
-   ========================================================================== */
 @keyframes govModalSlideUp {
   from {
     opacity: 0;
@@ -361,7 +331,7 @@
 
 @media (max-width: 850px) {
   .mainGrid {
-    grid-template-columns: 1fr; /* One column layout para sa tablets pababa */
+    grid-template-columns: 1fr;
     gap: 24px;
   }
   .imageContainer {

@@ -33,11 +33,11 @@ const ResolveConcernModal = ({ onClose, data }) => {
   const handleImageChange = (event) => {
     const file = event.target.files[0];
     if (file) {
-      setRawFile(file); // I-save ang totoong file object para sa backend
+      setRawFile(file);
 
       const reader = new FileReader();
       reader.onloadend = () => {
-        setPreviewImage(reader.result); // Base64 String para sa visual preview
+        setPreviewImage(reader.result);
       };
       reader.readAsDataURL(file);
     }
@@ -62,9 +62,7 @@ const ResolveConcernModal = ({ onClose, data }) => {
               <span className={style.subLabel}>(Pagkatapos naayos)</span>
             </label>
 
-            {/* Gagawin nating clickable ang buong upload area */}
             <label className={style.uploadZone}>
-              {/* Dito nakatago ang totoong input pero nakakabit ang iyong handleImageChange */}
               <input
                 type="file"
                 accept="image/png, image/jpeg, image/jpg"
@@ -72,7 +70,6 @@ const ResolveConcernModal = ({ onClose, data }) => {
                 onChange={handleImageChange}
               />
 
-              {/* KONDISYONAL NA DISPLAY: Kung may preview na, ipakita ang larawan. Kung wala, ipakita ang upload text */}
               {previewImage ? (
                 <div className={style.previewContainer}>
                   <img

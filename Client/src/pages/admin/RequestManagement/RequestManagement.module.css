@@ -1,30 +1,24 @@
-/* ==========================================================================
-   1. MASTER LAYOUT ENGINE (Sinisiguro nitong magkatabi ang Sidebar at Main)
-   ========================================================================== */
 .admin-layout {
   display: flex;
-  background-color: #f8fafc; /* Professional off-white government background */
+  background-color: #f8fafc;
   min-height: 100vh;
   width: 100%;
   box-sizing: border-box;
 }
 
 .main-wrapper {
-  flex: 1; /* Kakainin nito ang lahat ng natitirang espasyo sa kanan ng sidebar */
+  flex: 1;
   display: flex;
   flex-direction: column;
-  min-width: 0; /* Salbabida laban sa grid break at biglaang pag-stretch */
+  min-width: 0;
 }
 
 .content-area {
-  padding: 2.5rem; /* Maluwag na espasyo para sa premium dashboard look */
-  margin-left: 270px; /* Gitna ang buong table container kung sobrang lapad ng screen */
+  padding: 2.5rem;
+  margin-left: 270px;
   box-sizing: border-box;
 }
 
-/* ==========================================================================
-   2. DASHBOARD HEADER SYSTEM (Title, Subtitle, at Counter Badge)
-   ========================================================================== */
 .pageHeaderContainer {
   display: flex;
   justify-content: space-between;
@@ -39,7 +33,7 @@
 }
 
 .pageTitle {
-  color: #001f3f; /* Deep Agency Navy */
+  color: #001f3f;
   font-size: 1.6rem;
   font-weight: 800;
   margin: 0;
@@ -68,15 +62,12 @@
   margin-left: 0.3rem;
 }
 
-/* ==========================================================================
-   3. SYSTEM TABLE HOUSING (Dito nakatago ang glass-shadow effect)
-   ========================================================================== */
 .tableContainerShadow {
   background-color: #ffffff;
   border-radius: 8px;
   border: 1px solid #e2e8f0;
   box-shadow: 0 4px 20px rgba(0, 31, 63, 0.05);
-  overflow-x: auto; /* Salbabida para sa scrollbar kapag maliit ang monitor */
+  overflow-x: auto;
 }
 
 .adminTable {
@@ -88,9 +79,8 @@
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* Elegant Heavy Header Styling */
 .adminTable th {
-  background-color: #001f3f; /* Primary Navy */
+  background-color: #001f3f;
   color: #ffffff;
   font-weight: 600;
   font-size: 0.8rem;
@@ -107,7 +97,6 @@
   vertical-align: middle;
 }
 
-/* Table Actions & Micro interactions */
 .tableInteractiveRow {
   transition: background-color 0.15s ease;
 }
@@ -117,15 +106,9 @@
 }
 
 .tableInteractiveRow:hover {
-  background-color: rgba(
-    212,
-    175,
-    55,
-    0.04
-  ); /* Light gold accent window filter */
+  background-color: rgba(212, 175, 55, 0.04);
 }
 
-/* Specific Cell Fine-tuning */
 .primaryNameCell {
   font-weight: 700;
   color: #001f3f;
@@ -154,7 +137,6 @@
   text-align: center !important;
 }
 
-/* Dynamic Professional Certificate Label Badges */
 .certBadge {
   font-size: 0.75rem;
   font-weight: 700;
@@ -165,7 +147,6 @@
   letter-spacing: 0.5px;
 }
 
-/* Kulay para sa mga dynamic badges batay sa types ng document */
 .clearance,
 :global(.barangay_clearance) {
   background-color: #e6f4ea;
@@ -194,7 +175,6 @@
   border: 1px solid #e2e8f0;
 }
 
-/* Premium Action Process Button Layout */
 .actionCenterCell {
   display: flex;
   justify-content: center;
@@ -223,7 +203,6 @@
   box-shadow: 0 4px 12px rgba(0, 31, 63, 0.15);
 }
 
-/* Ultra Clean Empty Database State */
 .emptyTableWrapper {
   padding: 0 !important;
 }
@@ -235,7 +214,7 @@
   justify-content: center;
   padding: 5px;
 }
-/* Container para sa mga tabs */
+
 .tabContainer {
   display: flex;
   gap: 12px;
@@ -244,7 +223,6 @@
   padding-bottom: 8px;
 }
 
-/* Base style ng bawat tab button */
 .tabBtn {
   display: inline-flex;
   align-items: center;
@@ -253,7 +231,7 @@
   padding: 10px 20px;
   font-size: 14px;
   font-weight: 600;
-  color: #555555; /* Neutral dark gray para sa madaling basahing inactive text */
+  color: #555555;
   background-color: #f8f9fa;
   border: 1px solid #e2e8f0;
   border-radius: 6px;
@@ -261,39 +239,31 @@
   transition: all 0.25s ease-in-out;
 }
 
-/* Hover effect para sa hindi pa napipiling tabs */
 .tabBtn:hover {
   background-color: #f0f4f8;
-  color: #001f3f; /* Lumilitaw ang navy blue kapag hinover */
+  color: #001f3f;
   border-color: #001f3f;
 }
 
-/* Style kapag ACTIVE ang tab (Dito papasok ang theme mo) */
 .tabBtn.activeTab {
-  background-color: #001f3f; /* Deep Navy Blue */
-  color: #d4af37; /* Metallic Gold Text */
+  background-color: #001f3f;
+  color: #d4af37;
   border-color: #001f3f;
-  box-shadow: 0 4px 12px rgba(0, 31, 63, 0.2); /* Soft shadow gamit ang navy base */
+  box-shadow: 0 4px 12px rgba(0, 31, 63, 0.2);
 }
 
-/* Kulay ng SVG icons */
 .tabIcon {
   flex-shrink: 0;
   transition: transform 0.2s ease;
 }
 
-/* Swabe na micro-animation kapag hinover o active ang icon */
 .tabBtn:hover .tabIcon {
   transform: scale(1.05);
 }
 
 .tabBtn.activeTab .tabIcon {
-  /* Sinisiguro nito na sasabay ang kulay ng icon sa ginto (#d4af37) */
   stroke: #d4af37;
 }
-/* ==========================================================================
-   DOCKET MANAGEMENT SEARCH INPUT PANEL STYLING
-   ========================================================================== */
 
 .headerControlsBlock {
   display: flex;
@@ -323,7 +293,7 @@
 
 .searchInput:focus {
   background-color: #ffffff;
-  border-color: #001f3f; /* Signature Navy Blue Focus Point */
+  border-color: #001f3f;
   box-shadow: 0 0 0 3px rgba(0, 31, 63, 0.08);
 }
 
@@ -339,7 +309,6 @@
   color: #001f3f;
 }
 
-/* Responsive Action Layout adjustments */
 @media (max-width: 900px) {
   .pageHeaderContainer {
     flex-direction: column;

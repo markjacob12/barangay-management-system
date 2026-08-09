@@ -1,4 +1,3 @@
-/* Container Box Frame and Animation */
 .reviewContainer {
   width: 100%;
   animation: slideInUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
@@ -8,7 +7,6 @@
   width: 100%;
 }
 
-/* Header Alignment Elements Toolbar */
 .topBar {
   display: flex;
   justify-content: space-between;
@@ -34,7 +32,6 @@
   color: #001f3f;
 }
 
-/* Translucent Soft Alert Tag */
 .statusBadge {
   background-color: rgba(0, 31, 63, 0.06);
   color: #001f3f;
@@ -55,7 +52,7 @@
 }
 
 .highlightText {
-  color: #d4af37; /* Signature Gold theme parameter text */
+  color: #d4af37;
 }
 
 .header p {
@@ -74,12 +71,11 @@
   margin-bottom: 2rem;
 }
 
-/* 2-Column Summary Information Card Deck Grid */
 .infoGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.25rem;
-  background-color: #f8fafc; /* Elegant off-gray content platform block */
+  background-color: #f8fafc;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
   padding: 1.5rem;
@@ -98,7 +94,6 @@
   margin-top: 0.25rem;
 }
 
-/* Core Typography inside cells */
 .metaLabel {
   font-size: 0.75rem;
   font-weight: 700;
@@ -114,14 +109,12 @@
   color: #0f172a;
 }
 
-/* Purpose large box scroll text area adjustments */
 .purposeBox {
   line-height: 1.5;
   color: #334155;
-  white-space: pre-wrap; /* Pinapanatili ang multiline spacing layout */
+  white-space: pre-wrap;
 }
 
-/* Safety Verification Callout Banner */
 .warningNotice {
   margin-top: 1.25rem;
   background-color: rgba(212, 175, 55, 0.06);
@@ -140,12 +133,11 @@
 .warningNotice p {
   margin: 0;
   font-size: 0.85rem;
-  color: #856404; /* Dark gold/amber safe warning tone */
+  color: #856404;
   font-weight: 500;
   line-height: 1.4;
 }
 
-/* Bottom Controls Section Frame */
 .buttonContainer {
   margin-top: 2.25rem;
   border-top: 1px solid #e2e8f0;
@@ -155,7 +147,6 @@
   gap: 1rem;
 }
 
-/* Slate Grey Alternate Edit Button Module */
 .editBtn {
   background-color: #ffffff;
   color: #475569;
@@ -174,7 +165,6 @@
   border-color: #94a3b8;
 }
 
-/* Master Primary Blue Submit Button */
 .nextBtn {
   background-color: #001f3f;
   color: #ffffff;
@@ -203,7 +193,6 @@
   box-shadow: 0 2px 6px rgba(0, 31, 63, 0.1);
 }
 
-/* Disabled State Logic Framework overlay blocker */
 .editBtn:disabled,
 .nextBtn:disabled {
   opacity: 0.65;
@@ -212,9 +201,6 @@
   box-shadow: none !important;
 }
 
-/* ==========================================================================
-   INTERACTIVE SUBMIT LOADING SPINNER COMPONENT
-   ========================================================================== */
 .spinnerLayout {
   display: flex;
   align-items: center;
@@ -247,7 +233,6 @@
   }
 }
 
-/* Mobile responsive screen adaptations */
 @media (max-width: 640px) {
   .infoGrid {
     grid-template-columns: 1fr;
@@ -259,7 +244,7 @@
   }
 
   .buttonContainer {
-    flex-direction: column-reverse; /* I-salansan pababa, ngunit nasa itaas ang main action submit button */
+    flex-direction: column-reverse;
     gap: 0.75rem;
   }
 

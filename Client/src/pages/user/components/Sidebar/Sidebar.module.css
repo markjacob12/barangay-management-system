@@ -29,7 +29,6 @@
   padding: 10px;
 }
 
-/* User Profile Section */
 .user-section {
   display: flex;
   align-items: center;
@@ -75,7 +74,6 @@
   width: 100%;
 }
 
-/* Navigation Links */
 .link {
   display: flex;
   align-items: center;
@@ -90,11 +88,11 @@
 
 .icon {
   font-size: 1.1rem;
-  color: #d4af37; /* Gold accent line consistency */
+  color: #d4af37;
 }
 
 .link:hover {
-  background: rgba(212, 175, 55, 0.1); /* Light gold transparent */
+  background: rgba(212, 175, 55, 0.1);
   color: #d4af37;
 }
 

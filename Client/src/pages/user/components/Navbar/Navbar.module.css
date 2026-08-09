@@ -5,7 +5,7 @@
   background-color: #001f3f;
   border-bottom: 4px solid #d4af37;
   padding: 0 50px;
-  width: calc(100% - 260px); /* Width minus sidebar width */
+  width: calc(100% - 260px);
   margin-left: 260px;
 }
 .logo img {
@@ -19,7 +19,7 @@
 
 .dropdown {
   position: absolute;
-  top: 70px; /* Adjust base sa height ng Navbar mo */
+  top: 70px;
   right: 20px;
   z-index: 2000;
   animation: slideDown 0.3s ease-out;
@@ -48,7 +48,6 @@
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-/* Close Button Area */
 .closeHeader {
   display: flex;
   justify-content: flex-end;
@@ -66,7 +65,6 @@
   color: #ff4d4d;
 }
 
-/* Profile Section */
 .profileSection {
   display: flex;
   flex-direction: column;
@@ -84,7 +82,7 @@
   align-items: center;
   margin-bottom: 12px;
   padding: 5px;
-  border: 2px solid #d4af37; /* Gold accent from Screenshot 2026-05-04 154743.png */
+  border: 2px solid #d4af37;
 }
 
 .logoWrapper img {
@@ -95,7 +93,7 @@
 .profileName {
   margin: 0;
   font-size: 1.1rem;
-  color: #001f3f; /* Navy blue */
+  color: #001f3f;
   font-weight: 700;
 }
 
@@ -113,7 +111,6 @@
   margin: 0;
 }
 
-/* Logout Button */
 .menuItem {
   padding: 15px;
   background: #fdfdfd;
@@ -132,7 +129,7 @@
 }
 
 .logoutBtn:hover {
-  background: #d4af37; /* Nagiging gold pag hover */
+  background: #d4af37;
   color: #001f3f;
   transform: translateY(-2px);
 }

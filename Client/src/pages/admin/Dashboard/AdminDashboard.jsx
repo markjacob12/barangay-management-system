@@ -15,7 +15,6 @@ import { useResident } from "../../../components/Hooks/useResident";
 import { useRequest } from "../../../components/Hooks/useRequest";
 import { useConcern } from "../../../components/Hooks/useConcern";
 
-// Register ChartJS components
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const AdminDashboard = () => {
@@ -91,7 +90,6 @@ const AdminDashboard = () => {
             </div>
           </div>
 
-          {/* Bottom Section */}
           <div className={style["bottom-wrapper"]}>
             <div className={style["chart-container"]}>
               <h3>Resident Demographics</h3>

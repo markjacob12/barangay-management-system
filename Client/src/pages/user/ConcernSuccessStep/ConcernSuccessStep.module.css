@@ -1,4 +1,3 @@
-/* Main Structural Container */
 .successContainer {
   width: 100%;
   max-width: 600px;
@@ -12,7 +11,6 @@
   text-align: center;
 }
 
-/* Premium Success Badge Icon Alignment */
 .iconWrapper {
   display: flex;
   justify-content: center;
@@ -20,7 +18,7 @@
 }
 
 .successCircle {
-  background: rgba(212, 175, 55, 0.1); /* Soft Gold Blend */
+  background: rgba(212, 175, 55, 0.1);
   border: 2px solid #d4af37;
   padding: 20px;
   border-radius: 50%;
@@ -41,7 +39,6 @@
   }
 }
 
-/* Typography Header Matrix */
 .successHeader {
   margin-bottom: 30px;
 }
@@ -70,7 +67,6 @@
   padding: 0 15px;
 }
 
-/* Official Government Reference Tracking Card */
 .referenceCard {
   background: #f8fafc;
   border: 1px solid #e2e8f0;
@@ -103,8 +99,7 @@
   font-size: 1.1rem;
   font-weight: 700;
   color: #001f3f;
-  font-family:
-    "Courier New", Courier, monospace; /* Pang-resibo/Klerikal na look */
+  font-family: "Courier New", Courier, monospace;
   letter-spacing: 0.5px;
 }
 
@@ -121,7 +116,6 @@
   font-style: italic;
 }
 
-/* System Informative Alert Banner */
 .infoBanner {
   display: flex;
   align-items: center;
@@ -141,7 +135,6 @@
   font-weight: 500;
 }
 
-/* Action Control Button - SENTRALISADO */
 .actionContainer {
   display: flex;
   justify-content: center;

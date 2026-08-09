@@ -6,12 +6,10 @@ const Navbar = () => {
   return (
     <>
       <nav className={style["nav-bar"]}>
-        {/* Left Side: Logo Branding Container */}
         <div className={style.logo}>
           <img src={Logo} alt="PAPA Barangay Official Logo" />
         </div>
 
-        {/* Center Side: Clean Government Institutional Subtag */}
         <div className={style.govCenterTag}>
           <span className={style.republicText}>REPUBLIKA NG PILIPINAS</span>
           <span className={style.localText}>
@@ -19,7 +17,6 @@ const Navbar = () => {
           </span>
         </div>
 
-        {/* Right Side: Elite Admin Profile Card Badge */}
         <div className={style.info}>
           <div className={style.profileBadge}>
             <div className={style.avatarCircle}>

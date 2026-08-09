@@ -9,7 +9,6 @@ export const useRequest = (searchTerm = "") => {
   const submitRequest = async (selectedType, formData) => {
     setLoading(true);
     try {
-      // 1. Payload construction - pinagsasama ang piniling Type at yung Form Data
       const payload = {
         typeOfCertificate: selectedType,
         firstName: formData.firstName,
@@ -21,7 +20,6 @@ export const useRequest = (searchTerm = "") => {
         quantity: formData.quantity,
       };
 
-      // 2. API Call gamit ang iyong axios instance
       const res = await api.post("/requests/apply", payload);
       return res;
     } catch (err) {

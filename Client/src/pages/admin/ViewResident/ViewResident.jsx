@@ -7,7 +7,6 @@ const ViewResident = ({ resident }) => {
 
   return (
     <div className={style.container}>
-      {/* Header Banner - Government Style */}
       <div className={style.headerBanner}>
         <div className={style.avatarCircle}>
           {resident.firstName[0]}
@@ -71,7 +70,6 @@ const ViewResident = ({ resident }) => {
           </div>
         </div>
 
-        {/* Section 2: Address & Location */}
         <div className={style.card}>
           <h2 className={style.cardTitle}>Address Details</h2>
           <div className={style.infoGrid}>
@@ -90,7 +88,6 @@ const ViewResident = ({ resident }) => {
           </div>
         </div>
 
-        {/* Section 3: Government Sector / Program Qualifications */}
         <div className={`${style.card} ${style.fullWidthCard}`}>
           <h2 className={style.cardTitle}>
             Government Programs & Sector Records

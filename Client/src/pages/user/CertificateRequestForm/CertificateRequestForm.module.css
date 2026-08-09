@@ -1,10 +1,8 @@
-/* Container Box Frame */
 .formContainer {
   width: 100%;
   animation: slideInDown 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Header Alignment Elements */
 .formHeader {
   display: flex;
   flex-direction: column;
@@ -12,7 +10,6 @@
   margin-bottom: 2rem;
 }
 
-/* Premium Minimalist Back Arrow Trigger */
 .backBtn {
   align-self: flex-start;
   background: transparent;
@@ -30,7 +27,7 @@
 }
 
 .backBtn:hover {
-  color: #001f3f; /* Umaangat ang kulay papuntang Signature Navy */
+  color: #001f3f;
 }
 
 .formTitle {
@@ -42,7 +39,7 @@
 }
 
 .highlightText {
-  color: #d4af37; /* Gold accent color sa pangalan ng piniling certificate */
+  color: #d4af37;
 }
 
 .formSubtitle {
@@ -60,12 +57,10 @@
   margin-top: 1rem;
 }
 
-/* Main Layout Framework */
 .mainForm {
   width: 100%;
 }
 
-/* Professional 2-Column Framework Grid */
 .inputGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -79,10 +74,9 @@
 }
 
 .fullWidth {
-  grid-column: span 2; /* Kakainin ang buong linya kapag Purpose o Certificate Type */
+  grid-column: span 2;
 }
 
-/* Form Typography Components */
 .fieldLabel {
   font-size: 0.8rem;
   font-weight: 700;
@@ -107,7 +101,6 @@
   opacity: 0.6;
 }
 
-/* Standard Active Input Fields Styling */
 .inputField {
   width: 100%;
   padding: 0.75rem 1rem;
@@ -124,10 +117,9 @@
 .inputField:focus {
   outline: none;
   border-color: #001f3f;
-  box-shadow: 0 0 0 3px rgba(0, 31, 63, 0.08); /* Light navy halo accent ring */
+  box-shadow: 0 0 0 3px rgba(0, 31, 63, 0.08);
 }
 
-/* Custom Large Resizable Text Area box */
 .textArea {
   width: 100%;
   padding: 0.75rem 1rem;
@@ -149,24 +141,20 @@
   box-shadow: 0 0 0 3px rgba(0, 31, 63, 0.08);
 }
 
-/* ==========================================================================
-   LOCKED READ-ONLY INPUT STATES (Eto ang magic design para sa kinuha sa DB)
-   ========================================================================== */
 .readOnlyInput {
   width: 100%;
   padding: 0.75rem 1rem;
   font-size: 0.95rem;
   font-weight: 600;
   color: #475569;
-  background-color: #f1f5f9; /* Matte off-gray background to indicate locked state */
+  background-color: #f1f5f9;
   border: 1px solid #e2e8f0;
   border-radius: 6px;
   box-sizing: border-box;
-  cursor: not-allowed; /* Nagiging icon na bawal i-type kapag tinutok ang mouse */
+  cursor: not-allowed;
   user-select: none;
 }
 
-/* Bottom Actions Control Strip Wrapper */
 .actionWrapper {
   margin-top: 2.25rem;
   border-top: 1px solid #e2e8f0;
@@ -175,12 +163,11 @@
   justify-content: flex-end;
 }
 
-/* Submission Button Module */
 .submitBtn {
-  background-color: #001f3f; /* Dark Premium Navy */
+  background-color: #001f3f;
   color: #ffffff;
   border: none;
-  border-bottom: 3px solid #d4af37; /* Bottom key gold strip integration */
+  border-bottom: 3px solid #d4af37;
   padding: 0.75rem 2rem;
   font-size: 0.9rem;
   font-weight: 700;
@@ -204,7 +191,6 @@
   box-shadow: 0 2px 6px rgba(0, 31, 63, 0.1);
 }
 
-/* Entry Animation Layout Trigger */
 @keyframes slideInDown {
   from {
     opacity: 0;
@@ -216,10 +202,9 @@
   }
 }
 
-/* Mobile Small Scale Adaptations */
 @media (max-width: 640px) {
   .inputGrid {
-    grid-template-columns: 1fr; /* Nagiging 1 column kapag screen ng cp */
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
 

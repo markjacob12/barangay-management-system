@@ -1,26 +1,26 @@
 .nav-bar {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Mas standard ito para sa layout mo */
-  padding: 0 40px; /* Padding sa gilid para hindi dikit sa screen */
+  justify-content: space-between;
+  padding: 0 40px;
   background-color: #001f3f;
   color: white;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
   border-bottom: 4px solid #d4af37;
   font-family: "Poppins", sans-serif;
-  width: calc(100% - 260px); /* Width minus sidebar width */
+  width: calc(100% - 260px);
   margin-left: 260px;
 }
 
 .logo img {
-  height: 100px; /* 120px ay medyo malaki para sa navbar, 70-80px is sweet spot */
+  height: 100px;
   width: auto;
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
   transition: transform 0.3s ease;
 }
 
 .logo img:hover {
-  transform: scale(1.05); /* Kaunting effect pag hinover */
+  transform: scale(1.05);
 }
 .govCenterTag {
   display: flex;
@@ -33,7 +33,7 @@
 .republicText {
   font-size: 10px;
   font-weight: 700;
-  color: #d4af37; /* Gold primary sub-header */
+  color: #d4af37;
   letter-spacing: 2px;
 }
 
@@ -45,7 +45,6 @@
   margin-top: 2px;
 }
 
-/* Right Profile Controller Section */
 .info {
   display: flex;
   align-items: center;
@@ -57,8 +56,7 @@
   gap: 12px;
   padding: 6px 14px;
   background-color: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(212, 175, 55, 0.25); /* Subtle gold boundary outline */
-  border-radius: 4px; /* Clean sharp corners */
+  border: 1px solid rgba(212, 175, 55, 0.25);
   transition: all 0.2s ease;
   cursor: pointer;
 }
@@ -77,7 +75,7 @@
   height: 32px;
   background-color: #d4af37;
   color: #001f3f;
-  border-radius: 50%; /* Perfect circle for identity token */
+  border-radius: 50%;
 }
 
 .profileDetails {
@@ -94,13 +92,12 @@
 .accountRole {
   font-size: 10px;
   font-weight: 500;
-  color: #94a3b8; /* Muted gray tracking description */
+  color: #94a3b8;
   margin-top: 1px;
 }
 
-/* Fluid Responsiveness Configuration */
 @media (max-width: 992px) {
   .govCenterTag {
-    display: none; /* Tinatago ang gitnang teksto kung maliit ang view screen area */
+    display: none;
   }
 }

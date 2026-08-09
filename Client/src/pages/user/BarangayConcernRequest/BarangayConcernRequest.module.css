@@ -5,7 +5,7 @@
   background: #ffffff;
   border-radius: 8px;
   border: 1px solid #e2e8f0;
-  box-shadow: 0 4px 20px rgba(0, 31, 63, 0.03); /* Malambot na navy shadow */
+  box-shadow: 0 4px 20px rgba(0, 31, 63, 0.03);
   box-sizing: border-box;
   overflow: hidden;
   font-family:
@@ -13,7 +13,6 @@
   position: relative;
 }
 
-/* Elegant left-side subtle indicator strip */
 .requestCardBox::before {
   content: "";
   position: absolute;
@@ -21,10 +20,9 @@
   left: 0;
   bottom: 0;
   width: 4px;
-  background-color: #d4af37; /* Signature Gold Trim Line */
+  background-color: #d4af37;
 }
 
-/* Flex Grid Main Axis Connector */
 .cardFlexContainer {
   display: flex;
   align-items: center;
@@ -32,7 +30,6 @@
   gap: 1.5rem;
 }
 
-/* Icon Section Frame styling */
 .iconColumn {
   display: flex;
   align-items: center;
@@ -44,16 +41,15 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background-color: rgba(0, 31, 63, 0.05); /* Translucent navy glow */
-  color: #001f3f; /* Deep Navy icon */
+  background-color: rgba(0, 31, 63, 0.05);
+  color: #001f3f;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Core Typography Text Blocks */
 .textContentBlock {
-  flex: 1; /* Kakainin ang lahat ng natitirang espasyo sa gitna */
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
@@ -69,22 +65,21 @@
 
 .cardDescription {
   margin: 0;
-  color: #64748b; /* Slate gray subtitle text */
+  color: #64748b;
   font-size: 0.9rem;
   line-height: 1.4;
   font-weight: 500;
 }
 
-/* High-End Button Layout Modules */
 .buttonActionWrapper {
   flex-shrink: 0;
 }
 
 .primaryRequestBtn {
-  background-color: #001f3f; /* Signature Government Navy */
+  background-color: #001f3f;
   color: #ffffff;
   border: none;
-  border-bottom: 3px solid #d4af37; /* Gold Trim bottom keyholder */
+  border-bottom: 3px solid #d4af37;
   padding: 0.75rem 1.5rem;
   font-size: 0.88rem;
   font-weight: 700;
@@ -108,7 +103,6 @@
   box-shadow: 0 2px 6px rgba(0, 31, 63, 0.1);
 }
 
-/* Mobile responsive layout transformation */
 @media (max-width: 768px) {
   .cardFlexContainer {
     flex-direction: column;

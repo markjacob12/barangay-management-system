@@ -6,7 +6,6 @@ const UserRequestDetails = ({ request }) => {
   if (!request)
     return <p className={style.noData}>No request details available.</p>;
 
-  // Pagsamahin ang pangalan para malinis tingnan sa header
   const fullName =
     `${request.lastName}, ${request.firstName} ${request.middleName || ""} ${request.suffix || ""}`.trim();
 
@@ -26,7 +25,6 @@ const UserRequestDetails = ({ request }) => {
 
       <hr className={style.divider} />
 
-      {/* Info Grid Section */}
       <div className={style.infoGrid}>
         <div className={style.infoCard}>
           <span className={style.label}>Suffix:</span>
@@ -53,7 +51,6 @@ const UserRequestDetails = ({ request }) => {
 
       {request?.status === "disapprove" || request?.status === "disapproved" ? (
         <div className={style.disapprovedActionBlock}>
-          {/* Status Alert Area with an Attention SVG Icon */}
           <div className={`${style.statusAlert} ${style.disapprove}`}>
             <svg
               width="18"
@@ -83,7 +80,6 @@ const UserRequestDetails = ({ request }) => {
           </div>
         </div>
       ) : (
-        /* 2. Kung Pending o Approved naman, status box lang at walang pwedeng pindutin ang user */
         <div
           className={`${style.statusAlert} ${style[request?.status?.toLowerCase() === "disapprove" ? "disapproved" : request?.status?.toLowerCase() || "pending"]}`}
         >

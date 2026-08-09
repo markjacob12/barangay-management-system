@@ -50,7 +50,6 @@ export const ResidentForm = ({ onSave }) => {
 
   return (
     <div className={styles.formContainer}>
-      {/* Government-Style Official Header */}
       <div className={styles.formHeader}>
         <div className={styles.headerRibbon}></div>
         <div className={styles.headerTextContainer}>
@@ -64,7 +63,6 @@ export const ResidentForm = ({ onSave }) => {
       </div>
 
       <form onSubmit={handleSubmit} className={styles.formContent}>
-        {/* Left Column: Photo Management */}
         <div className={styles.photoSection}>
           <span className={styles.photoLabel}>Official Resident Photo</span>
           <div className={styles.photoPlaceholderContainer}>
@@ -80,9 +78,7 @@ export const ResidentForm = ({ onSave }) => {
           </p>
         </div>
 
-        {/* Right Column: Information Input Blocks */}
         <div className={styles.formFieldsSection}>
-          {/* CATEGORY 1: PERSONAL DETAILS */}
           <div className={styles.formSectionHeader}>
             <span className={styles.sectionNumber}>01</span> Personal
             Information
@@ -248,7 +244,6 @@ export const ResidentForm = ({ onSave }) => {
             </div>
           </div>
 
-          {/* CATEGORY 2: RESIDENCY / ADDRESS */}
           <div className={styles.formSectionHeader}>
             <span className={styles.sectionNumber}>02</span> Geographic &
             Address Details
@@ -293,7 +288,6 @@ export const ResidentForm = ({ onSave }) => {
             </div>
           </div>
 
-          {/* CATEGORY 3: GOVERNMENT CLASSIFICATIONS */}
           <div className={styles.formSectionHeader}>
             <span className={styles.sectionNumber}>03</span> Socio-Economic
             Sectors & Qualifications
@@ -400,7 +394,6 @@ export const ResidentForm = ({ onSave }) => {
             </div>
           </div>
 
-          {/* Form Actions with High-End Execution Style */}
           <div className={styles.formActions}>
             <button type="submit" className={styles.btnSave}>
               <span>SUBMIT RECORD DATA</span>

@@ -2,25 +2,19 @@
   margin-left: 260px;
   padding-top: 30px;
 }
-/* OVERLAY */
-/* Backdrop Overlay Grid */
+
 .modalOverlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(
-    15,
-    23,
-    42,
-    0.65
-  ); /* Elegant dark-slate transparent overlay */
-  backdrop-filter: blur(5px); /* Swabeng blur effect sa background dashboards */
+  background-color: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(5px);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 99999; /* Siguradong lulutang sa pinakatuktok ng page elements */
+  z-index: 99999;
   animation: overlayFade 0.2s ease-out;
 }
 
@@ -31,16 +25,15 @@
   box-shadow: 0 25px 60px -15px rgba(0, 31, 63, 0.25);
   position: relative;
   width: 92%;
-  max-width: 1150px; /* Maluwag na space para sa multi-step cards layout natin */
+  max-width: 1150px;
   max-height: 90vh;
   overflow: hidden;
-  border-top: 5px solid #d4af37; /* Premium Government Gold top-trim bar */
+  border-top: 5px solid #d4af37;
   animation: modalPopUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
 }
 
-/* Scrollable Inner Window Content Box */
 .modalContent {
   width: 100%;
   overflow-y: auto;
@@ -49,7 +42,6 @@
   box-sizing: border-box;
 }
 
-/* Floating Dismiss Cross Icon Hub ('X') */
 .closeBtn {
   position: absolute;
   top: 1.25rem;
@@ -72,13 +64,12 @@
 }
 
 .closeBtn:hover {
-  background-color: #dc2626; /* Nagiging critical warning red kapag balak kanselahin ang form */
+  background-color: #dc2626;
   color: #ffffff;
   border-color: #dc2626;
-  transform: rotate(90deg); /* Swabeng ikot micro-interaction click helper */
+  transform: rotate(90deg);
 }
 
-/* Internal Box Scrollbar Aesthetics */
 .modalContent::-webkit-scrollbar {
   width: 8px;
 }
@@ -90,7 +81,6 @@
   border-radius: 20px;
 }
 
-/* Keyframe Micro-Engines */
 @keyframes overlayFade {
   from {
     opacity: 0;

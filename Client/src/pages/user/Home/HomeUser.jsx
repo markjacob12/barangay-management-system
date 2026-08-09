@@ -22,16 +22,13 @@ const HomeUser = () => {
         <Sidebar />
       </section>
       <main className={style["mainContent"]}>
-        {/* Call-to-action card para sa request */}
         <CertificationRequest onOpenModal={() => setRequestShowModal(true)} />
 
-        {/* Modal Pop-up Layer */}
         {requestShowModal && (
           <div
             className={style.modalOverlay}
             onClick={() => setShowModal(false)}
           >
-            {/* e.stopPropagation() para hindi mag-trigger ang close kapag pinindot ang loob ng wizard */}
             <div
               className={style.modalWrapper}
               onClick={(e) => e.stopPropagation()}

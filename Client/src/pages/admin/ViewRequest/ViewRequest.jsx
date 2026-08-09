@@ -13,7 +13,6 @@ const ViewRequest = ({ request, onClose, statusUpdate }) => {
     contentRef: componentRef,
     documentTitle: `Certificate-${request?.lastName}`,
     onAfterPrint: () => {
-      // Kusang magti-trigger pagkasara ng Print Dialog Box ng computer
       setIsPrinted(true);
     },
   });
@@ -32,13 +31,11 @@ const ViewRequest = ({ request, onClose, statusUpdate }) => {
 
   return (
     <div className={style.modalOverlay} onClick={onClose}>
-      {/* Hidden print payload wrapper */}
       <div style={{ display: "none" }}>
         <CertificateTemplate ref={componentRef} request={request} />
       </div>
 
       <div className={style.modalContent} onClick={(e) => e.stopPropagation()}>
-        {/* Official State Ribbon Header */}
         <div className={style.docketHeader}>
           <div className={style.headerIconBlock}>
             <svg
@@ -78,9 +75,7 @@ const ViewRequest = ({ request, onClose, statusUpdate }) => {
           </button>
         </div>
 
-        {/* Core Operational Information Grid */}
         <div className={style.docketBody}>
-          {/* Section 1: Personal Credentials */}
           <div className={style.fieldCategoryTitle}>01. Applicant Identity</div>
           <div className={style.infoGrid}>
             <div className={style.dataBlock}>
@@ -107,7 +102,6 @@ const ViewRequest = ({ request, onClose, statusUpdate }) => {
             </div>
           </div>
 
-          {/* Section 2: Document Processing Specifications */}
           <div className={style.fieldCategoryTitle}>
             02. Document Requirements
           </div>
@@ -151,7 +145,6 @@ const ViewRequest = ({ request, onClose, statusUpdate }) => {
           </div>
         </div>
 
-        {/* High-End System Action Buttons Container */}
         <div className={style.docketActions}>
           {currentStatus === "Pending" ? (
             <>

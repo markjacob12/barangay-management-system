@@ -14,7 +14,6 @@ const ResidentTable = ({ onOpenModal, onDelete, onView }) => {
           </p>
         </div>
 
-        {/* Dito inilagay ang lagayan ng search sa tabi ng button */}
         <div className={style.toolbarActions}>
           <div className={style.searchWrapper}>
             <svg
@@ -46,7 +45,6 @@ const ResidentTable = ({ onOpenModal, onDelete, onView }) => {
         </div>
       </div>
 
-      {/* Table Wrapper for Responsive Scrolling */}
       <div className={style.tableResponsive}>
         <table className={style.customTable}>
           <thead>

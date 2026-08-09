@@ -2,7 +2,6 @@ import React from "react";
 import style from "./BarangayConcernFromReview.module.css";
 
 const BarangayConcernFormReview = ({ data, onBack, onSubmit }) => {
-  // Helper para sa kulay ng Priority Badge base sa tindi ng ulat
   const getPriorityClassName = (priority) => {
     switch (priority) {
       case "Emergency":
@@ -29,9 +28,7 @@ const BarangayConcernFormReview = ({ data, onBack, onSubmit }) => {
         <div className={style.goldDivider}></div>
       </div>
 
-      {/* Main Review Grid Area */}
       <div className={style.reviewContentGrid}>
-        {/* Left Side: Text Details */}
         <div className={style.infoPanel}>
           <div className={style.reviewField}>
             <span className={style.reviewLabel}>Type of Concern</span>
@@ -78,7 +75,6 @@ const BarangayConcernFormReview = ({ data, onBack, onSubmit }) => {
           </div>
         </div>
 
-        {/* Right Side: Document/Photo Evidence Media Box */}
         <div className={style.evidencePanel}>
           <span className={style.reviewLabel}>Photo Evidence</span>
           <div className={style.imageContainerBox}>
@@ -111,7 +107,6 @@ const BarangayConcernFormReview = ({ data, onBack, onSubmit }) => {
         </div>
       </div>
 
-      {/* Footer System Control Action Buttons */}
       <footer className={style.actionFooter}>
         <button type="button" onClick={onBack} className={style.btnBack}>
           ← Baguhin ang Detalye

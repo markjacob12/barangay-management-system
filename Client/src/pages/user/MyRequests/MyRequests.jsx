@@ -31,7 +31,6 @@ const MyRequests = () => {
     }
   };
 
-  // Helper function para maglapat ng dynamic classes sa status badge
   const getStatusClass = (status) => {
     const cleanStatus = status?.toLowerCase() || "pending";
     if (cleanStatus === "approved" || cleanStatus === "approve")
@@ -47,10 +46,8 @@ const MyRequests = () => {
       case "pending":
         return requestStatus === "pending";
       case "approved":
-        // Sinasalo nito kapag 'approved' o 'ready' ang status mula sa backend
         return requestStatus === "approved" || requestStatus === "approve";
       case "disapproved":
-        // Sinasalo nito kapag tinanggihan o kinansela ng user/admin
         return (
           requestStatus === "disapproved" || requestStatus === "disapprove"
         );
@@ -70,7 +67,6 @@ const MyRequests = () => {
         </aside>
 
         <main className={style.mainContent}>
-          {/* Header Track Title */}
           <div className={style.sectionHeader}>
             <h2 className={style.pageTitle}>Aking mga Kahilingan</h2>
             <p className={style.pageSubtitle}>
@@ -80,14 +76,12 @@ const MyRequests = () => {
             <div className={style.goldDivider}></div>
           </div>
 
-          {/* --- HAKBANG 3: MGA NA-CLICK NA TABS --- */}
           <div className={style.tabContainer}>
             <button
               type="button"
               className={`${style.tabBtn} ${currentTab === "pending" ? style.activeTab : ""}`}
               onClick={() => setCurrentTab("pending")}
             >
-              {/* Modern Animated/Style Hourglass Icon */}
               <svg
                 width="16"
                 height="16"
@@ -112,7 +106,6 @@ const MyRequests = () => {
               className={`${style.tabBtn} ${currentTab === "approved" ? style.activeTab : ""}`}
               onClick={() => setCurrentTab("approved")}
             >
-              {/* Double Check / Shield Success Icon */}
               <svg
                 width="16"
                 height="16"
@@ -135,7 +128,6 @@ const MyRequests = () => {
               className={`${style.tabBtn} ${currentTab === "disapproved" ? style.activeTab : ""}`}
               onClick={() => setCurrentTab("disapproved")}
             >
-              {/* Alert / Ban / X Circle Icon */}
               <svg
                 width="16"
                 height="16"
@@ -155,7 +147,6 @@ const MyRequests = () => {
             </button>
           </div>
 
-          {/* Core Grid Platform View */}
           <div className={style.containerRequest}>
             {isLoading ? (
               <div className={style.loadingSkeletonWrapper}>
@@ -166,7 +157,6 @@ const MyRequests = () => {
               <div className={style.requestsGridCanvas}>
                 {filteredRequest.map((req) => (
                   <div key={req._id} className={style.requestCard}>
-                    {/* Top Axis Ribbon Frame */}
                     <div className={style.cardHeader}>
                       <h3 className={style.certTypeTitle}>
                         {req.typeOfCertificate}
@@ -178,7 +168,6 @@ const MyRequests = () => {
                       </span>
                     </div>
 
-                    {/* Meta Values Row Stack */}
                     <div className={style.cardBody}>
                       <div className={style.metaDataRow}>
                         <span className={style.metaDataLabel}>Aplikante:</span>
@@ -204,7 +193,6 @@ const MyRequests = () => {
                       </div>
                     </div>
 
-                    {/* Integrated Control Actions Hub */}
                     <div className={style.cardActions}>
                       <button
                         type="button"
@@ -214,7 +202,6 @@ const MyRequests = () => {
                         Suriin Detalye
                       </button>
 
-                      {/* Kakanselahin lang ang button kung 'Pending' pa ang transaksyon */}
                       {(req.status?.toLowerCase() === "pending" ||
                         !req.status) && (
                         <button
@@ -231,7 +218,6 @@ const MyRequests = () => {
               </div>
             ) : (
               <div className={style.noDataBox}>
-                {/* Modern Vector Empty Folder/Inbox Icon */}
                 <svg
                   width="48"
                   height="48"
@@ -256,7 +242,6 @@ const MyRequests = () => {
             )}
           </div>
 
-          {/* Details Inspection Modal System Pop-up overlay */}
           {isViewModal && (
             <div
               className={style.modalOverlay}

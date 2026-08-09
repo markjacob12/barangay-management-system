@@ -255,7 +255,6 @@ const BarangayConcernForm = ({ onBack, onNext, data }) => {
           ></textarea>
         </div>
 
-        {/* Ginamit ang .formRow para magtabi ang Date at Time nang maayos gaya ng nasa sketch */}
         <div className={style.formRow}>
           <div className={style.inputGroup}>
             <label>Date</label>

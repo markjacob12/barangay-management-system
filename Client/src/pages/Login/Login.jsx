@@ -20,7 +20,6 @@ const Login = () => {
 
       const { token, user } = res.data;
 
-      // 1. I-save ang token sa LocalStorage (para hindi ma-logout pag refresh)
       localStorage.setItem("token", token);
       localStorage.setItem("role", user.role);
       localStorage.setItem("lastName", user.lastName);
@@ -48,7 +47,6 @@ const Login = () => {
   return (
     <div className="login-container">
       <div className="login-card">
-        {/* Left Side: Branding */}
         <div className="login-side-info">
           <img
             style={{ width: "80%" }}
@@ -61,7 +59,6 @@ const Login = () => {
           <div className="overlay"></div>
         </div>
 
-        {/* Right Side: Form */}
         <div className="login-form-section">
           <form className="login-form" onSubmit={handleLogin}>
             <h2>Welcome Back</h2>

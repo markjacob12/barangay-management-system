@@ -8,8 +8,8 @@ const PhotoEvidence = ({ onNext, data }) => {
   const handleImageChange = (event) => {
     const file = event.target.files[0];
     if (file) {
-      setRawFile(file); // 1. I-save ang totoong file object
-      // 2. Iwanan ang FileReader para LANG sa visual preview sa screen
+      setRawFile(file);
+
       const reader = new FileReader();
       reader.onloadend = () => {
         setPreviewImage(reader.result);
@@ -30,8 +30,8 @@ const PhotoEvidence = ({ onNext, data }) => {
   };
 
   const handleRemoveImage = () => {
-    setPreviewImage(null); // INAYOS: Ginawang setPreviewImage
-    setRawFile(null); // INAYOS: Nilinis din ang raw file state
+    setPreviewImage(null);
+    setRawFile(null);
   };
 
   return (
@@ -46,7 +46,7 @@ const PhotoEvidence = ({ onNext, data }) => {
           {previewImage ? (
             <div className={styles.previewContainer}>
               <img
-                src={previewImage} // INAYOS: Ginawang previewImage ang src
+                src={previewImage}
                 alt="Preview"
                 className={styles.previewImage}
               />
@@ -101,7 +101,6 @@ const PhotoEvidence = ({ onNext, data }) => {
           )}
         </div>
 
-        {/* ETO ANG DIV NA NAGPAPAGITNA SA MGA BUTTONS */}
         <div className={styles.actionContainer}>
           <button type="submit" className={styles.nextButton}>
             Next

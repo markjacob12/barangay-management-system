@@ -17,13 +17,13 @@ const RequestSystem = ({ currentResident }) => {
   const handleSubmit = async () => {
     const res = await submitRequest(selectedType, formData);
     if (res) {
-      setCurrentStep(4); // Success Validation!
+      setCurrentStep(4);
     }
   };
 
   const handleFormSubmit = (data) => {
-    setFormData(data); // Application form state storage
-    setCurrentStep(3); // Route to dynamic confirmation page
+    setFormData(data);
+    setCurrentStep(3);
   };
 
   const handleSelectType = (type) => {
@@ -33,9 +33,7 @@ const RequestSystem = ({ currentResident }) => {
 
   return (
     <div className={style.masterWizardFrame}>
-      {/* High-End Horizontal Navigation Progress Stepper */}
       <div className={style.stepperHeaderBlock}>
-        {/* Step 1: Selection */}
         <div className={style.stepWrapper}>
           <div
             className={`${style.stepCircle} ${currentStep >= 1 ? style.activeStep : ""} ${currentStep > 1 ? style.completedStep : ""}`}
@@ -56,7 +54,6 @@ const RequestSystem = ({ currentResident }) => {
           className={`${style.progressLine} ${currentStep >= 2 ? style.lineFilled : ""}`}
         ></div>
 
-        {/* Step 2: Information Entry */}
         <div className={style.stepWrapper}>
           <div
             className={`${style.stepCircle} ${currentStep >= 2 ? style.activeStep : ""} ${currentStep > 2 ? style.completedStep : ""}`}
@@ -77,7 +74,6 @@ const RequestSystem = ({ currentResident }) => {
           className={`${style.progressLine} ${currentStep >= 3 ? style.lineFilled : ""}`}
         ></div>
 
-        {/* Step 3: Formal Review */}
         <div className={style.stepWrapper}>
           <div
             className={`${style.stepCircle} ${currentStep >= 3 ? style.activeStep : ""} ${currentStep > 3 ? style.completedStep : ""}`}
@@ -98,7 +94,6 @@ const RequestSystem = ({ currentResident }) => {
           className={`${style.progressLine} ${currentStep >= 4 ? style.lineFilled : ""}`}
         ></div>
 
-        {/* Step 4: Completion */}
         <div className={style.stepWrapper}>
           <div
             className={`${style.stepCircle} ${currentStep >= 4 ? style.activeStep : ""} ${currentStep === 4 ? style.completedStep : ""}`}
@@ -116,7 +111,6 @@ const RequestSystem = ({ currentResident }) => {
         </div>
       </div>
 
-      {/* Dynamic Render Sandbox Content Panel */}
       <div className={style.contentDynamicBody}>
         {currentStep === 1 && (
           <CertificateTypeSelection onSelect={handleSelectType} />

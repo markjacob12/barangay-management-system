@@ -33,7 +33,6 @@
   padding: 10px;
 }
 
-/* User Profile Section */
 .user-section {
   display: flex;
   align-items: center;
@@ -86,7 +85,7 @@
 
 .pageTitle {
   margin: 0;
-  color: #001f3f; /* Deep Premium Navy */
+  color: #001f3f;
   font-size: 1.6rem;
   font-weight: 800;
   letter-spacing: -0.5px;
@@ -102,11 +101,11 @@
 .goldDivider {
   width: 50px;
   height: 3px;
-  background-color: #d4af37; /* Signature Gold Trim Strip */
+  background-color: #d4af37;
   border-radius: 2px;
   margin-top: 1rem;
 }
-/* Navigation Links */
+
 .link {
   display: flex;
   align-items: center;
@@ -121,15 +120,14 @@
 
 .icon {
   font-size: 1.1rem;
-  color: #d4af37; /* Gold accent line consistency */
-}
-
-.link:hover {
-  background: rgba(212, 175, 55, 0.1); /* Light gold transparent */
   color: #d4af37;
 }
 
-/* Active State */
+.link:hover {
+  background: rgba(212, 175, 55, 0.1);
+  color: #d4af37;
+}
+
 .active {
   background: #d4af37 !important;
   color: #001f3f !important;
@@ -149,7 +147,7 @@
   bottom: 30px;
   width: 80%;
 }
-/* Container framework ng buong layout */
+
 .mainContent {
   margin-left: 260px;
   padding: 40px;
@@ -165,7 +163,6 @@
   }
 }
 
-/* Dashboard Header Styling */
 .dashboardHeader {
   margin-bottom: 35px;
 }
@@ -187,7 +184,6 @@
   font-weight: 800;
 }
 
-/* CSS Grid Engine para sa Cards (Automatic ang pagbaba kapag masikip ang screen) */
 .cardGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -195,7 +191,6 @@
   width: 100%;
 }
 
-/* Ang Isang Pirasong Elite Card */
 .concernCard {
   background: #ffffff;
   border-radius: 12px;
@@ -207,14 +202,12 @@
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Itataas ng konti ang card kapag hinover para sa premium physical feel */
 .concernCard:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 25px rgba(0, 31, 63, 0.08);
   border-color: #cbd5e1;
 }
 
-/* Image Presentation Header Box */
 .cardImageSection {
   position: relative;
   width: 100%;
@@ -231,12 +224,9 @@
 }
 
 .concernCard:hover .cardThumb {
-  transform: scale(
-    1.04
-  ); /* Bahagyang zoom ng larawan kapag naka-hover ang card */
+  transform: scale(1.04);
 }
 
-/* Floating Priority Badges Layer */
 .priorityBadge {
   position: absolute;
   top: 12px;
@@ -271,10 +261,9 @@
   border: 1px solid #93c5fd;
 }
 
-/* Card Content Details Body Configs */
 .cardBody {
   padding: 20px;
-  flex-grow: 1; /* Sinasakop nito ang natitirang puwang para pantay-pantay ang mga button sa ilalim */
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
@@ -286,7 +275,7 @@
   font-weight: 700;
   line-height: 1.4;
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* Puputulin ang text sa 2 lines para manatiling pantay ang cards */
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -294,7 +283,7 @@
 .cardDivider {
   height: 1px;
   background: #f1f5f9;
-  margin-top: auto; /* Itutulak pababa bago mag-footer text */
+  margin-top: auto;
   margin-bottom: 12px;
 }
 
@@ -310,7 +299,6 @@
   color: #001f3f;
 }
 
-/* Interactive Card Footer Controls Area */
 .cardActionArea {
   padding: 0 20px 20px 20px;
 }
@@ -338,8 +326,6 @@
   box-shadow: 0 4px 12px rgba(0, 31, 63, 0.15);
 }
 
-/* Empty State Spinner UI */
-/* Styling para sa Empty State kung walang ulat */
 .emptyStateBlock {
   display: flex;
   flex-direction: column;
@@ -347,8 +333,8 @@
   justify-content: center;
   text-align: center;
   padding: 60px 20px;
-  background-color: #001f3f; /* Ang iyong Navy Blue */
-  border: 2px solid #d4af37; /* Ang iyong Gold */
+  background-color: #001f3f;
+  border: 2px solid #d4af37;
   border-radius: 12px;
   max-width: 500px;
   margin: 40px auto;
@@ -361,7 +347,7 @@
 }
 
 .emptyStateBlock h3 {
-  color: #d4af37; /* Gold Title */
+  color: #d4af37;
   font-family: "Montserrat", "Inter", sans-serif;
   font-size: 20px;
   margin-bottom: 8px;
@@ -369,7 +355,7 @@
 }
 
 .emptyStateBlock p {
-  color: #ffffff; /* White Text */
+  color: #ffffff;
   font-family: "Montserrat", "Inter", sans-serif;
   font-size: 14px;
   opacity: 0.8;
@@ -379,19 +365,18 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: #f1f5f9; /* Soft gray backing parang capsule container */
+  background-color: #f1f5f9;
   padding: 0.35rem;
   border-radius: 8px;
-  width: max-content; /* Saktong sukat lang sa haba ng mga buttons */
+  width: max-content;
   margin-bottom: 1.5rem;
   border: 1px solid #e2e8f0;
 }
 
-/* Base style para sa lahat ng tab buttons kapag hindi pa napipili */
 .tabBtn {
   background: transparent;
   border: none;
-  color: #64748b; /* Muted slate gray para hindi umahon sa paningin */
+  color: #64748b;
   padding: 0.6rem 1.2rem;
   font-family: inherit;
   font-size: 0.88rem;
@@ -400,48 +385,40 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 0.5rem; /* Espasyo sa pagitan ng emoji icon at text */
+  gap: 0.5rem;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   user-select: none;
 }
 
-/* Hover feedback kapag itinutok ang mouse sa hindi aktibong tab */
 .tabBtn:hover {
-  color: #001f3f; /* Umahon sa signature Navy kulay */
+  color: #001f3f;
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-/* ==========================================================================
-   ACTIVE STATES (Kapag napili o clicked ang tab)
-   ========================================================================== */
 .tabBtn.activeTab {
-  background-color: #ffffff; /* Pumuputi ang background para magmukhang litaw na card */
-  color: #001f3f; /* Solid Navy Blue text */
+  background-color: #ffffff;
+  color: #001f3f;
   box-shadow:
     0 4px 10px rgba(0, 31, 63, 0.06),
     0 1px 3px rgba(0, 0, 0, 0.05);
-  border-bottom: 2px solid #d4af37; /* May manipis na gold underline accent para sa focus indicator */
+  border-bottom: 2px solid #d4af37;
 }
 
-/* Responsive adjustment kung sakaling lumiit ang screen ng laptop */
 @media (max-width: 600px) {
   .tabContainer {
-    width: 100%; /* Sinasakop ang buong lapad ng screen */
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(
-      3,
-      1fr
-    ); /* Hinahati sa tatlong pantay na columns */
+    grid-template-columns: repeat(3, 1fr);
     text-align: center;
   }
 
   .tabBtn {
     justify-content: center;
     padding: 0.6rem 0.4rem;
-    font-size: 0.8rem; /* Pinapaliit ang text para magkasya sa mobile devices */
+    font-size: 0.8rem;
   }
 }
-/* Nililinis ang sukat at alignment ng mga bagong vector icons */
+
 .tabIcon {
   flex-shrink: 0;
   width: 16px;
@@ -449,12 +426,10 @@
   transition: transform 0.2s ease;
 }
 
-/* Nagbibigay ng micro-interaction kapag hinover ang mouse sa button */
 .tabBtn:hover .tabIcon {
   transform: scale(1.1);
 }
-/* Empty State Styling Elements */
-/* Container framework para sa Empty State at No Records Box */
+
 .noDataBox {
   display: flex;
   flex-direction: column;
@@ -463,39 +438,37 @@
   text-align: center;
   padding: 4rem 2rem;
   background-color: #ffffff;
-  border: 1px dashed #cbd5e1; /* Putol-putol na border para sa clean blueprint empty look */
+  border: 1px dashed #cbd5e1;
   border-radius: 8px;
   width: 100%;
   box-sizing: border-box;
   margin: 1rem 0;
 }
 
-/* Kulay at pwesto ng bago mong SVG Icon */
 .noDataIconSVG {
-  color: #94a3b8; /* Muted Slate gray */
+  color: #94a3b8;
   margin-bottom: 1.25rem;
   transition:
     transform 0.3s ease,
     color 0.3s ease;
 }
 
-/* Konting micro-interaction kapag tinapatan ng mouse ang walang data box */
 .noDataBox:hover .noDataIconSVG {
-  color: #d4af37; /* Nagiging Gold ang kupas na folder */
-  transform: translateY(-4px); /* Umaangat ng konti nang banayad */
+  color: #d4af37;
+  transform: translateY(-4px);
 }
 
 .noDataBox h3 {
   margin: 0 0 0.5rem 0;
   font-size: 1.2rem;
   font-weight: 700;
-  color: #001f3f; /* Signature Deep Navy */
+  color: #001f3f;
 }
 
 .noDataBox p {
   margin: 0;
   font-size: 0.9rem;
-  color: #64748b; /* Malinis na detalye ng text */
-  max-width: 340px; /* Saktong lapad para bumaba ang ibang salita */
+  color: #64748b;
+  max-width: 340px;
   line-height: 1.5;
 }

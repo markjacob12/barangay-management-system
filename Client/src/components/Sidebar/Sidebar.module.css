@@ -1,7 +1,7 @@
 .sidebar {
   width: 260px;
   height: 100vh;
-  background-color: #001f3f; /* Deep Premium Corporate Navy */
+  background-color: #001f3f;
   color: #ffffff;
   padding: 24px 16px;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -10,7 +10,7 @@
   top: 0;
   display: flex;
   flex-direction: column;
-  border-right: 1px solid rgba(212, 175, 55, 0.15); /* Soft gold accent border */
+  border-right: 1px solid rgba(212, 175, 55, 0.15);
   box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
   z-index: 100;
 }
@@ -19,7 +19,6 @@
   width: 70px;
 }
 
-/* Logo Section */
 .logoContainer {
   display: flex;
   flex-direction: column;
@@ -46,7 +45,7 @@
 }
 
 .goldText {
-  color: #d4af37; /* Signature Gold Accent */
+  color: #d4af37;
 }
 
 .govSubtag {
@@ -57,7 +56,6 @@
   margin-top: 4px;
 }
 
-/* Navigation Links */
 .navMenu {
   display: flex;
   flex-direction: column;
@@ -70,10 +68,10 @@
   display: flex;
   align-items: center;
   gap: 14px;
-  color: #cbd5e1; /* Soft professional text color */
+  color: #cbd5e1;
   text-decoration: none;
   padding: 11px 16px;
-  border-radius: 4px; /* Clean structured edge */
+  border-radius: 4px;
   font-size: 0.9rem;
   font-weight: 500;
   transition: all 0.2s ease;
@@ -85,20 +83,13 @@
   color: #ffffff;
 }
 
-/* Premium Active State: Navy Background, Gold Texts and Indicator */
 .activeLink {
-  background-color: rgba(
-    212,
-    175,
-    55,
-    0.08
-  ); /* Sophisticated subtle gold tint */
+  background-color: rgba(212, 175, 55, 0.08);
   color: #d4af37;
   font-weight: 600;
-  border-left: 3px solid #d4af37; /* Clean administrative sidebar pointer */
+  border-left: 3px solid #d4af37;
 }
 
-/* SVG Icon Controls */
 .svgIcon {
   width: 18px;
   height: 18px;
@@ -114,10 +105,9 @@
 }
 
 .activeLink .svgIcon {
-  color: #d4af37; /* Gold dynamic fill */
+  color: #d4af37;
 }
 
-/* Footer & Logout Row */
 .footer {
   margin-top: auto;
   padding-top: 16px;
@@ -151,7 +141,6 @@
   box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2);
 }
 
-/* Collapsed state handling for text */
 .collapsed .linkText,
 .collapsed .govSubtag,
 .collapsed .brandName,

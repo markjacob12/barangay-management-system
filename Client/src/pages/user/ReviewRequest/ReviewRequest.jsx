@@ -5,7 +5,6 @@ const ReviewRequest = ({ onNext, data, onBack, type, isSubmitting }) => {
   return (
     <div className={style.reviewContainer}>
       <div className={style.reviewCard}>
-        {/* Dynamic Header Toolbar Row */}
         <div className={style.topBar}>
           <button
             type="button"
@@ -31,7 +30,6 @@ const ReviewRequest = ({ onNext, data, onBack, type, isSubmitting }) => {
           <div className={style.statusBadge}>Pagsusuri / Verification</div>
         </div>
 
-        {/* Informational Header Section */}
         <div className={style.header}>
           <h2>
             Review for <span className={style.highlightText}>{type}</span>
@@ -43,7 +41,6 @@ const ReviewRequest = ({ onNext, data, onBack, type, isSubmitting }) => {
           <div className={style.goldDivider}></div>
         </div>
 
-        {/* Structured Grid Summary Canvas */}
         <div className={style.infoGrid}>
           <div className={style.infoBox}>
             <span className={style.metaLabel}>First Name</span>
@@ -85,7 +82,6 @@ const ReviewRequest = ({ onNext, data, onBack, type, isSubmitting }) => {
           </div>
         </div>
 
-        {/* Important Warning Notice Callout */}
         <div className={style.warningNotice}>
           <span className={style.noticeIcon}>ℹ️</span>
           <p>
@@ -94,7 +90,6 @@ const ReviewRequest = ({ onNext, data, onBack, type, isSubmitting }) => {
           </p>
         </div>
 
-        {/* Double Trigger Button Action Hub */}
         <div className={style.buttonContainer}>
           <button
             type="button"

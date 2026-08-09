@@ -6,10 +6,9 @@
   color: #333333;
 }
 
-/* Header Banner - Pro Government Look */
 .headerBanner {
-  background-color: #001f3f; /* Navy Blue */
-  border-left: 6px solid #d4af37; /* Gold Accent */
+  background-color: #001f3f;
+  border-left: 6px solid #d4af37;
   padding: 2rem;
   border-radius: 8px;
   display: flex;
@@ -22,7 +21,7 @@
 .avatarCircle {
   width: 70px;
   height: 70px;
-  background-color: #d4af37; /* Gold */
+  background-color: #d4af37;
   color: #001f3f;
   border-radius: 50%;
   display: flex;
@@ -63,7 +62,6 @@
   font-weight: 600;
 }
 
-/* Grid Layout for Cards */
 .gridContainer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -103,7 +101,6 @@
   background-color: #d4af37;
 }
 
-/* Info Alignments */
 .infoGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -143,9 +140,8 @@
   margin-top: 0.2rem;
 }
 
-/* Highlights for Special Sectors */
 .highlightYes {
-  color: #e65100 !important; /* Soft alert color para sa mabilisang pansin */
+  color: #e65100 !important;
   font-weight: 700 !important;
 }
 
@@ -156,7 +152,6 @@
   font-weight: 600;
 }
 
-/* Responsive Design for Mobile Devices */
 @media (max-width: 768px) {
   .gridContainer {
     grid-template-columns: 1fr;

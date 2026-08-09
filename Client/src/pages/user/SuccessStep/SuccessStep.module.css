@@ -1,4 +1,3 @@
-/* Outer Core Housing Frame */
 .successWrapper {
   width: 100%;
   display: flex;
@@ -21,16 +20,13 @@
   align-items: center;
 }
 
-/* ==========================================================================
-   PRODUCTION GRADE ANIMATED SVG CHECKMARK ENGINE
-   ========================================================================== */
 .iconCircle {
   width: 80px;
   height: 80px;
   border-radius: 50%;
   display: block;
   stroke-width: 3;
-  stroke: #10b981; /* Premium Emerald Success Green */
+  stroke: #10b981;
   stroke-miterlimit: 10;
   box-shadow: inset 0 0 0 #10b981;
   animation:
@@ -63,17 +59,16 @@
   animation: strokeCheckAnim 0.3s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards;
 }
 
-/* Typography Title Structures */
 .successTitle {
   margin: 0;
-  color: #001f3f; /* Signature Navy */
+  color: #001f3f;
   font-size: 1.75rem;
   font-weight: 800;
   letter-spacing: -0.5px;
 }
 
 .successTitle span {
-  color: #10b981; /* Lalagyan ng green tint ang "Naipadala!" o "Na!" */
+  color: #10b981;
 }
 
 .successMessage {
@@ -85,9 +80,6 @@
   max-width: 520px;
 }
 
-/* ==========================================================================
-   DIGITAL RECEIPT CONTAINER SLIP DESIGN
-   ========================================================================== */
 .detailsBox {
   width: 100%;
   max-width: 520px;
@@ -123,7 +115,7 @@
   justify-content: space-between;
   align-items: center;
   font-size: 0.93rem;
-  border-bottom: 1px dashed #f1f5f9; /* Soft dashed breakdown rows */
+  border-bottom: 1px dashed #f1f5f9;
   padding-bottom: 0.75rem;
 }
 
@@ -143,19 +135,16 @@
   text-align: right;
 }
 
-/* Dynamic Tracking Identification Badge Block */
 .trackingBadge {
-  background-color: #f0fdf4; /* Very light tint success green */
-  color: #166534; /* Dark solid forest text */
+  background-color: #f0fdf4;
+  color: #166534;
   padding: 0.25rem 0.6rem;
   border-radius: 4px;
-  font-family:
-    "Courier New", Courier, monospace; /* Monospace para mukhang high security hash token */
+  font-family: "Courier New", Courier, monospace;
   font-size: 0.95rem;
   border: 1px solid #bbf7d0;
 }
 
-/* Bottom Controls Section Frame */
 .actionSection {
   margin-top: 2rem;
   width: 100%;
@@ -164,10 +153,10 @@
 
 .doneBtn {
   width: 100%;
-  background-color: #001f3f; /* Corporate Navy Base */
+  background-color: #001f3f;
   color: #ffffff;
   border: none;
-  border-bottom: 3px solid #d4af37; /* Signature Gold Trim base strip anchor */
+  border-bottom: 3px solid #d4af37;
   padding: 0.85rem 2rem;
   font-size: 0.95rem;
   font-weight: 700;
@@ -188,9 +177,6 @@
   box-shadow: 0 2px 6px rgba(0, 31, 63, 0.1);
 }
 
-/* ==========================================================================
-   ANIMATION INTERACTIVE MATH ENGINES
-   ========================================================================== */
 @keyframes strokeCircleAnim {
   to {
     stroke-dashoffset: 0;
@@ -220,7 +206,6 @@
   }
 }
 
-/* Mobile responsive screen layout constraints */
 @media (max-width: 580px) {
   .detailsRow {
     flex-direction: column;

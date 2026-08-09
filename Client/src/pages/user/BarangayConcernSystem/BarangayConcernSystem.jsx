@@ -35,7 +35,6 @@ const BarangayConcernSystem = () => {
   return (
     <div className={style.masterWizardFrame}>
       <div className={style.stepperHeaderBlock}>
-        {/* Step 1 */}
         <div className={style.stepWrapper}>
           <div
             className={`${style.stepCircle} ${currentStep >= 1 ? style.activeStep : ""} ${currentStep > 1 ? style.completedStep : ""}`}
@@ -56,7 +55,6 @@ const BarangayConcernSystem = () => {
           className={`${style.progressLine} ${currentStep >= 2 ? style.lineFilled : ""}`}
         ></div>
 
-        {/* Step 2 */}
         <div className={style.stepWrapper}>
           <div
             className={`${style.stepCircle} ${currentStep >= 2 ? style.activeStep : ""} ${currentStep > 2 ? style.completedStep : ""}`}
@@ -77,7 +75,6 @@ const BarangayConcernSystem = () => {
           className={`${style.progressLine} ${currentStep >= 3 ? style.lineFilled : ""}`}
         ></div>
 
-        {/* Step 3 */}
         <div className={style.stepWrapper}>
           <div
             className={`${style.stepCircle} ${currentStep >= 3 ? style.activeStep : ""} ${currentStep > 3 ? style.completedStep : ""}`}
@@ -98,7 +95,6 @@ const BarangayConcernSystem = () => {
           className={`${style.progressLine} ${currentStep >= 4 ? style.lineFilled : ""}`}
         ></div>
 
-        {/* Step 4 */}
         <div className={style.stepWrapper}>
           <div
             className={`${style.stepCircle} ${currentStep >= 4 ? style.activeStep : ""} ${currentStep === 4 ? style.completedStep : ""}`}
